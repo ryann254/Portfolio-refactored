@@ -28,11 +28,11 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(122, 113, 113, 0.3);
+  background: linear-gradient(to right, #abbaab, #ffffff);
 }
-.text-secondary {
+/* .text-secondary {
   color: #f5603b;
-}
+} */
 
 main {
   padding: 9rem;
@@ -55,8 +55,6 @@ main .icons a:hover {
 
 /* My Work Page */
 .projects {
-  position: relative;
-  z-index: -1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.9rem;

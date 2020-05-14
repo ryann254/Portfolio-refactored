@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useRouteMatch } from "react-router-dom";
+import $ from "jquery";
 
 import "./Header.css";
 
@@ -66,11 +67,11 @@ function Header({ children }) {
     Array.from(nav).forEach((navItem) => {
       navItem.classList.remove("current");
     });
-    console.log(mainNav);
     Array.from(mainNav).forEach((navLink) => {
-      console.log(navLink);
       navLink.classList.remove("current-about");
       navLink.classList.remove("current-work");
+      navLink.classList.remove("current-work");
+      navLink.classList.remove("current-add-events");
       navLink.classList.remove("current-link-color");
     });
   }
@@ -169,48 +170,66 @@ function Header({ children }) {
     }
   }
 
+  //Making the header sticky
+  function stickyHeader() {
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 30) {
+          $("#nav-bar").addClass("navbar-fixed");
+        }
+        if ($(window).scrollTop() < 31) {
+          $("#nav-bar").removeClass("navbar-fixed");
+        }
+      });
+    });
+  }
+
   return (
     <Fragment>
+      {stickyHeader()}
       <div id="bg-img">
-        <Link to="/homepage" onMouseEnter={addHover} onMouseLeave={addHover}>
-          <div className="logo-container">
-            <div className="logo-border" id="logo-border">
-              <div className="logo">R</div>
-            </div>
-            <div>
-              <div className="logo-name">
-                Ryan Njoroge
-                <hr className="line"></hr>
-                <div className="logo-desc" id="logo-desc">
-                  Web Developer & Ai Enthusiast
+        <div id="nav-bar">
+          <Link to="/homepage" onMouseEnter={addHover} onMouseLeave={addHover}>
+            <div className="logo-container">
+              <div className="logo-border" id="logo-border">
+                <div className="logo">R</div>
+              </div>
+              <div>
+                <div className="logo-name">
+                  Ryan Njoroge
+                  <hr className="line"></hr>
+                  <div className="logo-desc" id="logo-desc">
+                    Web Developer & Ai Enthusiast
+                  </div>
                 </div>
               </div>
             </div>
+          </Link>
+          <div className="navigation-links">
+            <div className="links" id="home-link">
+              <Link to="/homepage">Home</Link>
+            </div>
+            <div className="links" id="about-link">
+              <Link to="/about"> About Me</Link>
+            </div>
+            <div className="links" id="work-link">
+              <Link to="/work">My Work</Link>
+            </div>
+            <div className="links" id="add-events-link">
+              <Link to="/add-events">Add Events</Link>
+            </div>
+            <div className="links" id="contact-link">
+              <Link to="/contact">Contact</Link>
+            </div>
+            <div className="underline"></div>
           </div>
-        </Link>
-        <div className="navigation-links">
-          <div className="links" id="home-link">
-            <Link to="/homepage">Home</Link>
-          </div>
-          <div className="links" id="about-link">
-            <Link to="/about"> About Me</Link>
-          </div>
-          <div className="links" id="work-link">
-            <Link to="/work">My Work</Link>
-          </div>
-          <div className="links" id="add-events-link">
-            <Link to="/add-events">Add Events</Link>
-          </div>
-          <div className="links" id="contact-link">
-            <Link to="/contact">Contact</Link>
-          </div>
-          <div className="underline"></div>
-        </div>
 
-        <div className="menu-btn" onClick={() => toggleMenu()}>
-          <div className="btn-line" id="line1"></div>
-          <div className="btn-line" id="line2"></div>
-          <div className="btn-line" id="line3"></div>
+          <div className="menu-btn" onClick={() => toggleMenu()}>
+            <div className="btn-line" id="line1"></div>
+            <div className="btn-line" id="line2"></div>
+            <div className="btn-line" id="line3"></div>
+          </div>
         </div>
 
         <nav className="menu">

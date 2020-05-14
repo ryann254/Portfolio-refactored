@@ -21,7 +21,7 @@
 }
 
 .about-info .bio-image {
-  width: 260px;
+  width: 280px;
   height: 280px;
   margin: auto;
   background-position: auto;
@@ -49,7 +49,7 @@
 
 .about-info .job {
   font-size: 1.2rem;
-  background: linear-gradient(to right, #f2f2f2, #dbdbdb, #eaeaea);
+  background: #eee;
   padding: 0.5rem;
   border-bottom: solid 5px #f5603b;
   border-radius: 5px;

@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Bounce, Zoom } from "react-reveal";
 
-import ProfilePic from "../../public/images/Profile-Pic-Two-Croped-min.jpg";
+import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
+import { changeScrollStatus } from "../redux/action-creator";
 
 function About() {
   const {
@@ -13,12 +14,15 @@ function About() {
     scrollToElement,
   } = useSelector((state) => state.about);
 
+  const dispatch = useDispatch();
+
   function scrollFunction(id) {
     let offsetTop = document.getElementById(`${id}`).offsetTop;
     window.scrollTo({
       top: offsetTop + 130,
       behavior: "smooth",
     });
+    dispatch(changeScrollStatus());
   }
 
   useEffect(() => {
@@ -37,7 +41,7 @@ function About() {
     <Fragment>
       <main id="about">
         <h1 className="lg-heading">
-          <span className="text-secondary">Something About</span> Me
+          <span className="text-secondary">About</span> Me
         </h1>
         <h2 className="sm-heading">Let me mention just a few...</h2>
         <div className="about-info">

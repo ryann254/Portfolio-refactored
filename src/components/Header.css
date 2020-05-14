@@ -9,6 +9,20 @@ a:hover {
   color: #999;
 }
 
+.navbar-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  height: 80px;
+  background: linear-gradient(to right, #ffefba, #ffffff);
+}
+
+.logo-container {
+  margin-top: -1.5%;
+}
+
 .logo-border {
   position: absolute;
   margin-top: 2.5%;

@@ -16,10 +16,9 @@ import HomepageRefactor from "./components/homepage-refactor/HomepageRefactor";
 export default () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/homepage" exact>
+      <Route path="/" exact>
         <HomepageRefactor />
       </Route>
-      <RoutesWithLayout path="/" exact layout={Header} component={Homepage} />
       <RoutesWithLayout path="/about" exact layout={Header} component={About} />
       <RoutesWithLayout path="/work" exact layout={Header} component={Work} />
       <RoutesWithLayout
@@ -28,9 +27,12 @@ export default () => (
         layout={Header}
         component={AddEvents}
       />
-      <Route path="/contact" exact>
-        <Contact />
-      </Route>
+      <RoutesWithLayout
+        path="/contact"
+        exact
+        layout={Header}
+        component={Contact}
+      />
     </Switch>
   </BrowserRouter>
 );
