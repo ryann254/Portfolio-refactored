@@ -1,12 +1,9 @@
 import React from "react";
 import { Bounce } from "react-reveal";
 
-import Header from "./Header";
-
 function Contact() {
   return (
     <div className="contact-body">
-      <Header />
       <main id="contact">
         <h1 className="lg-heading">
           <span className="text-secondary">Contact</span> Me
@@ -30,8 +27,6 @@ function Contact() {
           </div>
         </Bounce>
       </main>
-
-      <footer id="main-footer">Copyright &copy; 2020</footer>
     </div>
   );
 }
