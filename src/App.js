@@ -8,7 +8,7 @@ import Loader from "./loader/Loader";
 function App() {
   return (
     <div className="App">
-      <Loader />
+      {/* <Loader />*/}
       <Routes />
     </div>
   );

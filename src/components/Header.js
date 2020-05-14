@@ -2,10 +2,9 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useRouteMatch } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import $ from "jquery";
 
 import "./Header.css";
-import MenuPic from "../../public/images/Profile-Pic-One-Croped-min.jpg";
 
 function Header({ children }) {
   const { url } = useRouteMatch();
@@ -15,9 +14,12 @@ function Header({ children }) {
   const [menuBtn, setMenuBtn] = useState(null);
   const [btnLines, setBtnLines] = useState(null);
   const [menuNav, setMenuNav] = useState(null);
-  const [menuBranding, setMenuBranding] = useState(null);
   const [navItems, setNavItem] = useState(null);
   const [menu, setMenu] = useState(null);
+  const [mainNav, setMainNav] = useState("");
+  const [border, setBorder] = useState("");
+  const [desc, setDesc] = useState("");
+  const [hover, toggleHover] = useState(false);
 
   //On component mount the following should be fetched and set to state
   useEffect(() => {
@@ -27,8 +29,10 @@ function Header({ children }) {
     let btn3 = document.getElementById("line3");
     let menu = document.querySelector(".menu");
     let menuNav = document.querySelector(".menu-nav");
-    let menuBranding = document.querySelector(".menu-branding");
     let navItems = document.querySelectorAll(".nav-item");
+    let navLinks = document.querySelectorAll(".links");
+    let logoBorder = document.getElementById("logo-border");
+    let logoDesc = document.getElementById("logo-desc");
     const btnArray = [];
     btnArray.push(btn1, btn2, btn3);
     setBtnLines(btnArray);
@@ -36,8 +40,10 @@ function Header({ children }) {
     setMenuBtn(menuBtn);
     setMenu(menu);
     setMenuNav(menuNav);
-    setMenuBranding(menuBranding);
     setNavItem(navItems);
+    setMainNav(navLinks);
+    setBorder(logoBorder);
+    setDesc(logoDesc);
   }, []);
 
   // Changing menu color according to the page rendered
@@ -61,6 +67,13 @@ function Header({ children }) {
     Array.from(nav).forEach((navItem) => {
       navItem.classList.remove("current");
     });
+    Array.from(mainNav).forEach((navLink) => {
+      navLink.classList.remove("current-about");
+      navLink.classList.remove("current-work");
+      navLink.classList.remove("current-work");
+      navLink.classList.remove("current-add-events");
+      navLink.classList.remove("current-link-color");
+    });
   }
 
   // Adds the current class to the right link
@@ -68,36 +81,51 @@ function Header({ children }) {
     removeMenuColorChange();
     removeCurrent();
     let about = document.getElementById("about");
+    let aboutLink = document.getElementById("about-link");
     if (about !== null) {
       about.classList.add("current");
+      aboutLink.classList.add("current-about");
+      aboutLink.classList.add("current-link-color");
     }
   } else if (url.charAt(1) === "w") {
     removeMenuColorChange();
     removeCurrent();
     let work = document.getElementById("work");
+    let workLink = document.getElementById("work-link");
     if (work !== null) {
       work.classList.add("current");
+      workLink.classList.add("current-work");
+      workLink.classList.add("current-link-color");
     }
   } else if (url.charAt(1) === "c") {
     removeMenuColorChange();
     removeCurrent();
     let contact = document.getElementById("contact");
+    let contactLink = document.getElementById("contact-link");
     if (contact !== null) {
       contact.classList.add("current");
+      contactLink.classList.add("current-contact");
+      contactLink.classList.add("current-link-color");
     }
   } else if (url.charAt(2) === "d") {
     removeCurrent();
     let addEvents = document.getElementById("add-events");
+    let addEventsLink = document.getElementById("add-events-link");
     if (addEvents !== null) {
       addEvents.classList.add("current");
+      addEventsLink.classList.add("current-add-events");
+      addEventsLink.classList.add("current-link-color");
+
       menuColorChange();
     }
   } else {
     removeMenuColorChange();
     removeCurrent();
     let home = document.getElementById("home");
+    let homeLink = document.getElementById("home-link");
     if (home !== null) {
       home.classList.add("current");
+      homeLink.classList.add("current-link-color");
     }
   }
 
@@ -107,7 +135,6 @@ function Header({ children }) {
     menuBtn.classList.remove("close");
     menu.classList.remove("show");
     menuNav.classList.remove("show");
-    menuBranding.classList.remove("show");
     navItems.forEach((item) => {
       item.classList.remove("show");
     });
@@ -120,7 +147,6 @@ function Header({ children }) {
         menuBtn.classList.add("close");
         menu.classList.add("show");
         menuNav.classList.add("show");
-        menuBranding.classList.add("show");
         navItems.forEach((item) => {
           item.classList.add("show");
         });
@@ -131,21 +157,82 @@ function Header({ children }) {
     }
   };
 
+  //Adds hover effect to the logo elements
+  function addHover() {
+    if (!hover) {
+      border.classList.add("hover");
+      desc.classList.add("hover");
+      toggleHover(true);
+    } else {
+      toggleHover(false);
+      border.classList.remove("hover");
+      desc.classList.remove("hover");
+    }
+  }
+
+  //Making the header sticky
+  function stickyHeader() {
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 30) {
+          $("#nav-bar").addClass("navbar-fixed");
+        }
+        if ($(window).scrollTop() < 31) {
+          $("#nav-bar").removeClass("navbar-fixed");
+        }
+      });
+    });
+  }
+
   return (
     <Fragment>
+      {stickyHeader()}
       <div id="bg-img">
-        <div className="menu-btn" onClick={() => toggleMenu()}>
-          <div className="btn-line" id="line1"></div>
-          <div className="btn-line" id="line2"></div>
-          <div className="btn-line" id="line3"></div>
+        <div id="nav-bar">
+          <Link to="/homepage" onMouseEnter={addHover} onMouseLeave={addHover}>
+            <div className="logo-container">
+              <div className="logo-border" id="logo-border">
+                <div className="logo">R</div>
+              </div>
+              <div>
+                <div className="logo-name">
+                  Ryan Njoroge
+                  <hr className="line"></hr>
+                  <div className="logo-desc" id="logo-desc">
+                    Web Developer & Ai Enthusiast
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+          <div className="navigation-links">
+            <div className="links" id="home-link">
+              <Link to="/homepage">Home</Link>
+            </div>
+            <div className="links" id="about-link">
+              <Link to="/about"> About Me</Link>
+            </div>
+            <div className="links" id="work-link">
+              <Link to="/work">My Work</Link>
+            </div>
+            <div className="links" id="add-events-link">
+              <Link to="/add-events">Add Events</Link>
+            </div>
+            <div className="links" id="contact-link">
+              <Link to="/contact">Contact</Link>
+            </div>
+            <div className="underline"></div>
+          </div>
+
+          <div className="menu-btn" onClick={() => toggleMenu()}>
+            <div className="btn-line" id="line1"></div>
+            <div className="btn-line" id="line2"></div>
+            <div className="btn-line" id="line3"></div>
+          </div>
         </div>
 
         <nav className="menu">
-          <div className="menu-branding">
-            <div>
-              <img src={MenuPic} className="portrait" alt="" />
-            </div>
-          </div>
           <ul className="menu-nav">
             <div className="menu-nav-position"></div>
             <li id="home" className="nav-item">

@@ -21,7 +21,7 @@
 }
 
 .about-info .bio-image {
-  width: 260px;
+  width: 280px;
   height: 280px;
   margin: auto;
   background-position: auto;
@@ -40,7 +40,7 @@
   position: relative;
   top: -2%;
   transform: scale(1.05);
-  box-shadow: 0 12px 17px 9px rgba(15, 32, 39, 0.8);
+  box-shadow: 0 12px 17px 3px rgba(15, 32, 39, 0.5);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -49,9 +49,10 @@
 
 .about-info .job {
   font-size: 1.2rem;
-  background: #827878;
+  background: #eee;
   padding: 0.5rem;
   border-bottom: solid 5px #f5603b;
+  border-radius: 5px;
 }
 
 .sm-heading.work {

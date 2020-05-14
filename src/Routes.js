@@ -1,21 +1,17 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Own Components
 import { RoutesWithLayout } from "./RoutesWithLayout";
-import {
-  Header,
-  Homepage,
-  About,
-  Work,
-  Contact,
-  AddEvents,
-} from "./components";
+import { Header, About, Work, Contact, AddEvents } from "./components";
+import HomepageRefactor from "./components/homepage-refactor/HomepageRefactor";
 
 export default () => (
   <BrowserRouter>
     <Switch>
-      <RoutesWithLayout path="/" exact layout={Header} component={Homepage} />
+      <Route path="/" exact>
+        <HomepageRefactor />
+      </Route>
       <RoutesWithLayout path="/about" exact layout={Header} component={About} />
       <RoutesWithLayout path="/work" exact layout={Header} component={Work} />
       <RoutesWithLayout

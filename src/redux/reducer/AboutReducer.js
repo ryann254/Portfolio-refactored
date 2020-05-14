@@ -3,6 +3,7 @@ import {
   ADD_EVENT_ACHIEVEMENTS,
   EVENT_OR_WORK_ADDED,
   SCROLL_TO_ELEMENT,
+  CHANGE_SCROLL_STATUS,
 } from "../action-types";
 
 const initialState = {
@@ -76,6 +77,11 @@ function AboutReducer(state = initialState, action) {
       return {
         ...state,
         scrollToElement: action.payload,
+      };
+    case CHANGE_SCROLL_STATUS:
+      return {
+        ...state,
+        scrollToElement: { ...state.scrollToElement, state: false },
       };
     default:
       return state;

@@ -27,8 +27,6 @@ function Contact() {
           </div>
         </Bounce>
       </main>
-
-      <footer id="main-footer">Copyright &copy; 2020</footer>
     </div>
   );
 }

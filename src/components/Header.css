@@ -1,5 +1,129 @@
+/* Logo */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  transition: all 0.5s ease-out;
+  color: #999;
+}
+
+.navbar-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  height: 80px;
+  background: linear-gradient(to right, #ffefba, #ffffff);
+}
+
+.logo-container {
+  margin-top: -1.5%;
+}
+
+.logo-border {
+  position: absolute;
+  margin-top: 2.5%;
+  left: 2.1%;
+  border: 3.3px solid #333;
+  padding: 0;
+  border-radius: 50%;
+  width: 3.5%;
+}
+
+.logo {
+  margin-left: 18px;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.logo-name {
+  position: absolute;
+  margin-top: 2.5%;
+  left: 6.5%;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.line {
+  margin-top: -1px;
+  border: 0.6px solid #aaa;
+}
+
+.logo-desc {
+  margin-top: -12px;
+  font-size: 15px;
+  color: #666;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo-container:hover {
+  cursor: pointer;
+}
+
+.logo-desc.hover {
+  transition: all 0.5s ease-out;
+  color: #999;
+}
+.logo-border.hover {
+  transition: all 0.5s ease-out;
+  border: 3.3px solid #999;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 2.7%;
+  right: 5%;
+}
+
+.links {
+  margin: 0 25px;
+}
+
+.links > a:hover {
+  color: #f5603b !important;
+}
+
+.underline {
+  position: absolute;
+  top: 95%;
+  left: 1%;
+  width: 90px;
+  height: 2px;
+  background: #333;
+  transition: all 0.5s ease-out;
+}
+
+.links.current-about ~ .underline {
+  transform: translate(110px);
+}
+
+.links.current-work ~ .underline {
+  width: 85px;
+  transform: translate(235px);
+}
+
+.links.current-add-events ~ .underline {
+  transform: translate(360px);
+}
+
+.links.current-contact ~ .underline {
+  width: 85px;
+  transform: translate(487px);
+}
+
+.links.current-link-color > a {
+  color: #f5603b;
+}
 /* Controls all the actions for the menu icon at the top left */
+/* Hamburger Layout for smaller screens */
 .menu-btn {
+  display: none;
   position: absolute;
   z-index: 3;
   right: 35px;
@@ -10,7 +134,7 @@
 .menu-btn .btn-line {
   width: 28px;
   height: 3px;
-  background: #fff;
+  background: #111;
   margin: 0 0 5px 0;
   transition: all 0.5s ease-out;
 }
@@ -47,16 +171,14 @@
   visibility: visible;
 }
 /* Shows the content of the menu */
-.menu-branding,
 .menu-nav {
   position: relative;
   z-index: 10;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  float: left;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -64,9 +186,9 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #2c3e50;
+  background: rgb(15, 20, 30);
   list-style: none;
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out;
 }
 .menu-nav.show {
@@ -74,25 +196,9 @@
   transform: translate3d(0, 0, 0);
 }
 /* Reveals the content of menu branding e.g Potrait picture */
-.menu-branding {
-  background: #756c6c;
-  transform: translate3d(0, 100%, 0);
-  transition: all 0.5s ease-out;
-}
-.menu-branding.show {
-  transform: translate3d(0, 0, 0);
-}
-.menu-branding .portrait {
-  width: 260px;
-  height: 310px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  border: solid 3px #f5603b;
-}
 /* Styling the nav links */
 .menu .nav-item {
-  transform: translate3d(600px, 0, 0);
+  transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
 }
 .menu .nav-item.show {
@@ -140,4 +246,152 @@
 
 .nav-item:nth-child(6) {
   transition-delay: 0.5s;
+}
+
+/* Footer */
+.line-breaker {
+  color: #999;
+  width: 87%;
+}
+
+.pre-footer {
+  margin: 4.2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-footer .content-dev {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #999;
+}
+
+.pre-footer .content-work {
+  font-size: 60px;
+  font-weight: 900;
+  color: #111;
+}
+
+.fas {
+  font-size: 44px;
+}
+
+.content-work a:hover {
+  text-decoration: underline;
+}
+
+.page-footer {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #111;
+}
+
+.contact-info,
+.project,
+.availability,
+.follow,
+h2 {
+  font-size: 27px;
+}
+.contact-info,
+.project,
+.availability,
+.follow {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.line-footer {
+  width: 2rem;
+  height: 4px;
+  background: #111;
+}
+
+.contact-info .line-footer {
+  margin: 60px 0 0 7px;
+}
+
+.project .line-footer {
+  margin: 60px 0 0 -15px;
+}
+
+.availability .line-footer {
+  margin: 60px 0 0 7px;
+}
+
+.follow .line-footer {
+  margin: 60px 0 0 4px;
+}
+
+.contact-content {
+  position: absolute;
+  margin-top: 10px;
+  color: #888;
+  font-size: 18px;
+  top: 75%;
+  margin-bottom: 20px;
+}
+
+.contact-content .highlight {
+  color: #111;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.projects-content {
+  position: absolute;
+  color: #666;
+  top: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.availability-content {
+  position: absolute;
+  color: #888;
+  top: 75%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.follow-content {
+  position: absolute;
+  color: #666;
+  top: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.follow a:hover {
+  text-decoration: underline;
+}
+
+.post-footer {
+  margin: 21% 0 1.2% 16%;
+  display: flex;
+  flex-direction: row;
+  color: #888;
+}
+
+.post-footer .logo-border {
+  margin: -15px 0 0 9% !important;
+  border-color: #888 !important;
+}
+
+.post-footer .logo {
+  color: #888 !important;
+}
+
+.date {
+  margin: 0 10px;
 }

@@ -7,6 +7,7 @@ import Image2 from "../../public/images/projects/Expenseapp-min.png";
 import Image3 from "../../public/images/projects/Fancyform-min.png";
 import Image4 from "../../public/images/projects/Netflix-min.png";
 import Image5 from "../../public/images/projects/Homefurniture-min.png";
+import Footer from "./Footer";
 
 function Work() {
   return (
@@ -134,8 +135,7 @@ function Work() {
           </Zoom>
         </div>
       </main>
-
-      <footer id="main-footer">Copyright &copy; 2020</footer>
+      <Footer />
     </div>
   );
 }
