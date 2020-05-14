@@ -15,9 +15,11 @@
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-slick": "^0.25.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.3",
+    "slick-carousel": "^1.8.1",
     "sweetalert2": "^9.10.12",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.10.3"

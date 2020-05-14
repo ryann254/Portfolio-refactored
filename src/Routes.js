@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Own Components
 import { RoutesWithLayout } from "./RoutesWithLayout";
@@ -11,10 +11,14 @@ import {
   Contact,
   AddEvents,
 } from "./components";
+import HomepageRefactor from "./components/homepage-refactor/HomepageRefactor";
 
 export default () => (
   <BrowserRouter>
     <Switch>
+      <Route path="/homepage" exact>
+        <HomepageRefactor />
+      </Route>
       <RoutesWithLayout path="/" exact layout={Header} component={Homepage} />
       <RoutesWithLayout path="/about" exact layout={Header} component={About} />
       <RoutesWithLayout path="/work" exact layout={Header} component={Work} />
@@ -24,12 +28,9 @@ export default () => (
         layout={Header}
         component={AddEvents}
       />
-      <RoutesWithLayout
-        path="/contact"
-        exact
-        layout={Header}
-        component={Contact}
-      />
+      <Route path="/contact" exact>
+        <Contact />
+      </Route>
     </Switch>
   </BrowserRouter>
 );

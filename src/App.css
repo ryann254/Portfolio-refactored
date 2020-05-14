@@ -1,6 +1,6 @@
 body {
-  background: #756c6c;
-  color: #fff;
+  background: #fff;
+  color: #333;
   height: 100%;
   margin: 0;
   line-height: 1.5;
@@ -8,16 +8,6 @@ body {
   background-attachment: fixed;
   background-size: cover; */
   overflow: auto;
-}
-body:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  background: rgba(117, 108, 108, 0.6);
 }
 
 /* Homepage Header styling */
@@ -30,7 +20,7 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h1.sm-heading,
