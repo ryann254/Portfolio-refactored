@@ -3,14 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Own Components
 import { RoutesWithLayout } from "./RoutesWithLayout";
-import {
-  Header,
-  Homepage,
-  About,
-  Work,
-  Contact,
-  AddEvents,
-} from "./components";
+import { Header, About, Work, Contact, AddEvents } from "./components";
 import HomepageRefactor from "./components/homepage-refactor/HomepageRefactor";
 
 export default () => (
