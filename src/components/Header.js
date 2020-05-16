@@ -70,7 +70,7 @@ function Header({ children }) {
     Array.from(mainNav).forEach((navLink) => {
       navLink.classList.remove("current-about");
       navLink.classList.remove("current-work");
-      navLink.classList.remove("current-work");
+      navLink.classList.remove("current-contact");
       navLink.classList.remove("current-add-events");
       navLink.classList.remove("current-link-color");
     });

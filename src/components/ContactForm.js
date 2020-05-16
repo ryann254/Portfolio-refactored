@@ -55,16 +55,23 @@ function ContactForm() {
       input_label.innerHTML = questions[position].question;
       input_field.type = questions[position].type || "text";
       input_field.value = questions[position].answer || "";
-      input_field.focus();
 
       progress_bar.style.width = (position * 100) / questions.length + "%";
 
       //Add User Icon or Back Arrow
       prev_btn.className = position ? "fas fa-arrow-left" : "fas fa-user";
+      //adding keyup event listener
+      window.document.addEventListener("keyup", handleKeyUp);
 
       showQuestion();
     }
   }
+
+  const handleKeyUp = (e) => {
+    if (e.keyCode === 13) {
+      validate();
+    }
+  };
 
   function showQuestion() {
     if (typeof input_group !== "string" && typeof input_progress !== "string") {
@@ -91,21 +98,15 @@ function ContactForm() {
   }
 
   function validate() {
-    if (typeof input_field !== "string") {
-      if (!input_field.value.match(questions[position].pattern || /.+/)) {
-        inputFail();
-      } else {
-        inputPass();
-      }
+    if (!input_field.value.match(questions[position].pattern || /.+/)) {
+      inputFail();
+    } else {
+      inputPass();
     }
   }
 
   function inputFail() {
-    if (
-      typeof input_progress !== "string" &&
-      typeof input_field !== "string" &&
-      typeof next_btn !== "string"
-    ) {
+    if (typeof input_progress !== "string" && typeof next_btn !== "string") {
       input_progress.style.borderColor = "#ff2d26";
       next_btn.style.color = "#ff2d26";
       for (let i = 0; i < 6; i++) {
@@ -120,7 +121,6 @@ function ContactForm() {
     if (
       typeof input_progress !== "string" &&
       typeof next_btn !== "string" &&
-      typeof input_field !== "string" &&
       typeof progress_bar !== "string"
     ) {
       input_progress.style.borderColor = "#2c3e50";
