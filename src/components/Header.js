@@ -174,7 +174,6 @@ function Header({ children }) {
   function stickyHeader() {
     $(document).ready(function () {
       $(window).scroll(function () {
-        console.log($(window).scrollTop());
         if ($(window).scrollTop() > 30) {
           $("#nav-bar").addClass("navbar-fixed");
         }
@@ -190,7 +189,7 @@ function Header({ children }) {
       {stickyHeader()}
       <div id="bg-img">
         <div id="nav-bar">
-          <Link to="/homepage" onMouseEnter={addHover} onMouseLeave={addHover}>
+          <Link to="/" onMouseEnter={addHover} onMouseLeave={addHover}>
             <div className="logo-container">
               <div className="logo-border" id="logo-border">
                 <div className="logo">R</div>
@@ -208,7 +207,7 @@ function Header({ children }) {
           </Link>
           <div className="navigation-links">
             <div className="links" id="home-link">
-              <Link to="/homepage">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="links" id="about-link">
               <Link to="/about"> About Me</Link>
