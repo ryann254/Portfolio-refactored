@@ -282,12 +282,6 @@ main .icons a:hover {
   .projects {
     grid-template-columns: 1fr;
   }
-  .boxes div {
-    padding: 1rem 1.5rem;
-  }
-  .boxes div:hover {
-    padding: 0.3rem 1rem;
-  }
 }
 
 /* Loader */
