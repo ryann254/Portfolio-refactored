@@ -56,29 +56,81 @@ main .icons a:hover {
 /* My Work Page */
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.9rem;
+  grid-template-columns: 1fr;
+  grid-gap: 90px 10px;
 }
 
 .projects img {
-  width: 100%;
+  width: 65%;
+  height: 40%;
   border: 3px #fff solid;
 }
+
+.projects .fancy-form {
+  width: 65%;
+  height: 60%;
+  border: 3px #fff solid;
+}
+
+.projects .netflix-image {
+  width: 65%;
+  height: 60%;
+  border: 3px #fff solid;
+}
+
+.projects .photography {
+  width: 65%;
+  height: 250px !important;
+  border: 3px #fff solid;
+}
+
 .projects img:hover {
   opacity: 0.6;
   border-color: #f5603b;
   transition: all 0.6s ease-in-out;
 }
+
+.work-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.work-buttons i {
+  font-size: 19px;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12rem;
+}
+
+.technologies img {
+  margin: 0 20px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.technologies img:hover {
+  border: none;
+  opacity: 1;
+  transition: none;
+}
+
 .btn,
 .btn-dark,
 .btn-light {
   display: block;
-  padding: 0.5rem 0.5rem;
-  margin-right: -5px;
+  padding: 5px 20px;
   border: 0;
-  margin-bottom: 0.4rem;
+  margin: 20px;
   border-radius: 5px;
   text-align: center;
+  width: 20%;
 }
 .btn:hover,
 .btn-dark:hover,
@@ -97,6 +149,14 @@ main .icons a:hover {
   color: #333;
 }
 
+.work-content h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.work-content {
+  border-bottom: 2px solid #4ca1af;
+}
 /* Contact page */
 .contact-body {
   position: absolute;
@@ -191,28 +251,28 @@ main .icons a:hover {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 50% auto;
   }
-  .covid-19,
+  /* .covid-19,
   .expense-tracker,
   .fancy-form,
   .netflix-image,
   .photography {
-    height: 160px;
-  }
+    height: 10px;
+  } */
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
-    width: 120%;
+    grid-template-columns: 40% auto;
+    width: 100%;
   }
-  .covid-19,
+  /* .covid-19,
   .expense-tracker,
   .fancy-form,
   .netflix-image,
   .photography {
     height: 160px;
-  }
+  } */
 }
 @media screen and (max-width: 768px) {
   main {
@@ -264,7 +324,7 @@ main .icons a:hover {
     grid-template-columns: 1fr;
   }
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 40% auto;
   }
   .netflix-image {
     height: 120px;
