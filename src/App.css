@@ -168,12 +168,12 @@ main .icons a:hover {
   top: 60%;
   left: 0;
   width: 85vw;
-  height: 70vh;
+  height: 72vh;
 }
 
 .page-content {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 165%;
   font-size: 7rem;
   text-transform: uppercase;
