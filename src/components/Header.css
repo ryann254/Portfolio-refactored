@@ -16,7 +16,7 @@ a:hover {
   width: 100%;
   margin: 0;
   height: 80px;
-  background: linear-gradient(to right, #ffefba, #ffffff);
+  background: #fffeee;
 }
 
 .logo-container {
