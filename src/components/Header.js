@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useRouteMatch } from "react-router-dom";
 import $ from "jquery";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 import "./Header.css";
 
@@ -62,70 +65,74 @@ function Header({ children }) {
     }
   }
 
-  // Removes the current class
-  function removeCurrent() {
-    Array.from(nav).forEach((navItem) => {
-      navItem.classList.remove("current");
-    });
+  // Removes the Link color
+  function removeLinkColor() {
     Array.from(mainNav).forEach((navLink) => {
-      navLink.classList.remove("current-about");
-      navLink.classList.remove("current-work");
-      navLink.classList.remove("current-contact");
-      navLink.classList.remove("current-add-events");
-      navLink.classList.remove("current-link-color");
+      if (navLink !== undefined) {
+        navLink.children[0].classList.remove("link-color");
+        navLink.children[1].classList.remove("active");
+      }
     });
   }
 
+  const addLinkColor = (link) => {
+    link.children[0].classList.add("link-color");
+    link.children[1].classList.add("active");
+  };
+
+  const headerStyling = (link) => {
+    if (link === "about") {
+      let aboutLink = document.getElementById("about-link");
+      addLinkColor(aboutLink);
+    } else if (link === "work") {
+      let workLink = document.getElementById("work-link");
+      addLinkColor(workLink);
+    } else if (link === "contact") {
+      let contactLink = document.getElementById("contact-link");
+      addLinkColor(contactLink);
+    } else if (link === "add-events") {
+      let addEventsLink = document.getElementById("add-events-link");
+      addLinkColor(addEventsLink);
+    } else {
+      let homeLink = document.getElementById("home-link");
+      addLinkColor(homeLink);
+    }
+  };
+
   // Adds the current class to the right link
   if (url.charAt(2) === "b") {
-    removeMenuColorChange();
-    removeCurrent();
-    let about = document.getElementById("about");
+    removeLinkColor();
     let aboutLink = document.getElementById("about-link");
-    if (about !== null) {
-      about.classList.add("current");
-      aboutLink.classList.add("current-about");
-      aboutLink.classList.add("current-link-color");
+    if (aboutLink !== null) {
+      headerStyling("about");
     }
   } else if (url.charAt(1) === "w") {
     removeMenuColorChange();
-    removeCurrent();
-    let work = document.getElementById("work");
+    removeLinkColor();
     let workLink = document.getElementById("work-link");
-    if (work !== null) {
-      work.classList.add("current");
-      workLink.classList.add("current-work");
-      workLink.classList.add("current-link-color");
+    if (workLink !== null) {
+      headerStyling("work");
     }
   } else if (url.charAt(1) === "c") {
     removeMenuColorChange();
-    removeCurrent();
-    let contact = document.getElementById("contact");
+    removeLinkColor();
     let contactLink = document.getElementById("contact-link");
-    if (contact !== null) {
-      contact.classList.add("current");
-      contactLink.classList.add("current-contact");
-      contactLink.classList.add("current-link-color");
+    if (contactLink !== null) {
+      headerStyling("contact");
     }
   } else if (url.charAt(2) === "d") {
-    removeCurrent();
-    let addEvents = document.getElementById("add-events");
+    removeLinkColor();
     let addEventsLink = document.getElementById("add-events-link");
-    if (addEvents !== null) {
-      addEvents.classList.add("current");
-      addEventsLink.classList.add("current-add-events");
-      addEventsLink.classList.add("current-link-color");
-
+    if (addEventsLink !== null) {
+      headerStyling("add-events");
       menuColorChange();
     }
   } else {
     removeMenuColorChange();
-    removeCurrent();
-    let home = document.getElementById("home");
+    removeLinkColor();
     let homeLink = document.getElementById("home-link");
-    if (home !== null) {
-      home.classList.add("current");
-      homeLink.classList.add("current-link-color");
+    if (homeLink !== null) {
+      headerStyling(homeLink);
     }
   }
 
@@ -188,6 +195,17 @@ function Header({ children }) {
     <Fragment>
       {stickyHeader()}
       <div id="bg-img">
+        <header>
+          <Container fluid>
+            <Navbar bg="light" expand="md">
+              <Navbar.Brand href="/" className="brand"></Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav></Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </Container>
+        </header>
         <div id="nav-bar">
           <Link to="/" onMouseEnter={addHover} onMouseLeave={addHover}>
             <div className="logo-container">
@@ -208,20 +226,24 @@ function Header({ children }) {
           <div className="navigation-links">
             <div className="links" id="home-link">
               <Link to="/">Home</Link>
+              <div className="underline active"></div>
             </div>
             <div className="links" id="about-link">
               <Link to="/about"> About Me</Link>
+              <div className="underline"></div>
             </div>
             <div className="links" id="work-link">
               <Link to="/work">My Work</Link>
+              <div className="underline"></div>
             </div>
             <div className="links" id="add-events-link">
               <Link to="/add-events">Add Events</Link>
+              <div className="underline"></div>
             </div>
             <div className="links" id="contact-link">
               <Link to="/contact">Contact</Link>
+              <div className="underline"></div>
             </div>
-            <div className="underline"></div>
           </div>
 
           <div className="menu-btn" onClick={() => toggleMenu()}>

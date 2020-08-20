@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap");
+
+/* Brand */
+.brand {
+  font-family: "Clicker Script", cursive;
+}
+
 /* Logo */
 a {
   text-decoration: none;
@@ -7,6 +14,7 @@ a {
 a:hover {
   transition: all 0.5s ease-out;
   color: #999;
+  text-decoration: none;
 }
 
 .navbar-fixed {
@@ -83,43 +91,28 @@ a:hover {
 
 .links {
   margin: 0 25px;
+  position: relative;
 }
 
 .links > a:hover {
   color: #f5603b !important;
 }
 
-.underline {
+.active {
   position: absolute;
   top: 95%;
-  left: 1%;
-  width: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
   height: 2px;
-  background: #333;
+  background: #f5603b;
   transition: all 0.5s ease-out;
 }
 
-.links.current-about ~ .underline {
-  transform: translate(110px);
+.link-color {
+  color: #f5603b !important;
 }
 
-.links.current-work ~ .underline {
-  width: 85px;
-  transform: translate(235px);
-}
-
-.links.current-add-events ~ .underline {
-  transform: translate(360px);
-}
-
-.links.current-contact ~ .underline {
-  width: 85px;
-  transform: translate(487px);
-}
-
-.links.current-link-color > a {
-  color: #f5603b;
-}
 /* Controls all the actions for the menu icon at the top left */
 /* Hamburger Layout for smaller screens */
 .menu-btn {
@@ -206,9 +199,6 @@ a:hover {
 }
 
 /* Set color the current link */
-.nav-item.current > a {
-  color: #f5603b;
-}
 .menu .nav-link {
   display: inline-block;
   position: relative;
