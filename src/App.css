@@ -45,7 +45,7 @@ main .icons a {
 }
 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 main .icons a:hover {
