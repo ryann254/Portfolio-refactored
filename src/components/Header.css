@@ -9,6 +9,7 @@
 .navbar {
   height: 80px;
 }
+
 /* Brand */
 .brand {
   font-family: "Clicker Script", cursive;
@@ -29,12 +30,11 @@ a {
 
 .navbar-fixed {
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 20;
   position: fixed;
   width: 100%;
-  margin: 0;
-  height: 80px;
-  background: #fffeee;
 }
 
 .links {
