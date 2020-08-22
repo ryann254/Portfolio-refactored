@@ -28,13 +28,12 @@ a {
   color: #333;
 }
 
-.navbar-fixed {
+.navbar {
   top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   position: fixed;
-  width: 100%;
 }
 
 .links {

@@ -82,7 +82,7 @@ function AddEvents({ history, ...props }) {
             <div className="proto"></div>
           </div>
 
-          <div className="container">
+          <div className="container-events">
             <div className="inner">
               <div className="left" onMouseMove={addAnimation}>
                 <div className="content">
