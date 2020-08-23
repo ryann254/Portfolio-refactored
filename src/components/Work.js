@@ -2,11 +2,11 @@ import React from "react";
 import { Zoom } from "react-reveal";
 
 // Own Components
-import Image1 from "../../public/images/projects/Estimatorapp-min.png";
-import Image2 from "../../public/images/projects/Expenseapp-min.png";
-import Image3 from "../../public/images/projects/Fancyform-min.png";
-import Image4 from "../../public/images/projects/Netflix-min.png";
-import Image5 from "../../public/images/projects/Homefurniture-min.png";
+import Image1 from "../../public/images/projects/Estimator-app.png";
+import Image2 from "../../public/images/projects/Expense-app.png";
+import Image3 from "../../public/images/projects/Fancy-form.png";
+import Image4 from "../../public/images/projects/Netflix.png";
+import Image5 from "../../public/images/projects/Home-furniture.png";
 import IconHtml from "../../public/images/icons/html-icon.png";
 import IconCss from "../../public/images/icons/css-icon.png";
 import IconJs from "../../public/images/icons/js-icon.png";

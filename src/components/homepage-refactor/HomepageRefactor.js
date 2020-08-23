@@ -6,12 +6,12 @@ import "./HomepageRefactor.scss";
 import ProfilePic from "../../../public/images/Profile-replacement3-min.jpg";
 import WeddingTemplate from "../../../public/images/projects/Wedding-template.jpg";
 import BakeryTemplate from "../../../public/images/projects/Bakery template.png";
-import LawTemplate from "../../../public/images/projects/Law Template - 2.png";
-import Estimatorapp from "../../../public/images/projects/Estimatorapp-min.png";
-import Expenseapp from "../../../public/images/projects/Expenseapp-min.png";
-import Fancyform from "../../../public/images/projects/Fancyform-min.png";
-import Homefurniture from "../../../public/images/projects/Homefurniture-min.png";
-import Netflix from "../../../public/images/projects/Netflix-min.png";
+import LawTemplate from "../../../public/images/projects/Law-template.png";
+import Estimatorapp from "../../../public/images/projects/Estimator-app.png";
+import Expenseapp from "../../../public/images/projects/Expense-app.png";
+import Fancyform from "../../../public/images/projects/Fancy-form.png";
+import Homefurniture from "../../../public/images/projects/Home-furniture.png";
+import Netflix from "../../../public/images/projects/Netflix.png";
 import Header from "../Header";
 import Footer from "../Footer";
 import Container from "react-bootstrap/Container";
@@ -204,7 +204,7 @@ function HomepageRefactor() {
                       />
                     </a>
                   </div>
-                  <div>
+                  <div className="pr-4">
                     <a href="/work">
                       <img
                         src={Homefurniture}
@@ -228,9 +228,7 @@ function HomepageRefactor() {
           </Col>
         </Row>
       </Container>
-      <div className="special-footer">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

@@ -85,7 +85,7 @@ function AddEvents({ history, ...props }) {
           <div className="container-events">
             <div className="inner">
               <div className="left" onMouseMove={addAnimation}>
-                <div className="content">
+                <div className="content-add-events">
                   <h1>
                     Add <span>Education or Events Recently Occurred</span>
                   </h1>

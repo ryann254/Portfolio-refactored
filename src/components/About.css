@@ -1,23 +1,17 @@
+#about {
+  margin-top: 200px;
+}
+
 .text-secondary-paragraph {
   color: #434343;
   font-size: 20px;
 }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-}
-
-.about-info .image-bio {
-  position: relative;
-  z-index: -1;
-  display: grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .about-info .bio {
   font-size: 1.3rem;
+}
+
+.profile-pic {
 }
 
 .about-info .bio-image {

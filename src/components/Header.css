@@ -28,6 +28,10 @@ a {
   color: #333;
 }
 
+a:hover {
+  color: #999;
+}
+
 .navbar {
   top: 0;
   left: 0;
@@ -127,8 +131,7 @@ h2 {
 .availability,
 .follow {
   display: flex;
-  flex-direction: row;
-  position: relative;
+  flex-direction: column;
 }
 
 .line-footer {
@@ -137,28 +140,23 @@ h2 {
   background: #111;
 }
 
-.contact-info .line-footer {
-  margin: 60px 0 0 7px;
+.contact-info .line-footer,
+.availability .line-footer {
+  margin: 49px 0 0 7px;
 }
 
 .project .line-footer {
-  margin: 60px 0 0 -15px;
-}
-
-.availability .line-footer {
-  margin: 60px 0 0 7px;
+  margin: 49px 0 0 -15px;
 }
 
 .follow .line-footer {
-  margin: 60px 0 0 4px;
+  margin: 49px 0 0 4px;
 }
 
 .contact-content {
-  position: absolute;
   margin-top: 10px;
   color: #888;
   font-size: 18px;
-  top: 75%;
   margin-bottom: 20px;
 }
 
@@ -170,10 +168,12 @@ h2 {
   text-decoration: underline;
 }
 
+.contact-text {
+  width: 300px;
+}
+
 .projects-content {
-  position: absolute;
   color: #666;
-  top: 100%;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -183,17 +183,13 @@ h2 {
 }
 
 .availability-content {
-  position: absolute;
   color: #888;
-  top: 75%;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
 .follow-content {
-  position: absolute;
   color: #666;
-  top: 100%;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -202,19 +198,20 @@ h2 {
 }
 
 .post-footer {
-  margin: 21% 0 1.2% 16%;
   display: flex;
   flex-direction: row;
   color: #888;
 }
 
-.post-footer .logo-border {
-  margin: -15px 0 0 9% !important;
-  border-color: #888 !important;
+.logo {
+  color: #888 !important;
+  font-size: 40px;
+  margin-left: 72px;
 }
 
-.post-footer .logo {
-  color: #888 !important;
+.footer-text {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .date {
