@@ -43,94 +43,107 @@ function About() {
   return (
     <Fragment>
       <Container>
-        <Row>
-          <div id="about">
-            <h1 className="lg-heading mb-2">
-              <span className="text-secondary">About</span> Me
-            </h1>
-            <h2 className="sm-heading">Let me mention just a few...</h2>
-            <div className="about-info">
+        <div id="about">
+          <h1 className="lg-heading mb-2">
+            <span className="text-secondary">About</span> Me
+          </h1>
+          <h2 className="sm-heading">Let me mention just a few...</h2>
+          <div className="about-info">
+            <Row>
               <div className="image-bio d-flex">
-                <Bounce right>
-                  <Col md={6} className="profile-pic">
-                    <div>
+                <Col md={6} className="profile-pic my-auto">
+                  <Bounce right>
+                    <div className="d-flex justify-content-center">
                       <img
                         src={ProfilePic}
-                        alt=""
-                        className="img-fluid bio-image"
+                        width={280}
+                        height={280}
+                        alt="Bio image"
+                        className="bio-image"
                       />
                     </div>
-                  </Col>
-                  <Col md={6} className="">
-                    <div className="bio">
-                      <h3 className="text-secondary">BIO</h3>
-                      <p className="show">
-                        My life has been a roller coaster ride, its has had its
-                        ups and downs, some glorious moments here and there. But
-                        I'm not here to bore you with the details. <br />
-                        Boiled down, my life comes down to three major things:{" "}
-                        <br />
-                        <span className="text-secondary-paragraph">
-                          <strong>What motivates me: </strong>
-                        </span>{" "}
-                        The hope that one day atleast one of my ideas will bring
-                        great joy or relief, depending on the situation, to as
-                        many people as possible. Making the world a little bit
-                        more tolerable.
-                        <br />
-                        <span className="text-secondary-paragraph">
-                          <strong>How I will achieve this dream: </strong>
-                        </span>{" "}
-                        My first goal was to learn web development as it peaked
-                        my interests. All while trying to achieve my ultimate
-                        goal which is to learn AI and create something with it
-                        that could benefit as many people as possible.
-                        <br />
-                        <span className="text-secondary-paragraph">
-                          <strong>What I'm doing right now: </strong>
-                        </span>{" "}
-                        I'm now in JKUAT university pursuing my degree in
-                        Innovation and technology management and also interning
-                        at Softsearch Limited as front-end developer. I'm also
-                        learning how to intergrate AI with web development
-                      </p>
-                    </div>
-                  </Col>
-                </Bounce>
+                  </Bounce>
+                </Col>
+                <Col md={6} className="mx-auto">
+                  <div className="bio">
+                    <h3 className="text-secondary">BIO</h3>
+                    <p className="show">
+                      My life has been a roller coaster ride, its has had its
+                      ups and downs, some glorious moments here and there. But
+                      I'm not here to bore you with the details. <br />
+                      Boiled down, my life comes down to three major things:{" "}
+                      <br />
+                      <span className="text-secondary-paragraph">
+                        <strong>What motivates me: </strong>
+                      </span>{" "}
+                      The hope that one day atleast one of my ideas will bring
+                      great joy or relief, depending on the situation, to as
+                      many people as possible. Making the world a little bit
+                      more tolerable.
+                      <br />
+                      <span className="text-secondary-paragraph">
+                        <strong>How I will achieve this dream: </strong>
+                      </span>{" "}
+                      My first goal was to learn web development as it peaked my
+                      interests. All while trying to achieve my ultimate goal
+                      which is to learn AI and create something with it that
+                      could benefit as many people as possible.
+                      <br />
+                      <span className="text-secondary-paragraph">
+                        <strong>What I'm doing right now: </strong>
+                      </span>{" "}
+                      I'm now in JKUAT university pursuing my degree in
+                      Innovation and technology management and also interning at
+                      Softsearch Limited as front-end developer. I'm also
+                      learning how to intergrate AI with web development
+                    </p>
+                  </div>
+                </Col>
               </div>
-              <h2 className="sm-heading work">Work and Education</h2>
-              <Zoom>
-                <div className="work-education" id="work-section">
+            </Row>
+            <h2 className="sm-heading work">Work and Education</h2>
+            <Zoom>
+              <div className="work-education d-flex mb-5" id="work-section">
+                <Row>
                   {workEducationData !== ""
                     ? workEducationData.map((item, index) => (
-                        <div className="job" key={index}>
-                          <h3>{item.title}</h3>
-                          <h4>{item.subtitle}</h4>
-                          <p>{item.content}</p>
-                        </div>
+                        <Col key={index} md={4} className="mb-4">
+                          <div className="job" key={index}>
+                            <h3>{item.title}</h3>
+                            <h4>{item.subtitle}</h4>
+                            <p>{item.content}</p>
+                          </div>
+                        </Col>
                       ))
                     : console.log("Loading")}
-                </div>
-              </Zoom>
-              <div className="headings">
-                <h2 className="sm-heading work">Events and Achievements</h2>
+                </Row>
               </div>
-              <Zoom>
-                <div className="work-education" id="events-section">
+            </Zoom>
+            <div className="headings">
+              <h2 className="sm-heading work">Events and Achievements</h2>
+            </div>
+            <Zoom>
+              <div
+                className="work-education d-flex mx-auto"
+                id="events-section"
+              >
+                <Row>
                   {eventsAchievements !== ""
                     ? eventsAchievements.map((item, index) => (
-                        <div className="job" key={index}>
-                          <h3>{item.title}</h3>
-                          <h4>{item.subtitle}</h4>
-                          <p>{item.content}</p>
-                        </div>
+                        <Col key={index} md={4} className="mb-4">
+                          <div className="job" key={index}>
+                            <h3>{item.title}</h3>
+                            <h4>{item.subtitle}</h4>
+                            <p>{item.content}</p>
+                          </div>
+                        </Col>
                       ))
                     : console.log("Loading")}
-                </div>
-              </Zoom>
-            </div>
+                </Row>
+              </div>
+            </Zoom>
           </div>
-        </Row>
+        </div>
       </Container>
       <Footer />
     </Fragment>

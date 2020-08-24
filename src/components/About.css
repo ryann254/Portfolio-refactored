@@ -1,5 +1,6 @@
 #about {
   margin-top: 200px;
+  margin-bottom: 110px;
 }
 
 .text-secondary-paragraph {
@@ -11,23 +12,12 @@
   font-size: 1.3rem;
 }
 
-.profile-pic {
-}
-
 .about-info .bio-image {
-  width: 280px;
-  height: 280px;
   margin: auto;
   background-position: auto;
   background-size: cover;
   border-radius: 50%;
   border: solid 3px #f5603b;
-}
-
-.work-education {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .job:hover {
@@ -47,6 +37,7 @@
   padding: 0.5rem;
   border-bottom: solid 5px #f5603b;
   border-radius: 5px;
+  height: 100%;
 }
 
 .sm-heading.work {
