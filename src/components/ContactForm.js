@@ -146,7 +146,6 @@ function ContactForm() {
   }
 
   function formComplete() {
-    console.log(questions);
     const h1 = document.createElement("h1");
     h1.classList.add("end");
     h1.appendChild(
@@ -174,21 +173,23 @@ function ContactForm() {
         getQuestion()
       }
       <div id="container">
-        <div id="form-box">
-          <i id="prev-btn" className="fas fa-arrow-left"></i>
-          <i
-            id="next-btn"
-            className="fas fa-arrow-right"
-            onClick={handleClick}
-          ></i>
+        <form action="https://formspree.io/mlepkvdl" method="post">
+          <div id="form-box">
+            <i id="prev-btn" className="fas fa-arrow-left"></i>
+            <i
+              id="next-btn"
+              className="fas fa-arrow-right"
+              onClick={handleClick}
+            ></i>
 
-          <div id="input-group">
-            <input id="input-field" required />
-            <label id="input-label"></label>
-            <div id="input-progress"></div>
+            <div id="input-group">
+              <input id="input-field" required />
+              <label id="input-label"></label>
+              <div id="input-progress"></div>
+            </div>
+            <div id="progress-bar"></div>
           </div>
-          <div id="progress-bar"></div>
-        </div>
+        </form>
       </div>
     </Fragment>
   );

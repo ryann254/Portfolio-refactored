@@ -2,23 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
-import "./HomepageRefactor.scss";
-import ProfilePic from "../../../public/images/Profile-replacement3-min.jpg";
-import WeddingTemplate from "../../../public/images/projects/Wedding-template.jpg";
-import BakeryTemplate from "../../../public/images/projects/Bakery template.png";
-import LawTemplate from "../../../public/images/projects/Law-template.png";
-import Estimatorapp from "../../../public/images/projects/Estimator-app.png";
-import Expenseapp from "../../../public/images/projects/Expense-app.png";
-import Fancyform from "../../../public/images/projects/Fancy-form.png";
-import Homefurniture from "../../../public/images/projects/Home-furniture.png";
-import Netflix from "../../../public/images/projects/Netflix.png";
-import Header from "../Header";
-import Footer from "../Footer";
+import "./Homepage.scss";
+import ProfilePic from "../../public/images/Profile-replacement3-min.jpg";
+import WeddingTemplate from "../../public/images/projects/Wedding-template.jpg";
+import BakeryTemplate from "../../public/images/projects/Bakery template.png";
+import LawTemplate from "../../public/images/projects/Law-template.png";
+import Estimatorapp from "../../public/images/projects/Estimator-app.png";
+import Expenseapp from "../../public/images/projects/Expense-app.png";
+import Fancyform from "../../public/images/projects/Fancy-form.png";
+import Homefurniture from "../../public/images/projects/Home-furniture.png";
+import Netflix from "../../public/images/projects/Netflix.png";
+import Header from "./Header";
+import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function HomepageRefactor() {
+function Homepage() {
   const settings = {
     dots: true,
     infinite: true,
@@ -233,4 +233,4 @@ function HomepageRefactor() {
   );
 }
 
-export default HomepageRefactor;
+export default Homepage;

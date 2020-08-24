@@ -1,8 +1,3 @@
-#about {
-  margin-top: 200px;
-  margin-bottom: 110px;
-}
-
 .text-secondary-paragraph {
   color: #434343;
   font-size: 20px;
@@ -33,7 +28,8 @@
 
 .about-info .job {
   font-size: 1.2rem;
-  background: #eee;
+  background: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
   border-bottom: solid 5px #f5603b;
   border-radius: 5px;

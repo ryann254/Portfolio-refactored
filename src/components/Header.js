@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useRouteMatch } from "react-router-dom";
-import $ from "jquery";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";

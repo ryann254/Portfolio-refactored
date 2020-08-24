@@ -39,9 +39,6 @@ h3.sm-heading {
   color: #f5603b;
 } */
 
-main {
-  padding: 9rem;
-}
 main .icons {
   margin-top: 1rem;
 }
@@ -58,34 +55,20 @@ main .icons a:hover {
   transition: all 0.5s ease-out;
 }
 
-/* My Work Page */
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 90px 10px;
+#about,
+#work,
+#contact {
+  margin-top: 200px;
+  margin-bottom: 110px;
 }
 
+#contact {
+  margin-bottom: 0;
+}
+
+/* My Work Page */
 .projects img {
   width: 65%;
-  height: 40%;
-  border: 3px #fff solid;
-}
-
-.projects .fancy-form {
-  width: 65%;
-  height: 60%;
-  border: 3px #fff solid;
-}
-
-.projects .netflix-image {
-  width: 65%;
-  height: 60%;
-  border: 3px #fff solid;
-}
-
-.projects .photography {
-  width: 65%;
-  height: 250px !important;
   border: 3px #fff solid;
 }
 
@@ -97,18 +80,17 @@ main .icons a:hover {
 
 .work-buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  width: 65%;
 }
 
 .work-buttons i {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .technologies {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-left: -12rem;
@@ -130,12 +112,10 @@ main .icons a:hover {
 .btn-dark,
 .btn-light {
   display: block;
-  padding: 5px 20px;
   border: 0;
   margin: 20px;
   border-radius: 5px;
   text-align: center;
-  width: 20%;
 }
 .btn:hover,
 .btn-dark:hover,
@@ -163,23 +143,19 @@ main .icons a:hover {
   border-bottom: 2px solid #4ca1af;
 }
 /* Contact page */
-.contact-body {
-  position: absolute;
-  z-index: -1;
+.contact-pic {
+  width: 85vw;
+  height: 85vh;
 }
 
-.contact-pic {
-  position: absolute;
-  top: 60%;
-  left: 0;
-  width: 85vw;
-  height: 72vh;
+.contact-top {
+  position: relative;
 }
 
 .page-content {
   position: absolute;
-  top: 38%;
-  left: 165%;
+  top: -85px;
+  right: 0;
   font-size: 7rem;
   text-transform: uppercase;
   letter-spacing: 30px;
@@ -202,18 +178,8 @@ main .icons a:hover {
 }
 
 .content-words .one-letter {
-  color: #333;
+  color: #bbb;
   padding-left: 10px;
-}
-
-.contact-middle {
-  display: grid;
-  grid-template-columns: 55% auto;
-}
-.contact-left {
-  position: absolute;
-  top: 230%;
-  left: 10%;
 }
 
 .sm-header {
@@ -230,18 +196,13 @@ main .icons a:hover {
   color: #000;
 }
 .lg-header .line-contact {
-  position: absolute;
-  top: 70%;
-  left: 105%;
+  margin-left: 10px;
   width: 2.5rem;
   height: 4px;
   background: #333;
 }
 
 .contact-right {
-  position: absolute;
-  top: 240%;
-  left: 110%;
   width: 100%;
 }
 
@@ -255,9 +216,6 @@ main .icons a:hover {
 }
 
 @media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: 50% auto;
-  }
   /* .covid-19,
   .expense-tracker,
   .fancy-form,
@@ -267,10 +225,6 @@ main .icons a:hover {
   } */
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: 40% auto;
-    width: 100%;
-  }
   /* .covid-19,
   .expense-tracker,
   .fancy-form,
@@ -323,14 +277,6 @@ main .icons a:hover {
     width: 230px;
     height: 250px;
   }
-  div.work-education {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
-  }
-  .projects {
-    grid-template-columns: 40% auto;
-  }
   .netflix-image {
     height: 120px;
   }
@@ -343,9 +289,6 @@ main .icons a:hover {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
-  }
-  .projects {
-    grid-template-columns: 1fr;
   }
 }
 

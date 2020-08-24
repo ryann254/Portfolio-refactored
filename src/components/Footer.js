@@ -75,6 +75,30 @@ function Footer() {
                 <div className="projects-content mt-2">
                   <div>
                     <a
+                      href="https://compassionate-einstein-9ec9cd.netlify.app/"
+                      target="_blank"
+                    >
+                      Wedding Template
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://hardcore-tereshkova-f8d88e.netlify.app/"
+                      target="_blank"
+                    >
+                      Law Template
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://dreamy-sammet-3a0674.netlify.app/"
+                      target="_blank"
+                    >
+                      Bakery Template
+                    </a>
+                  </div>
+                  <div>
+                    <a
                       href="https://ryann254.github.io/Ryan-Covid19-Deploy/"
                       target="_blank"
                     >
