@@ -30,7 +30,7 @@ function Work() {
           <div className="projects">
             <Row className="mb-5">
               <Col>
-                <div className="item">
+                <div className="item mb-4">
                   <a
                     href="https://ryann254.github.io/Ryan-Covid19-Deploy/"
                     target="_blank"
@@ -103,7 +103,7 @@ function Work() {
             </Row>
             <Row className="mb-5">
               <Col>
-                <div className="item">
+                <div className="item mb-4">
                   <a
                     href="https://expense-tracker-frontend-001.herokuapp.com/"
                     target="_blank"
@@ -178,7 +178,7 @@ function Work() {
             </Row>
             <Row className="mb-5">
               <Col>
-                <div className="item">
+                <div className="item mb-4">
                   <a href="https://ryanfancyform.cf/" target="_blank">
                     <img src={Image3} className="fancy-form" alt="Project" />
                   </a>
@@ -233,7 +233,7 @@ function Work() {
             </Row>
             <Row className="mb-5">
               <Col>
-                <div className="item">
+                <div className="item mb-4">
                   <a
                     href="https://tender-fermi-f8c720.netlify.app/"
                     target="_blank"
@@ -289,7 +289,7 @@ function Work() {
             </Row>
             <Row className="mb-5">
               <Col>
-                <div className="item">
+                <div className="item mb-4">
                   <a href="https://ryanphotography.cf/" target="_blank">
                     <img className="photography" src={Image5} alt="Project" />
                   </a>

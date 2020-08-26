@@ -1,219 +1,265 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Nunito+Sans&display=swap");
 
-/* Header */
-.container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+@media all and (min-width: 360px) {
+  /* Header */
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #basic-navbar-nav {
+    background: #343a40;
+  }
+
+  a {
+    color: #eee;
+    text-decoration: none;
+  }
+
+  /* Brand */
+  .brand {
+    font-family: "Clicker Script", cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 66px;
+    color: #e6b001 !important;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.18em;
+  }
+
+  /* Logo */
+  a:hover {
+    color: #999;
+  }
+
+  .navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    position: fixed;
+  }
+
+  .links {
+    position: relative;
+  }
+
+  .links > a:hover {
+    color: #f5603b !important;
+  }
+
+  .link-color {
+    color: #f5603b !important;
+  }
+
+  #growth {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  /* Footer */
+  .line-breaker {
+    color: #999;
+    width: 87%;
+  }
+
+  .content-work a {
+    color: #333;
+  }
+
+  .pre-footer {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pre-footer .content-dev {
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #999;
+  }
+
+  .pre-footer .content-work {
+    font-size: 40px;
+    font-weight: 900;
+    color: #111;
+  }
+
+  .fas {
+    font-size: 36px;
+  }
+
+  .content-work a:hover {
+    text-decoration: underline;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .contact-info,
+  .project,
+  .availability,
+  .follow {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .contact-info a,
+  .project a,
+  .availability a,
+  .follow a {
+    color: #333;
+  }
+
+  .line-footer {
+    width: 2rem;
+    height: 4px;
+    background: #111;
+  }
+
+  .contact-info .line-footer,
+  .availability .line-footer,
+  .project .line-footer,
+  .follow .line-footer {
+    margin: 19px 0 0 10px;
+  }
+
+  .post-footer {
+    color: #888;
+  }
+
+  .logo {
+    color: #888 !important;
+  }
+
+  .footer-text {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .date {
+    margin: 0 10px 0 0;
+  }
 }
 
-.navbar {
-  height: 80px;
+@media all and (max-width: 767px) {
+  .underline {
+    display: none;
+  }
 }
 
-/* Brand */
-.brand {
-  font-family: "Clicker Script", cursive;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 50px;
-  line-height: 66px;
-  color: #e6b001 !important;
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  letter-spacing: 0.18em;
-}
+@media all and (min-width: 768px) {
+  .active {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background: #f5603b;
+    transition: all 0.5s ease-out;
+  }
 
-/* Logo */
-a {
-  text-decoration: none;
-  color: #333;
-}
+  .nav-item {
+    flex-grow: 0.1;
+  }
 
-a:hover {
-  color: #999;
-}
+  .pre-footer {
+    margin: 4.2rem 0;
+  }
 
-.navbar {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  position: fixed;
-}
+  .pre-footer .content-dev {
+    font-size: 24px;
+  }
 
-.links {
-  position: relative;
-}
+  .pre-footer .content-work {
+    font-size: 60px;
+  }
 
-.links > a:hover {
-  color: #f5603b !important;
-}
+  .fas {
+    font-size: 44px;
+  }
 
-.active {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35px;
-  height: 2px;
-  background: #f5603b;
-  transition: all 0.5s ease-out;
-}
+  .page-footer {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #111;
+  }
 
-.link-color {
-  color: #f5603b !important;
-}
+  .contact-info,
+  .project,
+  .availability,
+  .follow,
+  h2 {
+    font-size: 27px;
+  }
+  .contact-info,
+  .project,
+  .availability,
+  .follow {
+    display: flex;
+    flex-direction: column;
+  }
 
-#growth {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  font-weight: normal;
-  font-size: 17px;
-  letter-spacing: 0.1em;
-  font-family: "Nunito Sans", sans-serif;
-}
+  .contact-info .line-footer,
+  .availability .line-footer {
+    margin: 49px 0 0 7px;
+  }
 
-.nav-item {
-  flex-grow: 0.1;
-}
+  .project .line-footer {
+    margin: 49px 0 0 -15px;
+  }
 
-/* Footer */
-.line-breaker {
-  color: #999;
-  width: 87%;
-}
+  .follow .line-footer {
+    margin: 49px 0 0 4px;
+  }
 
-.pre-footer {
-  margin: 4.2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .contact-content,
+  .availability-content {
+    margin-top: 10px;
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-.pre-footer .content-dev {
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #999;
-}
+  .contact-info a:hover,
+  .project a:hover,
+  .follow a:hover {
+    text-decoration: underline;
+  }
 
-.pre-footer .content-work {
-  font-size: 60px;
-  font-weight: 900;
-  color: #111;
-}
+  .contact-text {
+    width: 300px;
+  }
 
-.fas {
-  font-size: 44px;
-}
+  .projects-content,
+  .follow-content {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-.content-work a:hover {
-  text-decoration: underline;
-}
+  .availability-content {
+    margin-top: auto;
+  }
 
-.page-footer {
-  margin-top: 4.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  color: #111;
-}
+  .logo {
+    font-size: 40px;
+    margin-left: 72px;
+  }
 
-.contact-info,
-.project,
-.availability,
-.follow,
-h2 {
-  font-size: 27px;
-}
-.contact-info,
-.project,
-.availability,
-.follow {
-  display: flex;
-  flex-direction: column;
-}
-
-.line-footer {
-  width: 2rem;
-  height: 4px;
-  background: #111;
-}
-
-.contact-info .line-footer,
-.availability .line-footer {
-  margin: 49px 0 0 7px;
-}
-
-.project .line-footer {
-  margin: 49px 0 0 -15px;
-}
-
-.follow .line-footer {
-  margin: 49px 0 0 4px;
-}
-
-.contact-content {
-  margin-top: 10px;
-  color: #888;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.contact-content .highlight {
-  color: #111;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-text {
-  width: 300px;
-}
-
-.projects-content {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-.availability-content {
-  color: #888;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.follow-content {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.follow a:hover {
-  text-decoration: underline;
-}
-
-.post-footer {
-  display: flex;
-  flex-direction: row;
-  color: #888;
-}
-
-.logo {
-  color: #888 !important;
-  font-size: 40px;
-  margin-left: 72px;
-}
-
-.footer-text {
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.date {
-  margin: 0 10px;
+  .date {
+    margin: 0 10px;
+  }
 }

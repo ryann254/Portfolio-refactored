@@ -50,7 +50,7 @@ function About() {
           <h2 className="sm-heading">Let me mention just a few...</h2>
           <div className="about-info">
             <Row>
-              <div className="image-bio d-flex">
+              <div className="image-bio d-flex-column">
                 <Col md={6} className="profile-pic my-auto">
                   <Bounce right>
                     <div className="d-flex justify-content-center">
@@ -64,7 +64,7 @@ function About() {
                     </div>
                   </Bounce>
                 </Col>
-                <Col md={6} className="mx-auto">
+                <Col md={6} className="mx-auto mt-5">
                   <div className="bio">
                     <h3 className="text-secondary">BIO</h3>
                     <p className="show">

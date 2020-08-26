@@ -33,20 +33,20 @@ function Footer() {
           </Col>
         </Row>
         <Row>
-          <hr className="line-breaker"></hr>
           <div className="page-footer">
             <Col md={3}>
-              <div className="contact-info">
-                <div className="d-flex">
+              <hr className="line-breaker"></hr>
+              <div className="contact-info mt-3 mb-4">
+                <div className="d-flex mb-2 justify-content-center">
                   <h2>
-                    Contact <br />
+                    Contact <br className="br" />
                     information
                   </h2>
                   <div className="line-footer"></div>
                 </div>
                 <div className="contact-content mt-2">
                   <div>
-                    <p className="contact-text">
+                    <p className="contact-text pl-2 pr-2">
                       Feel free to reach out at any time, through email or call.
                     </p>
                   </div>
@@ -65,10 +65,10 @@ function Footer() {
               </div>
             </Col>
             <Col md={2}>
-              <div className="project">
-                <div className="d-flex">
+              <div className="project mb-4">
+                <div className="d-flex justify-content-center mb-2">
                   <h2>
-                    My Recent <br /> Projects
+                    My Recent <br className="br" /> Projects
                   </h2>
                   <div className="line-footer"></div>
                 </div>
@@ -135,16 +135,16 @@ function Footer() {
               </div>
             </Col>
             <Col md={2}>
-              <div className="availability">
-                <div className="d-flex">
+              <div className="availability mb-4">
+                <div className="d-flex justify-content-center">
                   <h2>
-                    Current <br /> availability
+                    Current <br className="br" /> availability
                   </h2>
                   <div className="line-footer"></div>
                 </div>
                 <div className="availability-content mt-2">
                   <div>
-                    <p>
+                    <p className="pl-2 pr-2">
                       Most of the time I'm working on a project(either personal
                       or business related) but I’ll be happy to discuss new
                       opportunities. Let’s get in touch!
@@ -154,10 +154,10 @@ function Footer() {
               </div>
             </Col>
             <Col md={2}>
-              <div className="follow">
-                <div className="d-flex">
+              <div className="follow mb-4">
+                <div className="d-flex justify-content-center mb-2">
                   <h2>
-                    Follow <br /> me on
+                    Follow <br className="br" /> me on
                   </h2>
                   <div className="line-footer"></div>
                 </div>
@@ -187,7 +187,7 @@ function Footer() {
         </Row>
         <Row>
           <Col>
-            <div className="post-footer mt-2">
+            <div className="post-footer d-flex justify-content-center mt-2">
               <Link to="/homepage">
                 <div className="brand logo">RN</div>
               </Link>

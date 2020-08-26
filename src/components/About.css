@@ -1,3 +1,8 @@
+@media all and (min-width: 360px) {
+  .text-secondary {
+    margin-bottom: 10px;
+  }
+}
 .text-secondary-paragraph {
   color: #434343;
   font-size: 20px;

@@ -1,85 +1,122 @@
-.homepage {
-  margin-top: 359px;
-}
-
-.middle {
-  .sm-header {
-    letter-spacing: 5px;
-    color: #888;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+@media all and (min-width: 360px) {
+  .homepage {
+    margin-top: 150px;
   }
 
   .lg-header {
-    letter-spacing: 1px;
-    font-size: 44px;
-    font-weight: 900;
+    font-size: 36px;
+    font-weight: 600;
     color: #000;
   }
 
-  .homepage-links {
-    margin-top: 20px;
-    font-weight: 600;
-  }
-  .link-projects:hover {
-    text-decoration: underline;
+  .middle {
+    .sm-header {
+      letter-spacing: 5px;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .link-projects,
+    .link-read {
+      color: #000;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 22px;
+      color: #555;
+    }
   }
 
-  .link-read:hover {
-    text-decoration: underline;
-  }
-
-  span {
-    font-weight: normal;
-    margin: 0 9px;
+  .projects-header {
+    margin-top: 90px;
+    margin-bottom: 75px;
   }
 }
 
-.right-home {
-  .profile-container {
-    border: 2px solid #999;
-    width: auto;
-    padding: 20px 10px 30px 10px;
-    border-radius: 4px;
-    box-shadow: 0px 12px 19px rgba(0, 0, 255, 0.4);
+@media all and (max-width: 767px) {
+  .larger-screens {
+    display: none;
+  }
+}
 
-    .profile {
-      border: 2px solid #f7b733;
-      border-radius: 50%;
-      width: 215px;
-      height: 220px;
+@media all and (min-width: 768px) {
+  .homepage {
+    margin-top: 359px;
+  }
+
+  .middle {
+    .lg-header {
+      letter-spacing: 1px;
+      font-size: 44px;
+      font-weight: 900;
     }
 
-    .profile-content {
-      margin: 0;
-      padding: 0;
+    .homepage-links {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    .link-projects:hover {
+      text-decoration: underline;
+    }
+
+    .link-read:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      font-weight: normal;
+      margin: 0 9px;
+    }
+  }
+
+  .right-home {
+    .profile-container {
+      border: 2px solid #999;
       width: auto;
-      height: 320px;
-    }
-  }
+      padding: 20px 10px 30px 10px;
+      border-radius: 4px;
+      box-shadow: 0px 12px 19px rgba(0, 0, 255, 0.4);
 
-  .profile-container:hover {
-    animation: shake 1.2s ease;
-  }
+      .profile {
+        border: 2px solid #f7b733;
+        border-radius: 50%;
+        width: 215px;
+        height: 220px;
+      }
 
-  @keyframes shake {
-    0% {
-      transform: translate(0);
+      .profile-content {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: 320px;
+      }
     }
-    20%,
-    40%,
-    60%,
-    80% {
-      transform: translate(0.8em);
+
+    .profile-container:hover {
+      animation: shake 1.2s ease;
     }
-    10%,
-    30%,
-    50% {
-      transform: translate(-0.2em);
-    }
-    70%,
-    100% {
-      transform: translate(0);
+
+    @keyframes shake {
+      0% {
+        transform: translate(0);
+      }
+      20%,
+      40%,
+      60%,
+      80% {
+        transform: translate(0.8em);
+      }
+      10%,
+      30%,
+      50% {
+        transform: translate(-0.2em);
+      }
+      70%,
+      100% {
+        transform: translate(0);
+      }
     }
   }
 }
