@@ -112,73 +112,70 @@ function AddEvents({ history, ...props }) {
                   <Col>
                     <div className="right">
                       <p>Fill the following form!</p>
-                      <form onSubmit={handleSubmit}>
-                        <Form>
-                          <Form.Group>
-                            <Form.Label>Title</Form.Label>
-                            <Form.Control
-                              type="text"
-                              name="title"
-                              placeholder="Enter the title.."
-                              value={title}
-                              onChange={(e) => setTitle(e.target.value)}
-                            />
-                          </Form.Group>
-
-                          <Form.Group>
-                            <Form.Label>Subtitle</Form.Label>
-                            <Form.Control
-                              type="text"
-                              name="subtitle"
-                              value={subtitle}
-                              onChange={(e) => setSubtitle(e.target.value)}
-                              placeholder="Enter the subtitle..."
-                            />
-                          </Form.Group>
-                          <Form.Group controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Content</Form.Label>
-                            <Form.Control
-                              as="textarea"
-                              rows="4"
-                              value={content}
-                              onChange={(e) => setContent(e.target.value)}
-                              placeholder="Enter some descriptive content..."
-                            />
-                          </Form.Group>
-                          <div className="d-flex justify-content-center">
-                            <Button
-                              variant="primary"
-                              className="submit"
-                              type="submit"
-                            >
-                              Submit
-                            </Button>
-                          </div>
-                        </Form>
-                        <div className="input-radio">
-                          <label className="label work-events">
+                      <Form onSubmit={handleSubmit}>
+                        <Form.Group>
+                          <Form.Label>
                             Are you adding to the work section or the events
                             section:
-                          </label>
-                          <br />
-                          <input
+                          </Form.Label>
+                          <Form.Check
                             type="radio"
-                            id="work"
+                            id="work-radio"
                             name="workorevents"
+                            label="Work Section"
                             value="work"
-                            onClick={(e) => setRadio(e.target.value)}
+                            onChange={(e) => setRadio(e.target.value)}
                           />
-                          <label className="radio-label">Work Section</label>
-                          <br />
-                          <input
+                          <Form.Check
                             type="radio"
+                            id="events"
                             name="workorevents"
-                            value="events"
-                            onClick={(e) => setRadio(e.target.value)}
+                            label="Events Section"
+                            work="events"
+                            onChange={(e) => setRadio(e.target.value)}
                           />
-                          <label className="radio-label">Events Section</label>
+                        </Form.Group>
+                        <Form.Group>
+                          <Form.Label>Title</Form.Label>
+                          <Form.Control
+                            type="text"
+                            name="title"
+                            placeholder="Enter the title.."
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                          />
+                        </Form.Group>
+
+                        <Form.Group>
+                          <Form.Label>Subtitle</Form.Label>
+                          <Form.Control
+                            type="text"
+                            name="subtitle"
+                            value={subtitle}
+                            onChange={(e) => setSubtitle(e.target.value)}
+                            placeholder="Enter the subtitle..."
+                          />
+                        </Form.Group>
+                        <Form.Group controlId="exampleForm.ControlTextarea1">
+                          <Form.Label>Content</Form.Label>
+                          <Form.Control
+                            as="textarea"
+                            rows="4"
+                            value={content}
+                            onChange={(e) => setContent(e.target.value)}
+                            placeholder="Enter some descriptive content..."
+                          />
+                        </Form.Group>
+                        <div className="d-flex justify-content-center">
+                          <Button
+                            variant="primary"
+                            className="submit"
+                            type="submit"
+                          >
+                            Submit
+                          </Button>
                         </div>
-                      </form>
+                      </Form>
                     </div>
                   </Col>
                 </div>

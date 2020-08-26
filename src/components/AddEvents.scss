@@ -34,17 +34,6 @@
     text-align: left;
   }
 
-  .input[type="radio"] {
-    margin-top: 1em !important;
-    margin-bottom: 1em !important;
-    margin-left: -95px;
-  }
-
-  #work {
-    margin-top: 15px;
-    margin-left: -66.2%;
-  }
-
   .radio-label {
     color: #333;
   }
@@ -88,6 +77,22 @@
     font-size: 20px;
   }
 
+  .inner {
+    .left {
+      height: 100%;
+
+      .content-add-events {
+        h1 {
+          margin: 3em 0 2em 0;
+        }
+      }
+    }
+
+    .right {
+      text-align: left;
+    }
+  }
+
   input[type="text"] {
     width: calc(60% - 1em) !important;
   }
@@ -102,7 +107,6 @@
     .left {
       text-align: left;
       padding: 0 2em;
-      height: 100vh;
       display: flex;
       align-items: center;
     }
