@@ -3,37 +3,16 @@
   font-size: 20px;
 }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-}
-
-.about-info .image-bio {
-  position: relative;
-  z-index: -1;
-  display: grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .about-info .bio {
   font-size: 1.3rem;
 }
 
 .about-info .bio-image {
-  width: 280px;
-  height: 280px;
   margin: auto;
   background-position: auto;
   background-size: cover;
   border-radius: 50%;
   border: solid 3px #f5603b;
-}
-
-.work-education {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .job:hover {
@@ -49,10 +28,12 @@
 
 .about-info .job {
   font-size: 1.2rem;
-  background: #eee;
+  background: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
   border-bottom: solid 5px #f5603b;
   border-radius: 5px;
+  height: 100%;
 }
 
 .sm-heading.work {

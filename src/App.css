@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 body {
   background: #fff;
   color: #333;
@@ -34,9 +39,6 @@ h3.sm-heading {
   color: #f5603b;
 } */
 
-main {
-  padding: 9rem;
-}
 main .icons {
   margin-top: 1rem;
 }
@@ -45,7 +47,7 @@ main .icons a {
 }
 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 main .icons a:hover {
@@ -53,30 +55,65 @@ main .icons a:hover {
   transition: all 0.5s ease-out;
 }
 
-/* My Work Page */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.9rem;
+#about,
+#work,
+#contact {
+  margin-top: 200px;
+  margin-bottom: 110px;
 }
 
+#contact {
+  margin-bottom: 0;
+}
+
+/* My Work Page */
 .projects img {
-  width: 100%;
+  width: 65%;
   border: 3px #fff solid;
 }
+
 .projects img:hover {
   opacity: 0.6;
   border-color: #f5603b;
   transition: all 0.6s ease-in-out;
 }
+
+.work-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+
+.work-buttons i {
+  font-size: 18px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12rem;
+}
+
+.technologies img {
+  margin: 0 20px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.technologies img:hover {
+  border: none;
+  opacity: 1;
+  transition: none;
+}
+
 .btn,
 .btn-dark,
 .btn-light {
   display: block;
-  padding: 0.5rem 0.5rem;
-  margin-right: -5px;
   border: 0;
-  margin-bottom: 0.4rem;
+  margin: 20px;
   border-radius: 5px;
   text-align: center;
 }
@@ -97,24 +134,28 @@ main .icons a:hover {
   color: #333;
 }
 
-/* Contact page */
-.contact-body {
-  position: absolute;
-  z-index: -1;
+.work-content h3 {
+  font-weight: bold;
+  margin: 0;
 }
 
+.work-content {
+  border-bottom: 2px solid #4ca1af;
+}
+/* Contact page */
 .contact-pic {
-  position: absolute;
-  top: 60%;
-  left: 0;
   width: 85vw;
-  height: 70vh;
+  height: 85vh;
+}
+
+.contact-top {
+  position: relative;
 }
 
 .page-content {
   position: absolute;
-  top: 40%;
-  left: 165%;
+  top: -85px;
+  right: 0;
   font-size: 7rem;
   text-transform: uppercase;
   letter-spacing: 30px;
@@ -137,18 +178,8 @@ main .icons a:hover {
 }
 
 .content-words .one-letter {
-  color: #333;
+  color: #bbb;
   padding-left: 10px;
-}
-
-.contact-middle {
-  display: grid;
-  grid-template-columns: 55% auto;
-}
-.contact-left {
-  position: absolute;
-  top: 230%;
-  left: 10%;
 }
 
 .sm-header {
@@ -165,18 +196,13 @@ main .icons a:hover {
   color: #000;
 }
 .lg-header .line-contact {
-  position: absolute;
-  top: 70%;
-  left: 105%;
+  margin-left: 10px;
   width: 2.5rem;
   height: 4px;
   background: #333;
 }
 
 .contact-right {
-  position: absolute;
-  top: 240%;
-  left: 110%;
   width: 100%;
 }
 
@@ -190,29 +216,22 @@ main .icons a:hover {
 }
 
 @media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .covid-19,
+  /* .covid-19,
   .expense-tracker,
   .fancy-form,
   .netflix-image,
   .photography {
-    height: 160px;
-  }
+    height: 10px;
+  } */
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-    width: 120%;
-  }
-  .covid-19,
+  /* .covid-19,
   .expense-tracker,
   .fancy-form,
   .netflix-image,
   .photography {
     height: 160px;
-  }
+  } */
 }
 @media screen and (max-width: 768px) {
   main {
@@ -258,14 +277,6 @@ main .icons a:hover {
     width: 230px;
     height: 250px;
   }
-  div.work-education {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
-  }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .netflix-image {
     height: 120px;
   }
@@ -278,9 +289,6 @@ main .icons a:hover {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
-  }
-  .projects {
-    grid-template-columns: 1fr;
   }
 }
 

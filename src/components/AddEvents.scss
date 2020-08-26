@@ -1,13 +1,10 @@
 .body {
-  position: absolute;
-  z-index: -1;
   margin: 0;
-  background: #ddd;
   font-size: 18px;
   height: 100vh;
 }
 
-.container {
+.container-events {
   margin: 0 auto;
   text-align: center;
 
@@ -37,17 +34,6 @@
     text-align: left;
   }
 
-  .input[type="radio"] {
-    margin-top: 1em !important;
-    margin-bottom: 1em !important;
-    margin-left: -95px;
-  }
-
-  #work {
-    margin-top: 15px;
-    margin-left: -66.2%;
-  }
-
   .radio-label {
     color: #333;
   }
@@ -57,14 +43,13 @@
   }
 
   input[type="text"],
-  textarea,
-  button {
+  textarea {
     font-family: "Roboto Condensed", sans-serif;
     width: calc(100% - 3em);
     padding: 0.3em;
     outline: none;
     font-size: 1.3rem;
-    margin: 1em;
+    margin: 0 0 1em 0;
   }
 
   .label {
@@ -74,13 +59,11 @@
   }
 
   button {
-    width: calc(100% - 2em);
     margin: 0;
     color: #eee;
     background: #8800ff;
     border: none;
     cursor: pointer;
-    border-radius: 20px;
   }
 
   textarea {
@@ -94,8 +77,20 @@
     font-size: 20px;
   }
 
-  button {
-    width: 60% !important;
+  .inner {
+    .left {
+      height: 100%;
+
+      .content-add-events {
+        h1 {
+          margin: 3em 0 2em 0;
+        }
+      }
+    }
+
+    .right {
+      text-align: left;
+    }
   }
 
   input[type="text"] {
@@ -109,18 +104,14 @@
   }
 
   .inner {
-    display: grid;
-    grid-template-columns: 55% auto;
-
     .left {
       text-align: left;
       padding: 0 2em;
-      height: 100vh;
-      display: grid;
+      display: flex;
       align-items: center;
     }
 
-    .content {
+    .content-add-events {
       padding: 0 3em;
     }
 
@@ -135,11 +126,8 @@
   }
 
   .right {
-    margin-top: 15%;
-    text-align: right;
-    align-self: center;
-    padding: 0 2em 1.5em;
-    justify-self: center;
+    margin-top: 16%;
+    text-align: left;
 
     p {
       text-align: center;
@@ -147,12 +135,7 @@
 
     input[type="text"] {
       width: calc(100% - 1em) !important;
-      margin: 1em 0;
-    }
-
-    button {
-      width: 60% !important;
-      margin-right: 91px;
+      margin: 0 0 1em 0;
     }
   }
 }
@@ -181,7 +164,7 @@
     font-size: 24px;
   }
 
-  .content {
+  .content-add-events {
     padding: 0 6em !important;
   }
 
