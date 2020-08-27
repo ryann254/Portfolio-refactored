@@ -1,38 +1,36 @@
-@media all and (min-width: 360px) {
-  .homepage {
-    margin-top: 150px;
+.homepage {
+  margin-top: 150px;
+}
+
+.lg-header {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+}
+
+.middle {
+  .sm-header {
+    letter-spacing: 5px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
-  .lg-header {
-    font-size: 36px;
-    font-weight: 600;
+  .link-projects,
+  .link-read {
     color: #000;
   }
 
-  .middle {
-    .sm-header {
-      letter-spacing: 5px;
-      color: #888;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .link-projects,
-    .link-read {
-      color: #000;
-    }
-
-    .content {
-      font-size: 18px;
-      line-height: 22px;
-      color: #555;
-    }
+  .content {
+    font-size: 18px;
+    line-height: 22px;
+    color: #555;
   }
+}
 
-  .projects-header {
-    margin-top: 90px;
-    margin-bottom: 75px;
-  }
+.projects-header {
+  margin-top: 90px;
+  margin-bottom: 75px;
 }
 
 @media all and (max-width: 767px) {
@@ -119,39 +117,38 @@
       }
     }
   }
-}
+  // Slider Buttons
+  .slick-prev {
+    left: -320px;
+  }
 
-.home-projects {
-  margin-top: 90px;
-  margin-bottom: 100px;
-}
+  .slick-next {
+    right: -320px;
+  }
 
-.wedding-home,
-.bakery-home,
-.law-home,
-.estimator-home,
-.expense-home,
-.fancy-form-home,
-.homefurniture-home,
-.netflix-home {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
+  .slick-prev:before,
+  .slick-next:before {
+    color: #333;
+  }
 
-// Slider Buttons
-.slick-prev {
-  left: -320px;
-}
+  .home-projects {
+    margin-top: 90px;
+    margin-bottom: 100px;
+  }
 
-.slick-next {
-  right: -320px;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #333;
+  .wedding-home,
+  .bakery-home,
+  .law-home,
+  .estimator-home,
+  .expense-home,
+  .fancy-form-home,
+  .homefurniture-home,
+  .netflix-home {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 1200px) {

@@ -23,7 +23,7 @@ function Contact() {
                   className="contact-pic"
                   alt="contact-pic"
                 />
-                <div className="page-content">
+                <div className="page-content larger-screens">
                   <span className="content-words">Let's</span>
                   <br /> <span className="content-words">get</span>
                   <br /> <span className="content-words">to</span>
@@ -37,7 +37,7 @@ function Contact() {
             </Col>
           </Row>
           <Row>
-            <div className="contact-middle d-flex">
+            <div className="contact-middle d-flex-column">
               <Col md={5}>
                 <div className="contact-left mt-5">
                   <div className="sm-header">contact</div>

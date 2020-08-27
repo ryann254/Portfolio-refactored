@@ -82,7 +82,7 @@ function AddEvents({ history, ...props }) {
         <Row>
           <div className="body">
             <Zoom bottom>
-              <div className="proto-container">
+              <div className="proto-container larger-screens">
                 <div className="proto"></div>
                 <div className="proto"></div>
                 <div className="proto"></div>
@@ -90,7 +90,7 @@ function AddEvents({ history, ...props }) {
               </div>
 
               <div className="container-events">
-                <div className="inner d-flex">
+                <div className="inner d-flex-column">
                   <Col>
                     <div className="left" onMouseMove={addAnimation}>
                       <div className="content-add-events">
@@ -110,9 +110,9 @@ function AddEvents({ history, ...props }) {
                     </div>
                   </Col>
                   <Col>
-                    <div className="right">
-                      <p>Fill the following form!</p>
-                      <Form onSubmit={handleSubmit}>
+                    <div className="right mb-3">
+                      <p className="text-center">Fill the following form!</p>
+                      <Form onSubmit={handleSubmit} className="pl-3 pr-3">
                         <Form.Group>
                           <Form.Label>
                             Are you adding to the work section or the events

@@ -137,7 +137,7 @@ function ContactForm() {
         getQuestion();
       } else {
         hideQuestion();
-        form_box.className = "close";
+        form_box.classList.add("close");
         progress_bar.style.width = "100%";
 
         formComplete();
