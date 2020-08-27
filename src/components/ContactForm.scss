@@ -123,6 +123,14 @@ h1.end {
   }
 }
 
+@media all and (min-width: 411px) {
+  #container {
+    #form-box {
+      width: 380px;
+    }
+  }
+}
+
 @media all and (min-width: 768px) {
   #form-box {
     width: 550px;

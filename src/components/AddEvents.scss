@@ -41,7 +41,6 @@
   input[type="text"],
   textarea {
     font-family: "Roboto Condensed", sans-serif;
-    width: calc(100% - 3em);
     padding: 0.3em;
     outline: none;
     font-size: 1.3rem;
@@ -71,6 +70,14 @@
 .content-add-events {
   h1 {
     margin: 2.5em 0 1em 0 !important;
+  }
+}
+
+@media all and (min-width: 411px) {
+  .content-add-events {
+    h1 {
+      margin: 2.9em 0 1em 0 !important;
+    }
   }
 }
 
