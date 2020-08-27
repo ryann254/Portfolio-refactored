@@ -120,7 +120,7 @@ function Header({ children }) {
     <Fragment>
       <header>
         <Container fluid>
-          <Navbar bg="light" expand="md">
+          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
             <Navbar.Brand href="/" className="brand ml-lg-4">
               RN
             </Navbar.Brand>
@@ -128,31 +128,31 @@ function Header({ children }) {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav id="growth">
                 <NavItem>
-                  <div className="links text-center" id="home-link">
+                  <div className="links mb-2 text-center" id="home-link">
                     <Link to="/">Home</Link>
                     <div className="underline active"></div>
                   </div>
                 </NavItem>
                 <NavItem>
-                  <div className="links text-center" id="about-link">
+                  <div className="links mb-2 text-center" id="about-link">
                     <Link to="/about"> About Me</Link>
                     <div className="underline"></div>
                   </div>
                 </NavItem>
                 <NavItem>
-                  <div className="links text-center" id="work-link">
+                  <div className="links mb-2 text-center" id="work-link">
                     <Link to="/work">My Work</Link>
                     <div className="underline"></div>
                   </div>
                 </NavItem>
                 <NavItem>
-                  <div className="links text-center" id="add-events-link">
+                  <div className="links mb-2 text-center" id="add-events-link">
                     <Link to="/add-events">Add Events</Link>
                     <div className="underline"></div>
                   </div>
                 </NavItem>
                 <NavItem>
-                  <div className="links text-center" id="contact-link">
+                  <div className="links mb-2 text-center" id="contact-link">
                     <Link to="/contact">Contact</Link>
                     <div className="underline"></div>
                   </div>

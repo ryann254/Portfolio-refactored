@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { Fade } from "react-reveal";
 
 import "./Homepage.scss";
 import ProfilePic from "../../public/images/Profile-replacement3-min.jpg";
@@ -50,12 +51,12 @@ function Homepage() {
             <div className="left">
               <div className="middle">
                 <div className="sm-header">Ryan Njoroge</div>
-                <div className="lg-header">
+                <div className="lg-header mb-3">
                   Web Developer, AI Enthusiast
                   <br />
                   and Critical Thinker
                 </div>
-                <div className="content">
+                <div className="content mb-3">
                   Lorem ipsum dolor sit amet, elit nisl mauris, neque porta id
                   nunc nulla urna. Scelerisque pharetra pretium, sagittis metus
                   phasellus velit diam, ut eu et pellentesque urna mus mi, dui
@@ -87,7 +88,70 @@ function Homepage() {
             </div>
           </Col>
           <Col className="ml-auto" md={5}>
-            <div className="right-home">
+            <Row>
+              <div className="smaller-screens projects-header d-flex-column">
+                <div className="lg-header text-center mb-5">
+                  Some of my projects
+                </div>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img
+                      src={WeddingTemplate}
+                      alt="wedding"
+                      className="img-fluid"
+                    />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img src={LawTemplate} alt="law" className="img-fluid" />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img
+                      src={BakeryTemplate}
+                      alt="bakery"
+                      className="img-fluid"
+                    />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img
+                      src={Estimatorapp}
+                      alt="estimator"
+                      className="img-fluid"
+                    />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img
+                      src={Fancyform}
+                      alt="fancyform"
+                      className="img-fluid"
+                    />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img src={Netflix} alt="netflix" className="img-fluid" />
+                  </Fade>
+                </Col>
+                <Col className="mb-3">
+                  <Fade bottom>
+                    <img
+                      src={Homefurniture}
+                      alt="homefurniture"
+                      className="img-fluid"
+                    />
+                  </Fade>
+                </Col>
+              </div>
+            </Row>
+
+            <div className="right-home larger-screens">
               <div className="profile-container d-flex-column justify-content-center">
                 <div className="mb-5 d-flex justify-content-center">
                   <img src={ProfilePic} className="profile" alt="profile" />
@@ -142,7 +206,7 @@ function Homepage() {
             </div>
           </Col>
         </Row>
-        <Row className="home-projects">
+        <Row className="home-projects larger-screens">
           <Col className="mx-auto" md={9}>
             <div className="lg-header text-center mb-5">
               Some of my projects

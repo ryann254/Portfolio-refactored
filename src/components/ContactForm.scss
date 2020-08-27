@@ -3,10 +3,11 @@ h1.end {
   color: #333;
   opacity: 0;
   transition: 0.8s ease-in-out;
+  font-size: 2rem;
 }
 
 #container {
-  height: 300px;
+  height: 215px;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -16,7 +17,7 @@ h1.end {
   #form-box {
     background: #eee;
     position: relative;
-    width: 550px;
+    width: 330px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
@@ -27,7 +28,7 @@ h1.end {
       position: absolute;
       right: 20px;
       bottom: 10px;
-      font-size: 40px;
+      font-size: 30px;
       color: #2c3e50;
       float: right;
       cursor: pointer;
@@ -57,7 +58,7 @@ h1.end {
 
     #input-group {
       position: relative;
-      padding: 30px 20px 20px 20px;
+      padding: 30px 10px 20px 20px;
       margin: 10px 60px 10px 10px;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
@@ -119,5 +120,31 @@ h1.end {
   .close #next-btn,
   .close #prev-btn {
     color: #eee;
+  }
+}
+
+@media all and (min-width: 411px) {
+  #container {
+    #form-box {
+      width: 380px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  #form-box {
+    width: 550px;
+  }
+
+  #container {
+    height: 300px;
+  }
+
+  #container #form-box #next-btn {
+    font-size: 40px;
+  }
+
+  #container #form-box #input-group {
+    padding: 30px 20px 20px 20px;
   }
 }

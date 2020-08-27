@@ -9,13 +9,9 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
-  /* background-image: url("../public/images/background.jpg");
-  background-attachment: fixed;
-  background-size: cover; */
   overflow: auto;
 }
 
-/* Homepage Header styling */
 h1,
 h2,
 h3 {
@@ -25,7 +21,11 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 4rem;
+  font-size: 2rem;
+}
+
+h2.sm-heading {
+  font-size: 1.7rem;
 }
 
 h1.sm-heading,
@@ -35,9 +35,6 @@ h3.sm-heading {
   padding: 0.2rem 1rem;
   background: linear-gradient(to right, #abbaab, #ffffff);
 }
-/* .text-secondary {
-  color: #f5603b;
-} */
 
 main .icons {
   margin-top: 1rem;
@@ -45,6 +42,7 @@ main .icons {
 main .icons a {
   padding: 0.35rem;
 }
+
 a {
   color: #fff;
   text-decoration: none !important;
@@ -58,17 +56,21 @@ main .icons a:hover {
 #about,
 #work,
 #contact {
-  margin-top: 200px;
-  margin-bottom: 110px;
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 
 #contact {
   margin-bottom: 0;
 }
 
-/* My Work Page */
-.projects img {
-  width: 65%;
+/* Work Page */
+.projects .covid-19,
+.projects .expense-tracker,
+.projects .fancy-form,
+.projects .netflix-image,
+.projects .photography {
+  width: 100%;
   border: 3px #fff solid;
 }
 
@@ -82,7 +84,7 @@ main .icons a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 100%;
 }
 
 .work-buttons i {
@@ -93,7 +95,10 @@ main .icons a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -12rem;
+}
+
+.work-content p {
+  font-size: 1.2rem;
 }
 
 .technologies img {
@@ -142,44 +147,11 @@ main .icons a:hover {
 .work-content {
   border-bottom: 2px solid #4ca1af;
 }
-/* Contact page */
+
+/* Contact Page */
 .contact-pic {
-  width: 85vw;
-  height: 85vh;
-}
-
-.contact-top {
-  position: relative;
-}
-
-.page-content {
-  position: absolute;
-  top: -85px;
-  right: 0;
-  font-size: 7rem;
-  text-transform: uppercase;
-  letter-spacing: 30px;
-}
-
-.page-content .content-words:nth-child(1) {
-  color: #ccc;
-}
-
-.page-content .content-words:nth-child(3) {
-  color: #fff;
-}
-
-.page-content .content-words:nth-child(5) {
-  color: #ccc;
-}
-
-.page-content .content-words:nth-child(7) {
-  color: #fff;
-}
-
-.content-words .one-letter {
-  color: #bbb;
-  padding-left: 10px;
+  width: 100%;
+  height: inherit;
 }
 
 .sm-header {
@@ -215,80 +187,78 @@ main .icons a:hover {
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 1171px) {
-  /* .covid-19,
-  .expense-tracker,
-  .fancy-form,
-  .netflix-image,
-  .photography {
-    height: 10px;
-  } */
-}
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  /* .covid-19,
-  .expense-tracker,
-  .fancy-form,
-  .netflix-image,
-  .photography {
-    height: 160px;
-  } */
-}
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center;
-  }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  ul.menu-nav.show,
-  div.menu-branding.show {
-    transform: translate3d(0, 0, 0);
-  }
-  ul.menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-nav-position {
-    margin-top: -90px;
-  }
-  div.menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-  }
-  div.menu-branding .portrait {
-    width: 160px;
-    height: 180px;
-  }
-  div.image-bio {
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: 1fr;
-  }
-  div.image-bio img.bio-image {
-    width: 230px;
-    height: 250px;
-  }
-  .netflix-image {
-    height: 120px;
-  }
-
-  .photography {
-    height: 140px;
+@media all and (max-width: 767px) {
+  .larger-screens {
+    display: none;
   }
 }
 
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
+@media all and (min-width: 768px) {
+  /* Homepage Header styling */
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 4rem;
+  }
+
+  #about,
+  #work,
+  #contact {
+    margin-top: 200px;
+    margin-bottom: 110px;
+  }
+
+  /* My Work Page */
+  .projects img {
+    width: 65%;
+  }
+
+  .work-buttons {
+    width: 65%;
+  }
+
+  .technologies {
+    margin-left: -12px;
+  }
+
+  /* Contact page */
+  .contact-pic {
+    width: 85vw;
+    height: 85vh;
+  }
+
+  .contact-top {
+    position: relative;
+  }
+
+  .page-content {
+    position: absolute;
+    top: -85px;
+    right: 0;
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+  }
+
+  .page-content .content-words:nth-child(1) {
+    color: #ccc;
+  }
+
+  .page-content .content-words:nth-child(3) {
+    color: #fff;
+  }
+
+  .page-content .content-words:nth-child(5) {
+    color: #ccc;
+  }
+
+  .page-content .content-words:nth-child(7) {
+    color: #fff;
+  }
+
+  .content-words .one-letter {
+    color: #bbb;
+    padding-left: 10px;
   }
 }
 

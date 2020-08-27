@@ -1,5 +1,11 @@
 .homepage {
-  margin-top: 359px;
+  margin-top: 150px;
+}
+
+.lg-header {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
 }
 
 .middle {
@@ -10,111 +16,139 @@
     margin-bottom: 10px;
   }
 
-  .lg-header {
-    letter-spacing: 1px;
-    font-size: 44px;
-    font-weight: 900;
+  .link-projects,
+  .link-read {
     color: #000;
   }
 
-  .homepage-links {
-    margin-top: 20px;
-    font-weight: 600;
-  }
-  .link-projects:hover {
-    text-decoration: underline;
-  }
-
-  .link-read:hover {
-    text-decoration: underline;
-  }
-
-  span {
-    font-weight: normal;
-    margin: 0 9px;
+  .content {
+    font-size: 18px;
+    line-height: 22px;
+    color: #555;
   }
 }
 
-.right-home {
-  .profile-container {
-    border: 2px solid #999;
-    width: auto;
-    padding: 20px 10px 30px 10px;
-    border-radius: 4px;
-    box-shadow: 0px 12px 19px rgba(0, 0, 255, 0.4);
-
-    .profile {
-      border: 2px solid #f7b733;
-      border-radius: 50%;
-      width: 215px;
-      height: 220px;
-    }
-
-    .profile-content {
-      margin: 0;
-      padding: 0;
-      width: auto;
-      height: 320px;
-    }
-  }
-
-  .profile-container:hover {
-    animation: shake 1.2s ease;
-  }
-
-  @keyframes shake {
-    0% {
-      transform: translate(0);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-      transform: translate(0.8em);
-    }
-    10%,
-    30%,
-    50% {
-      transform: translate(-0.2em);
-    }
-    70%,
-    100% {
-      transform: translate(0);
-    }
-  }
-}
-
-.home-projects {
+.projects-header {
   margin-top: 90px;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
-.wedding-home,
-.bakery-home,
-.law-home,
-.estimator-home,
-.expense-home,
-.fancy-form-home,
-.homefurniture-home,
-.netflix-home {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+@media all and (max-width: 767px) {
+  .larger-screens {
+    display: none;
+  }
 }
 
-// Slider Buttons
-.slick-prev {
-  left: -320px;
-}
+@media all and (min-width: 768px) {
+  .homepage {
+    margin-top: 359px;
+  }
 
-.slick-next {
-  right: -320px;
-}
+  .middle {
+    .lg-header {
+      letter-spacing: 1px;
+      font-size: 44px;
+      font-weight: 900;
+    }
 
-.slick-prev:before,
-.slick-next:before {
-  color: #333;
+    .homepage-links {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    .link-projects:hover {
+      text-decoration: underline;
+    }
+
+    .link-read:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      font-weight: normal;
+      margin: 0 9px;
+    }
+  }
+
+  .right-home {
+    .profile-container {
+      border: 2px solid #999;
+      width: auto;
+      padding: 20px 10px 30px 10px;
+      border-radius: 4px;
+      box-shadow: 0px 12px 19px rgba(0, 0, 255, 0.4);
+
+      .profile {
+        border: 2px solid #f7b733;
+        border-radius: 50%;
+        width: 215px;
+        height: 220px;
+      }
+
+      .profile-content {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: 320px;
+      }
+    }
+
+    .profile-container:hover {
+      animation: shake 1.2s ease;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translate(0);
+      }
+      20%,
+      40%,
+      60%,
+      80% {
+        transform: translate(0.8em);
+      }
+      10%,
+      30%,
+      50% {
+        transform: translate(-0.2em);
+      }
+      70%,
+      100% {
+        transform: translate(0);
+      }
+    }
+  }
+  // Slider Buttons
+  .slick-prev {
+    left: -320px;
+  }
+
+  .slick-next {
+    right: -320px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: #333;
+  }
+
+  .home-projects {
+    margin-top: 90px;
+    margin-bottom: 100px;
+  }
+
+  .wedding-home,
+  .bakery-home,
+  .law-home,
+  .estimator-home,
+  .expense-home,
+  .fancy-form-home,
+  .homefurniture-home,
+  .netflix-home {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 1200px) {

@@ -1,3 +1,6 @@
+.text-secondary {
+  margin-bottom: 10px;
+}
 .text-secondary-paragraph {
   color: #434343;
   font-size: 20px;
@@ -36,6 +39,8 @@
   height: 100%;
 }
 
-.sm-heading.work {
-  font-size: 2.6rem;
+@media all and (min-width: 768px) {
+  .sm-heading.work {
+    font-size: 2.6rem;
+  }
 }

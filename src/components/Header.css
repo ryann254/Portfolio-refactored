@@ -6,8 +6,13 @@
   padding-right: 0 !important;
 }
 
-.navbar {
-  height: 80px;
+#basic-navbar-nav {
+  background: #343a40;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
 }
 
 /* Brand */
@@ -23,20 +28,15 @@
 }
 
 /* Logo */
-a {
-  text-decoration: none;
-  color: #333;
-}
-
 a:hover {
-  color: #999;
+  color: #999 !important;
 }
 
 .navbar {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 10;
   position: fixed;
 }
 
@@ -46,17 +46,6 @@ a:hover {
 
 .links > a:hover {
   color: #f5603b !important;
-}
-
-.active {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35px;
-  height: 2px;
-  background: #f5603b;
-  transition: all 0.5s ease-out;
 }
 
 .link-color {
@@ -73,18 +62,18 @@ a:hover {
   font-family: "Nunito Sans", sans-serif;
 }
 
-.nav-item {
-  flex-grow: 0.1;
-}
-
 /* Footer */
 .line-breaker {
   color: #999;
   width: 87%;
 }
 
+.content-work a {
+  color: #333;
+}
+
 .pre-footer {
-  margin: 4.2rem 0;
+  margin: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,45 +82,41 @@ a:hover {
 
 .pre-footer .content-dev {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 19px;
   color: #999;
 }
 
 .pre-footer .content-work {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 900;
   color: #111;
 }
 
 .fas {
-  font-size: 44px;
+  font-size: 36px;
 }
 
 .content-work a:hover {
   text-decoration: underline;
 }
 
-.page-footer {
-  margin-top: 4.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  color: #111;
+.br {
+  display: none;
 }
 
 .contact-info,
 .project,
 .availability,
-.follow,
-h2 {
-  font-size: 27px;
-}
-.contact-info,
-.project,
-.availability,
 .follow {
-  display: flex;
-  flex-direction: column;
+  font-size: 19px;
+  text-align: center;
+}
+
+.contact-info a,
+.project a,
+.availability a,
+.follow a {
+  color: #333;
 }
 
 .line-footer {
@@ -141,72 +126,18 @@ h2 {
 }
 
 .contact-info .line-footer,
-.availability .line-footer {
-  margin: 49px 0 0 7px;
-}
-
-.project .line-footer {
-  margin: 49px 0 0 -15px;
-}
-
+.availability .line-footer,
+.project .line-footer,
 .follow .line-footer {
-  margin: 49px 0 0 4px;
-}
-
-.contact-content {
-  margin-top: 10px;
-  color: #888;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.contact-content .highlight {
-  color: #111;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-text {
-  width: 300px;
-}
-
-.projects-content {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-.availability-content {
-  color: #888;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.follow-content {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.follow a:hover {
-  text-decoration: underline;
+  margin: 19px 0 0 10px;
 }
 
 .post-footer {
-  display: flex;
-  flex-direction: row;
   color: #888;
 }
 
 .logo {
   color: #888 !important;
-  font-size: 40px;
-  margin-left: 72px;
 }
 
 .footer-text {
@@ -215,5 +146,118 @@ h2 {
 }
 
 .date {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
+}
+
+@media all and (max-width: 767px) {
+  .underline {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .active {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background: #f5603b;
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-item {
+    flex-grow: 0.1;
+  }
+
+  .pre-footer {
+    margin: 4.2rem 0;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 24px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 60px;
+  }
+
+  .fas {
+    font-size: 44px;
+  }
+
+  .page-footer {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #111;
+  }
+
+  .contact-info,
+  .project,
+  .availability,
+  .follow,
+  h2 {
+    font-size: 27px;
+  }
+  .contact-info,
+  .project,
+  .availability,
+  .follow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info .line-footer,
+  .availability .line-footer {
+    margin: 49px 0 0 7px;
+  }
+
+  .project .line-footer {
+    margin: 49px 0 0 -15px;
+  }
+
+  .follow .line-footer {
+    margin: 49px 0 0 4px;
+  }
+
+  .contact-content,
+  .availability-content {
+    margin-top: 10px;
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info a:hover,
+  .project a:hover,
+  .follow a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-text {
+    width: 300px;
+  }
+
+  .projects-content,
+  .follow-content {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .availability-content {
+    margin-top: auto;
+  }
+
+  .logo {
+    font-size: 40px;
+    margin-left: 72px;
+  }
+
+  .date {
+    margin: 0 10px;
+  }
 }
