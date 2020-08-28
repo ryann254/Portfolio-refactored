@@ -142,6 +142,7 @@ main .icons a:hover {
 .work-content h3 {
   font-weight: bold;
   margin: 0;
+  font-size: 26px;
 }
 
 .work-content {
@@ -163,13 +164,13 @@ main .icons a:hover {
 
 .lg-header {
   letter-spacing: 1px;
-  font-size: 44px;
-  font-weight: 900;
+  font-size: 33px !important;
+  font-weight: 600;
   color: #000;
 }
 .lg-header .line-contact {
   margin-left: 10px;
-  width: 2.5rem;
+  width: 2rem;
   height: 4px;
   background: #333;
 }
@@ -180,7 +181,7 @@ main .icons a:hover {
 
 .right-heading {
   color: #888;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .contact-form {

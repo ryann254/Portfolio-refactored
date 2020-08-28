@@ -19,10 +19,25 @@ function About() {
 
   const dispatch = useDispatch();
 
-  function scrollFunction(id) {
+  function doneResizing(id, offsetTop) {
+    if (window.Modernizr.mq("screen and (min-width:768px)")) {
+      let offsetTop = 130;
+      scrollFunction(id, offsetTop);
+    } else if (window.Modernizr.mq("screen and (max-width: 767px)")) {
+      if (offsetTop === "") {
+        let offsetTop = 500;
+        scrollFunction(id, offsetTop);
+      } else {
+        scrollFunction(id, offsetTop);
+      }
+    }
+  }
+
+  function scrollFunction(id, addTop) {
     let offsetTop = document.getElementById(`${id}`).offsetTop;
+    console.log(addTop);
     window.scrollTo({
-      top: offsetTop + 130,
+      top: offsetTop + addTop,
       behavior: "smooth",
     });
     dispatch(changeScrollStatus());
@@ -34,9 +49,10 @@ function About() {
         scrollToElement.section !== "" &&
         scrollToElement.section === "work"
       ) {
-        scrollFunction("work-section");
+        doneResizing("work-section");
       } else {
-        scrollFunction("events-section");
+        let offsetTop = 1300;
+        doneResizing("events-section", offsetTop);
       }
     }
   }, [scrollToElement]);

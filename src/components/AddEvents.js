@@ -140,6 +140,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Control
                             type="text"
                             name="title"
+                            autoComplete="off"
                             placeholder="Enter the title.."
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
@@ -151,6 +152,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Control
                             type="text"
                             name="subtitle"
+                            autoComplete="off"
                             value={subtitle}
                             onChange={(e) => setSubtitle(e.target.value)}
                             placeholder="Enter the subtitle..."

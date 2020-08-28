@@ -57,7 +57,7 @@ a:hover {
   justify-content: flex-end;
   width: 100%;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: 0.1em;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -73,7 +73,7 @@ a:hover {
 }
 
 .pre-footer {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,13 +87,13 @@ a:hover {
 }
 
 .pre-footer .content-work {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 900;
   color: #111;
 }
 
 .fas {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .content-work a:hover {
@@ -108,8 +108,15 @@ a:hover {
 .project,
 .availability,
 .follow {
-  font-size: 19px;
+  font-size: 18px;
   text-align: center;
+}
+
+.contact-info h2,
+.project h2,
+.availability h2,
+.follow h2 {
+  font-size: 29px;
 }
 
 .contact-info a,

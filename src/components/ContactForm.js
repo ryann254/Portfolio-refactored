@@ -139,10 +139,59 @@ function ContactForm() {
         hideQuestion();
         form_box.classList.add("close");
         progress_bar.style.width = "100%";
-
-        formComplete();
+        submitForm(questions);
       }
     }
+  }
+
+  function submitForm(questions) {
+    //Getting the data from the submission's array
+    let data = {
+      first_name: questions[0].answer,
+      second_name: questions[1].answer,
+      email: questions[2].answer,
+      message: questions[3].answer,
+    };
+
+    //Preparing the data for sending
+    let form_data = new FormData();
+    for (let key in data) {
+      form_data.append(key, data[key]);
+    }
+
+    //Sending
+    const xhr = new XMLHttpRequest();
+    const form_url = "ttps://formspree.io/mlepkvdl";
+    xhr.open("POST", form_url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        formComplete();
+      } else {
+        //When the message is not set
+        input_progress.style.borderColor = "#ff2d26";
+        next_btn.style.color = "#ff2d26";
+        for (let i = 0; i < 6; i++) {
+          setTimeout(transform, shakeWaitTime * i, ((i % 2) * 2 - 1) * 20, 0);
+          setTimeout(transform, shakeWaitTime * 6, 0, 0);
+        }
+        const h3 = document.createElement("h3");
+        h3.classList.add("error");
+        h3.appendChild(
+          document.createTextNode(
+            `Sorry ${questions[0].answer}. There was an error sending your message.
+            Please check your internet connection and try reloading the page.`
+          )
+        );
+
+        setTimeout(() => {
+          form_box.parentElement.appendChild(h3);
+          setTimeout(() => (h3.style.opacity = 1), 50);
+        }, 1000);
+      }
+    };
+    xhr.send(form_data);
   }
 
   function formComplete() {
@@ -173,7 +222,7 @@ function ContactForm() {
         getQuestion()
       }
       <div id="container">
-        <form action="https://formspree.io/mlepkvdl" method="post">
+        <form>
           <div id="form-box">
             <i id="prev-btn" className="fas fa-arrow-left"></i>
             <i
@@ -183,7 +232,7 @@ function ContactForm() {
             ></i>
 
             <div id="input-group">
-              <input id="input-field" required />
+              <input id="input-field" autoComplete="off" required />
               <label id="input-label"></label>
               <div id="input-progress"></div>
             </div>
