@@ -11,10 +11,16 @@ const initialState = {
   eventORWorkStatus: false,
   workEducationData: [
     {
-      title: "Intern at Softsearch(2020-)",
+      title: "HNG Internship(2020)",
+      subtitle: "HNGI7 International Organization",
+      content:
+        "In June I joined an international organization named HNG Internship as one of the selected interns to participate in its various training activities. The internship was very informative and challenging as I had to use technologies that I had not used before e.g. bootstrap and PHP. No frameworks i.e. React/Angular, were to be used and we had to rely on good old html,css and js for the frontend team. I got to interact and work with people from the whole developer cycle i.e. Designers, Backend developers, Devops, Mobile Developers and other frontend developers. I left the internship in July as I was unable to make it to stage 7 of the internship.",
+    },
+    {
+      title: "Intern at Softsearch(2020)",
       subtitle: "Front-End Developer",
       content:
-        "As of January 23rd 2020, I started my internship at Softsearch Limited, a software development and consultancy start-up. At Softsearch I work with another front-end developer to develop and deliver well designed and optimized websites. We are currently working on product to ease transportation of bulky goods to and fro a place.",
+        "As of January 23rd 2020, I started my internship at Softsearch Limited, a software development and consultancy start-up. At Softsearch I worked with another front-end developer to develop and deliver well designed and optimized websites using mainly react. We worked on a product/website to ease transportation of bulky goods to and from a place. I learnt a lot skills from this internship e.g. using git to collaborate with other developers, writing user stories, and  just to mention a few. I ended the internship in May.",
     },
     {
       title: "JKUAT(2017-2021)",
