@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
+import $ from "jquery";
 
 import "./ContactForm.scss";
 
@@ -135,14 +136,25 @@ function ContactForm() {
       if (questions[position]) {
         hideQuestion();
         getQuestion();
+        return false;
       } else {
         hideQuestion();
         form_box.classList.add("close");
         progress_bar.style.width = "100%";
         submitForm(questions);
+        return true;
       }
     }
   }
+
+  $(document).ready(function () {
+    $(document).on("keyup keypress", 'form input[type="text"]', function (evt) {
+      if (evt.keyCode == 13) {
+        evt.preventDefault();
+        return false;
+      }
+    });
+  });
 
   function submitForm(questions) {
     //Getting the data from the submission's array
@@ -161,7 +173,7 @@ function ContactForm() {
 
     //Sending
     const xhr = new XMLHttpRequest();
-    const form_url = "ttps://formspree.io/mlepkvdl";
+    const form_url = "https://formspree.io/mlepkvdl";
     xhr.open("POST", form_url);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
@@ -232,7 +244,7 @@ function ContactForm() {
             ></i>
 
             <div id="input-group">
-              <input id="input-field" autoComplete="off" required />
+              <input id="input-field" type="text" autoComplete="off" required />
               <label id="input-label"></label>
               <div id="input-progress"></div>
             </div>
