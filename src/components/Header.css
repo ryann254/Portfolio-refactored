@@ -160,9 +160,17 @@ a:hover {
   .underline {
     display: none;
   }
+
+  .larger-screens {
+    display: none;
+  }
 }
 
 @media all and (min-width: 768px) {
+  .smaller-screens {
+    display: none;
+  }
+
   .active {
     position: absolute;
     top: 95%;
@@ -174,32 +182,37 @@ a:hover {
     transition: all 0.5s ease-out;
   }
 
+  #growth {
+    font-size: 16px;
+  }
+
   .nav-item {
     flex-grow: 0.1;
   }
 
   .pre-footer {
-    margin: 4.2rem 0;
+    margin: 3rem 0;
   }
 
   .pre-footer .content-dev {
-    font-size: 24px;
+    font-size: 19px;
   }
 
   .pre-footer .content-work {
-    font-size: 60px;
+    font-size: 48px;
   }
 
   .fas {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .page-footer {
-    margin-top: 4.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     color: #111;
+    width: -webkit-fill-available;
   }
 
   .contact-info,
@@ -219,15 +232,15 @@ a:hover {
 
   .contact-info .line-footer,
   .availability .line-footer {
-    margin: 49px 0 0 7px;
+    margin: 19px 0 0 7px;
   }
 
   .project .line-footer {
-    margin: 49px 0 0 -15px;
+    margin: 19px 0 0 7px;
   }
 
   .follow .line-footer {
-    margin: 49px 0 0 4px;
+    margin: 19px 0 0 7px;
   }
 
   .contact-content,
@@ -244,10 +257,6 @@ a:hover {
     text-decoration: underline;
   }
 
-  .contact-text {
-    width: 300px;
-  }
-
   .projects-content,
   .follow-content {
     color: #666;
@@ -261,7 +270,7 @@ a:hover {
 
   .logo {
     font-size: 40px;
-    margin-left: 72px;
+    margin-left: 45px;
   }
 
   .date {

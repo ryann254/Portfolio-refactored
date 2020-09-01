@@ -66,7 +66,7 @@ function About() {
           <h2 className="sm-heading">Let me mention just a few...</h2>
           <div className="about-info">
             <Row>
-              <div className="image-bio d-flex-column">
+              <div className="image-bio d-flex-column d-md-flex">
                 <Col md={6} className="profile-pic my-auto">
                   <Bounce right>
                     <div className="d-flex justify-content-center">
@@ -123,7 +123,7 @@ function About() {
                 <Row>
                   {workEducationData !== ""
                     ? workEducationData.map((item, index) => (
-                        <Col key={index} md={4} className="mb-4">
+                        <Col key={index} md={6} className="mb-4">
                           <div className="job" key={index}>
                             <h3>{item.title}</h3>
                             <h4>{item.subtitle}</h4>
@@ -146,7 +146,7 @@ function About() {
                 <Row>
                   {eventsAchievements !== ""
                     ? eventsAchievements.map((item, index) => (
-                        <Col key={index} md={4} className="mb-4">
+                        <Col key={index} md={6} className="mb-4">
                           <div className="job" key={index}>
                             <h3>{item.title}</h3>
                             <h4>{item.subtitle}</h4>

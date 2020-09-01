@@ -33,7 +33,7 @@ function Work() {
           <h2 className="sm-heading">A few of my projects....</h2>
           <div className="projects">
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -93,7 +93,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -152,7 +152,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -214,7 +214,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -293,7 +293,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -370,7 +370,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a href="https://ryanfancyform.cf/" target="_blank">
@@ -431,7 +431,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -493,7 +493,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a href="https://ryanphotography.cf/" target="_blank">

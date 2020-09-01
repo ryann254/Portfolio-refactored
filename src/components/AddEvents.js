@@ -90,8 +90,8 @@ function AddEvents({ history, ...props }) {
               </div>
 
               <div className="container-events">
-                <div className="inner d-flex-column">
-                  <Col>
+                <div className="inner d-flex-column d-md-flex">
+                  <Col md={6}>
                     <div className="left" onMouseMove={addAnimation}>
                       <div className="content-add-events">
                         <h1>
@@ -109,7 +109,7 @@ function AddEvents({ history, ...props }) {
                       </div>
                     </div>
                   </Col>
-                  <Col>
+                  <Col md={6}>
                     <div className="right mb-3">
                       <p className="text-center">Fill the following form!</p>
                       <Form onSubmit={handleSubmit} className="pl-3 pr-3">

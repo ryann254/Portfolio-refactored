@@ -7,7 +7,7 @@
 }
 
 .about-info .bio {
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .about-info .bio-image {
@@ -30,7 +30,7 @@
 }
 
 .about-info .job {
-  font-size: 1.2rem;
+  font-size: 18px;
   background: #fff;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
@@ -40,16 +40,17 @@
 }
 
 .about-info h3 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .about-info h4 {
-  font-size: 23px;
+  font-size: 19px;
   margin-bottom: 15px;
 }
 
+.sm-heading.work {
+  font-size: 25px;
+}
+
 @media all and (min-width: 768px) {
-  .sm-heading.work {
-    font-size: 2.6rem;
-  }
 }
