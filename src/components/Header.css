@@ -186,6 +186,15 @@ a:hover {
     font-size: 16px;
   }
 
+  .navbar,
+  #basic-navbar-nav {
+    background-color: #eee !important;
+  }
+
+  .links a {
+    color: #333;
+  }
+
   .nav-item {
     flex-grow: 0.1;
   }
@@ -275,5 +284,44 @@ a:hover {
 
   .date {
     margin: 0 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Header */
+  #growth {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .sm-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .lg-screens {
+    display: none;
+  }
+  .br {
+    display: block;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 52px;
+    line-height: 63px;
+  }
+
+  .footer-2 {
+    justify-content: flex-start;
+  }
+
+  .contact-middle {
+    width: 100%;
   }
 }

@@ -54,7 +54,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -62,7 +62,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -122,7 +122,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -173,7 +173,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -181,7 +181,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -238,7 +238,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -246,7 +246,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -316,7 +316,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -324,7 +324,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -391,7 +391,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -399,7 +399,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -453,7 +453,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -461,7 +461,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -514,7 +514,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -522,7 +522,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>

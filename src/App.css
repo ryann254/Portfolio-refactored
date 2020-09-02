@@ -71,13 +71,12 @@ main .icons a:hover {
 .projects .netflix-image,
 .projects .photography {
   width: 100%;
-  border: 3px #fff solid;
 }
 
 .projects img:hover {
   opacity: 0.6;
-  border-color: #f5603b;
   transition: all 0.6s ease-in-out;
+  border: 3px #f5603b solid;
 }
 
 .work-buttons {
@@ -213,12 +212,24 @@ main .icons a:hover {
   #work,
   #contact {
     margin-top: 200px;
-    margin-bottom: 110px;
+    margin-bottom: 75px;
+  }
+
+  #contact {
+    margin-bottom: 0px;
   }
 
   /* My Work Page */
   .technologies img {
     width: 30px;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
   }
 
   .work-buttons {
@@ -227,8 +238,8 @@ main .icons a:hover {
 
   /* Contact page */
   .contact-pic {
-    width: 85vw;
-    height: 85vh;
+    width: 100%;
+    height: 70vh;
   }
 
   .contact-top {
@@ -237,9 +248,9 @@ main .icons a:hover {
 
   .page-content {
     position: absolute;
-    top: -85px;
-    right: 0;
-    font-size: 7rem;
+    top: -66px;
+    right: -37px;
+    font-size: 5.7rem;
     text-transform: uppercase;
     letter-spacing: 30px;
   }
@@ -263,6 +274,32 @@ main .icons a:hover {
   .content-words .one-letter {
     color: #bbb;
     padding-left: 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Work Page */
+  .item a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    width: 370px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sm-heading.work {
+    font-size: 27px !important;
+  }
+
+  .contact-pic {
+    height: 75vh;
   }
 }
 

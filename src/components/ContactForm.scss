@@ -150,7 +150,7 @@ h3.error {
   }
 }
 
-@media all and (max-width: 576px) {
+@media all and (min-width: 576px) {
   #container {
     #form-box {
       width: 480px;
@@ -159,12 +159,11 @@ h3.error {
 }
 
 @media all and (min-width: 768px) {
-  #form-box {
-    width: 550px;
-  }
-
   #container {
     height: 300px;
+    #form-box {
+      width: 400px;
+    }
   }
 
   #container #form-box #next-btn {
@@ -173,5 +172,13 @@ h3.error {
 
   #container #form-box #input-group {
     padding: 30px 20px 20px 20px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  #container {
+    #form-box {
+      width: 480px;
+    }
   }
 }

@@ -53,7 +53,8 @@ function Homepage() {
                 <div className="sm-header">Ryan Njoroge</div>
                 <div className="lg-header mb-3">
                   Web Developer, AI Enthusiast
-                  <br />
+                  <br className="br" />
+                  <span className="pl-2"></span>
                   and Critical Thinker
                 </div>
                 <div className="content mb-3">
@@ -87,7 +88,7 @@ function Homepage() {
               </div>
             </div>
           </Col>
-          <Col className="ml-auto pr-md-0" md={6}>
+          <Col className="ml-auto pr-md-0" md={6} lg={5}>
             <Row className="smaller-screens">
               <div className="projects-header d-flex-column">
                 <div className="lg-header text-capitalize text-center mb-5">

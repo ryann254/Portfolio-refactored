@@ -156,7 +156,21 @@
   }
 }
 
+@media all and (min-width: 992px) {
+  .right-home {
+    .profile-container {
+      width: 385px;
+      .profile-content {
+        padding: 5px;
+      }
+    }
+  }
+}
+
 @media all and (min-width: 1200px) {
+  .br {
+    display: none;
+  }
   .middle {
     .lg-header {
       width: 540px;

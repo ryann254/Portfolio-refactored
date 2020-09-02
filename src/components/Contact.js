@@ -37,8 +37,8 @@ function Contact() {
             </Col>
           </Row>
           <Row>
-            <div className="contact-middle d-flex-column">
-              <Col md={5}>
+            <div className="contact-middle d-flex-column d-md-flex">
+              <Col md={5} className="d-xl-flex justify-content-center">
                 <div className="contact-left mt-5">
                   <div className="sm-header">contact</div>
                   <div className="lg-header d-flex">
@@ -47,7 +47,7 @@ function Contact() {
                   </div>
                 </div>
               </Col>
-              <Col md={7}>
+              <Col md={7} className="d-xl-flex justify-content-center">
                 <div className="contact-right mt-5">
                   <div className="right-heading">
                     Got a project? Drop me a line if you want to work together
