@@ -212,7 +212,7 @@ main .icons a:hover {
   #work,
   #contact {
     margin-top: 200px;
-    margin-bottom: 75px;
+    margin-bottom: 120px;
   }
 
   #contact {
@@ -300,6 +300,64 @@ main .icons a:hover {
 
   .contact-pic {
     height: 75vh;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .page-content {
+    font-size: 6rem;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .lg-header {
+    font-size: 36px !important;
+  }
+
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 59px;
+  }
+
+  h2.sm-heading {
+    font-size: 29px;
+  }
+
+  .sm-heading.work {
+    font-size: 30px !important;
+  }
+
+  .work-content p {
+    font-size: 20px;
+  }
+
+  .work-content h3 {
+    font-size: 29px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .sm-header,
+  .right-heading {
+    font-size: 23px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .page-content {
+    top: -78px;
+    font-size: 6.6rem;
   }
 }
 

@@ -38,7 +38,7 @@ function Contact() {
           </Row>
           <Row>
             <div className="contact-middle d-flex-column d-md-flex">
-              <Col md={5} className="d-xl-flex justify-content-center">
+              <Col md={5} className="d-xl-flex justify-content-start">
                 <div className="contact-left mt-5">
                   <div className="sm-header">contact</div>
                   <div className="lg-header d-flex">

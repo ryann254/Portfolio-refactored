@@ -52,5 +52,36 @@
   font-size: 25px;
 }
 
-@media all and (min-width: 992px) {
+.identify {
+  height: 50px;
+  width: 50px;
+  margin-right: 0.5em;
+  border: 2px solid #f4bb00;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18pt;
+  padding-top: 5px;
+  color: #fff;
+}
+
+.work-title {
+  width: 250px;
+}
+
+@media all and (min-width: 1680px) {
+  .about-info h3 {
+    font-size: 27px;
+  }
+
+  .about-info .bio {
+    font-size: 20px;
+  }
+
+  .about-info h4 {
+    font-size: 20px;
+  }
+
+  .about-info .job {
+    font-size: 20px;
+  }
 }

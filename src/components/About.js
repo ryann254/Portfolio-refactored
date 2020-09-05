@@ -1,14 +1,15 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Bounce, Zoom } from "react-reveal";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import randomcolor from "randomcolor";
 
 import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
 import { changeScrollStatus } from "../redux/action-creator";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 function About() {
   const {
@@ -125,8 +126,29 @@ function About() {
                     ? workEducationData.map((item, index) => (
                         <Col key={index} md={6} lg={4} className="mb-4">
                           <div className="job" key={index}>
-                            <h3>{item.title}</h3>
-                            <h4>{item.subtitle}</h4>
+                            <div className="d-flex">
+                              <div
+                                className="identify"
+                                style={{
+                                  background: randomcolor({
+                                    luminosity: "dark",
+                                    format: "rgba",
+                                    alpha: 0.7,
+                                  }),
+                                }}
+                              >
+                                {item.title !== ""
+                                  ? item.title.slice(0, 1).toUpperCase()
+                                  : null}
+                              </div>
+                              <div>
+                                <h3 className="mt-2 work-title">
+                                  {item.title}
+                                </h3>
+                                <h4>{item.subtitle}</h4>
+                              </div>
+                            </div>
+
                             <p>{item.content}</p>
                           </div>
                         </Col>
@@ -148,8 +170,28 @@ function About() {
                     ? eventsAchievements.map((item, index) => (
                         <Col key={index} md={6} lg={4} className="mb-4">
                           <div className="job" key={index}>
-                            <h3>{item.title}</h3>
-                            <h4>{item.subtitle}</h4>
+                            <div className="d-flex">
+                              <div
+                                className="identify"
+                                style={{
+                                  background: randomcolor({
+                                    luminosity: "dark",
+                                    format: "rgba",
+                                    alpha: 0.7,
+                                  }),
+                                }}
+                              >
+                                {item.title !== ""
+                                  ? item.title.slice(0, 1).toUpperCase()
+                                  : null}
+                              </div>
+                              <div>
+                                <h3 className="mt-2 work-title">
+                                  {item.title}
+                                </h3>
+                                <h4>{item.subtitle}</h4>
+                              </div>
+                            </div>
                             <p>{item.content}</p>
                           </div>
                         </Col>

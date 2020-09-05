@@ -78,7 +78,7 @@ function AddEvents({ history, ...props }) {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="limit-footer">
         <Row>
           <div className="body">
             <Zoom bottom>
@@ -139,6 +139,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Title</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="title"
                             autoComplete="off"
                             placeholder="Enter the title.."
@@ -151,6 +152,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Subtitle</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="subtitle"
                             autoComplete="off"
                             value={subtitle}
@@ -162,6 +164,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Content</Form.Label>
                           <Form.Control
                             as="textarea"
+                            required="true"
                             rows="4"
                             value={content}
                             onChange={(e) => setContent(e.target.value)}

@@ -188,7 +188,7 @@ a:hover {
 
   .navbar,
   #basic-navbar-nav {
-    background-color: #eee !important;
+    background-color: #ffffff !important;
   }
 
   .links a {
@@ -323,5 +323,55 @@ a:hover {
 
   .contact-middle {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 1366px) {
+  .footer-lg-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .xl-screens {
+    display: none;
+  }
+
+  .limit-footer {
+    max-width: 1440px;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .limit {
+    width: 1680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #growth {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 22px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 56px;
+  }
+
+  .contact-info h2,
+  .project h2,
+  .availability h2,
+  .follow h2 {
+    font-size: 31px;
+  }
+
+  .contact-content,
+  .availability-content,
+  .projects-content,
+  .follow-content {
+    font-size: 20px;
   }
 }

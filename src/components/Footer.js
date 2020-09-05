@@ -18,7 +18,7 @@ function Footer() {
   }, []);
   return (
     <>
-      <Container fluid>
+      <Container fluid className="limit-footer">
         <Row className="d-flex justify-content-between">
           <Col>
             <hr className="line-breaker"></hr>
@@ -201,7 +201,7 @@ function Footer() {
                   </div>
                   <div className="contact-content mt-2">
                     <div>
-                      <p className="contact-text pl-2 pr-2">
+                      <p className="contact-text pl-2 pl-lg-5 pr-2">
                         Feel free to reach out at any time, through email or
                         call.
                       </p>
@@ -309,9 +309,42 @@ function Footer() {
                   </div>
                 </div>
               </Col>
+              <Col className="footer-lg-screens">
+                <div className="follow mb-4">
+                  <div className="d-flex justify-content-center mb-2">
+                    <h2>
+                      Follow <br className="br" /> me on
+                    </h2>
+                    <div className="line-footer"></div>
+                  </div>
+                  <div className="follow-content mt-2">
+                    <div>
+                      <a
+                        href="https://twitter.com/ronjozkeddely"
+                        target="_blank"
+                      >
+                        Twitter
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/ryann254" target="_blank">
+                        Github
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="https://www.linkedin.com/in/ryan-n-3a81a9198"
+                        target="_blank"
+                      >
+                        LinkedIn
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Col>
             </div>
           </Row>
-          <Row>
+          <Row className="xl-screens">
             <div className="page-footer footer-2">
               <Col xl={4} className="lg-screens">
                 <div className="availability mb-4">

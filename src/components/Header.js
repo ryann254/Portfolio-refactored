@@ -120,7 +120,13 @@ function Header({ children }) {
     <Fragment>
       <header>
         <Container fluid>
-          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+          <Navbar
+            collapseOnSelect
+            expand="md"
+            bg="dark"
+            variant="dark"
+            className="limit"
+          >
             <Navbar.Brand href="/" className="brand ml-lg-4">
               RN
             </Navbar.Brand>
