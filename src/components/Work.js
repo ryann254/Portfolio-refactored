@@ -2,17 +2,21 @@ import React from "react";
 import { Zoom } from "react-reveal";
 
 // Own Components
-import Image1 from "../../public/images/projects/Estimator-app.png";
-import Image2 from "../../public/images/projects/Expense-app.png";
-import Image3 from "../../public/images/projects/Fancy-form.png";
-import Image4 from "../../public/images/projects/Netflix.png";
-import Image5 from "../../public/images/projects/Home-furniture.png";
+import Bakery from "../../public/images/projects/Bakery template.png";
+import Law from "../../public/images/projects/Law-template.png";
+import Wedding from "../../public/images/projects/Wedding-template.jpg";
+import Estimatorapp from "../../public/images/projects/Estimator-app.png";
+import Expenseapp from "../../public/images/projects/Expense-app.png";
+import Fancyform from "../../public/images/projects/Fancy-form.png";
+import Netflix from "../../public/images/projects/Netflix.png";
+import Homefurniture from "../../public/images/projects/Home-furniture.png";
 import IconHtml from "../../public/images/icons/html-icon.png";
 import IconCss from "../../public/images/icons/css-icon.png";
 import IconJs from "../../public/images/icons/js-icon.png";
 import IconReactjs from "../../public/images/icons/reactjs-icon.png";
 import IconNodejs from "../../public/images/icons/nodejs-icon.png";
 import IconAngular from "../../public/images/icons/angular-icon.png";
+import IconJquery from "../../public/images/icons/jquery-icon.png";
 import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -29,14 +33,199 @@ function Work() {
           <h2 className="sm-heading">A few of my projects....</h2>
           <div className="projects">
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
+                <Col>
+                  <div className="item mb-4">
+                    <a
+                      href="https://compassionate-einstein-9ec9cd.netlify.app/"
+                      target="_blank"
+                    >
+                      <img src={Wedding} className="covid-19" alt="Project" />
+                    </a>
+                    <div className="technologies">
+                      <img src={IconHtml} alt="icon" />
+                      <img src={IconCss} alt="icon" />
+                      <img src={IconJs} alt="icon" />
+                      <img src={IconJquery} alt="icon" />
+                    </div>
+                    <div className="work-buttons">
+                      <a
+                        href="https://compassionate-einstein-9ec9cd.netlify.app/"
+                        target="_blank"
+                        className="btn btn-light"
+                      >
+                        <i className="fas fa-eye pr-1"></i> Project
+                      </a>
+
+                      <a
+                        href="https://github.com/ryann254/Wedding-Planner-Template"
+                        target="_blank"
+                        className="btn btn-dark"
+                      >
+                        <i className="fab fa-github pr-1"></i> Github
+                      </a>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="work-content">
+                    <div>
+                      <h3>Wedding Planner Template</h3>
+                    </div>
+                    <div>
+                      <p>
+                        This is Wedding Planner template built with html,css,
+                        js, bootstrap and a touch of jquery.It's fully mobile
+                        responsive and can be adapted to any wedding planner
+                        theme or specification.
+                      </p>
+                    </div>
+                    <div>
+                      <h3>Noteable Features:</h3>
+                      <p>
+                        The template has a contact form at the bottom of the
+                        homepage which is fully functional and can be used to
+                        contact me. It also has a smooth scrolling effect.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row className="mb-5">
+              <div className="d-flex-column d-md-flex">
+                <Col>
+                  <div className="item mb-4">
+                    <a
+                      href="https://hardcore-tereshkova-f8d88e.netlify.app/"
+                      target="_blank"
+                    >
+                      <img src={Law} className="covid-19" alt="Project" />
+                    </a>
+                    <div className="technologies">
+                      <img src={IconHtml} alt="icon" />
+                      <img src={IconCss} alt="icon" />
+                      <img src={IconJs} alt="icon" />
+                      <img src={IconJquery} alt="icon" />
+                    </div>
+                    <div className="work-buttons">
+                      <a
+                        href="https://hardcore-tereshkova-f8d88e.netlify.app/"
+                        target="_blank"
+                        className="btn btn-light"
+                      >
+                        <i className="fas fa-eye pr-1"></i> Project
+                      </a>
+
+                      <a
+                        href="https://github.com/ryann254/Law-Template"
+                        target="_blank"
+                        className="btn btn-dark"
+                      >
+                        <i className="fab fa-github pr-1"></i> Github
+                      </a>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="work-content">
+                    <div>
+                      <h3>Law Template</h3>
+                    </div>
+                    <div>
+                      <p>
+                        This is law template built with html,css, js, bootstrap
+                        and a touch of jquery.It's fully mobile responsive and
+                        can be adapted to any law theme or specification.
+                      </p>
+                    </div>
+                    <div>
+                      <h3>Noteable Features:</h3>
+                      <p>
+                        The template has a contact form at the bottom of the
+                        homepage which is fully functional and can be used to
+                        contact me. It also has a smooth scrolling effect.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row className="mb-5">
+              <div className="d-flex-column d-md-flex">
+                <Col>
+                  <div className="item mb-4">
+                    <a
+                      href="https://dreamy-sammet-3a0674.netlify.app/"
+                      target="_blank"
+                    >
+                      <img src={Bakery} className="covid-19" alt="Project" />
+                    </a>
+                    <div className="technologies">
+                      <img src={IconHtml} alt="icon" />
+                      <img src={IconCss} alt="icon" />
+                      <img src={IconJs} alt="icon" />
+                      <img src={IconJquery} alt="icon" />
+                    </div>
+                    <div className="work-buttons">
+                      <a
+                        href="https://dreamy-sammet-3a0674.netlify.app/"
+                        target="_blank"
+                        className="btn btn-light"
+                      >
+                        <i className="fas fa-eye pr-1"></i> Project
+                      </a>
+
+                      <a
+                        href="https://github.com/ryann254/Bakery"
+                        target="_blank"
+                        className="btn btn-dark"
+                      >
+                        <i className="fab fa-github pr-1"></i> Github
+                      </a>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="work-content">
+                    <div>
+                      <h3>Bakery Template</h3>
+                    </div>
+                    <div>
+                      <p>
+                        This is bakery template built with html,css, js,
+                        bootstrap and a touch of jquery.It's fully mobile
+                        responsive and can be adapted to any bakery theme or
+                        specification.
+                      </p>
+                    </div>
+                    <div>
+                      <h3>Noteable Features:</h3>
+                      <p>
+                        The template has a contact form at the bottom of the
+                        homepage which is fully functional and can be used to
+                        contact me, there's also a similar one input form on the
+                        about,portfolio and contact. There's also a blog page
+                        that gives a recipe decription when you click read more.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+            <Row className="mb-5">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
                       href="https://ryann254.github.io/Ryan-Covid19-Deploy/"
                       target="_blank"
                     >
-                      <img src={Image1} className="covid-19" alt="Project" />
+                      <img
+                        src={Estimatorapp}
+                        className="covid-19"
+                        alt="Project"
+                      />
                     </a>
                     <div className="technologies">
                       <img src={IconHtml} alt="icon" />
@@ -49,7 +238,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -57,7 +246,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -104,7 +293,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -112,7 +301,7 @@ function Work() {
                       target="_blank"
                     >
                       <img
-                        src={Image2}
+                        src={Expenseapp}
                         className="expense-tracker"
                         alt="Project"
                       />
@@ -127,7 +316,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -135,7 +324,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -181,11 +370,15 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a href="https://ryanfancyform.cf/" target="_blank">
-                      <img src={Image3} className="fancy-form" alt="Project" />
+                      <img
+                        src={Fancyform}
+                        className="fancy-form"
+                        alt="Project"
+                      />
                     </a>
                     <div className="technologies">
                       <img src={IconHtml} alt="icon" />
@@ -198,7 +391,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -206,7 +399,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -238,7 +431,7 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a
@@ -246,7 +439,7 @@ function Work() {
                       target="_blank"
                     >
                       <img
-                        src={Image4}
+                        src={Netflix}
                         className="netflix-image"
                         alt="Project"
                       />
@@ -260,7 +453,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -268,7 +461,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>
@@ -300,11 +493,15 @@ function Work() {
               </div>
             </Row>
             <Row className="mb-5">
-              <div className="d-flex-column">
+              <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
                     <a href="https://ryanphotography.cf/" target="_blank">
-                      <img className="photography" src={Image5} alt="Project" />
+                      <img
+                        className="photography"
+                        src={Homefurniture}
+                        alt="Project"
+                      />
                     </a>
                     <div className="technologies">
                       <img src={IconHtml} alt="icon" />
@@ -317,7 +514,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-light"
                       >
-                        <i className="fas fa-eye"></i> Project
+                        <i className="fas fa-eye pr-1"></i> Project
                       </a>
 
                       <a
@@ -325,7 +522,7 @@ function Work() {
                         target="_blank"
                         className="btn btn-dark"
                       >
-                        <i className="fab fa-github"></i> Github
+                        <i className="fab fa-github pr-1"></i> Github
                       </a>
                     </div>
                   </div>

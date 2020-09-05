@@ -1,14 +1,15 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Bounce, Zoom } from "react-reveal";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import randomcolor from "randomcolor";
 
 import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
 import { changeScrollStatus } from "../redux/action-creator";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 function About() {
   const {
@@ -19,10 +20,25 @@ function About() {
 
   const dispatch = useDispatch();
 
-  function scrollFunction(id) {
+  function doneResizing(id, offsetTop) {
+    if (window.Modernizr.mq("screen and (min-width:768px)")) {
+      let offsetTop = 130;
+      scrollFunction(id, offsetTop);
+    } else if (window.Modernizr.mq("screen and (max-width: 767px)")) {
+      if (offsetTop === "") {
+        let offsetTop = 500;
+        scrollFunction(id, offsetTop);
+      } else {
+        scrollFunction(id, offsetTop);
+      }
+    }
+  }
+
+  function scrollFunction(id, addTop) {
     let offsetTop = document.getElementById(`${id}`).offsetTop;
+    console.log(addTop);
     window.scrollTo({
-      top: offsetTop + 130,
+      top: offsetTop + addTop,
       behavior: "smooth",
     });
     dispatch(changeScrollStatus());
@@ -34,9 +50,10 @@ function About() {
         scrollToElement.section !== "" &&
         scrollToElement.section === "work"
       ) {
-        scrollFunction("work-section");
+        doneResizing("work-section");
       } else {
-        scrollFunction("events-section");
+        let offsetTop = 1300;
+        doneResizing("events-section", offsetTop);
       }
     }
   }, [scrollToElement]);
@@ -50,7 +67,7 @@ function About() {
           <h2 className="sm-heading">Let me mention just a few...</h2>
           <div className="about-info">
             <Row>
-              <div className="image-bio d-flex-column">
+              <div className="image-bio d-flex-column d-md-flex">
                 <Col md={6} className="profile-pic my-auto">
                   <Bounce right>
                     <div className="d-flex justify-content-center">
@@ -107,10 +124,31 @@ function About() {
                 <Row>
                   {workEducationData !== ""
                     ? workEducationData.map((item, index) => (
-                        <Col key={index} md={4} className="mb-4">
+                        <Col key={index} md={6} lg={4} className="mb-4">
                           <div className="job" key={index}>
-                            <h3>{item.title}</h3>
-                            <h4>{item.subtitle}</h4>
+                            <div className="d-flex">
+                              <div
+                                className="identify"
+                                style={{
+                                  background: randomcolor({
+                                    luminosity: "dark",
+                                    format: "rgba",
+                                    alpha: 0.7,
+                                  }),
+                                }}
+                              >
+                                {item.title !== ""
+                                  ? item.title.slice(0, 1).toUpperCase()
+                                  : null}
+                              </div>
+                              <div>
+                                <h3 className="mt-2 work-title">
+                                  {item.title}
+                                </h3>
+                                <h4>{item.subtitle}</h4>
+                              </div>
+                            </div>
+
                             <p>{item.content}</p>
                           </div>
                         </Col>
@@ -130,10 +168,30 @@ function About() {
                 <Row>
                   {eventsAchievements !== ""
                     ? eventsAchievements.map((item, index) => (
-                        <Col key={index} md={4} className="mb-4">
+                        <Col key={index} md={6} lg={4} className="mb-4">
                           <div className="job" key={index}>
-                            <h3>{item.title}</h3>
-                            <h4>{item.subtitle}</h4>
+                            <div className="d-flex">
+                              <div
+                                className="identify"
+                                style={{
+                                  background: randomcolor({
+                                    luminosity: "dark",
+                                    format: "rgba",
+                                    alpha: 0.7,
+                                  }),
+                                }}
+                              >
+                                {item.title !== ""
+                                  ? item.title.slice(0, 1).toUpperCase()
+                                  : null}
+                              </div>
+                              <div>
+                                <h3 className="mt-2 work-title">
+                                  {item.title}
+                                </h3>
+                                <h4>{item.subtitle}</h4>
+                              </div>
+                            </div>
                             <p>{item.content}</p>
                           </div>
                         </Col>

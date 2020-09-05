@@ -62,7 +62,6 @@
   }
 
   textarea {
-    width: calc(100% - 1em);
     margin-left: -1px;
   }
 }
@@ -101,6 +100,7 @@
       height: 100%;
 
       .content-add-events {
+        margin-top: 50%;
         h1 {
           margin: 3em 0 2em 0;
         }
@@ -108,12 +108,9 @@
     }
 
     .right {
+      margin-top: 6.5rem;
       text-align: left;
     }
-  }
-
-  input[type="text"] {
-    width: calc(60% - 1em) !important;
   }
 
   .proto-container {
@@ -178,9 +175,19 @@
   }
 }
 
+@media all and (min-width: 1200px) {
+  .inner {
+    .left {
+      .content-add-events {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1600px) {
-  body {
-    font-size: 24px;
+  .body {
+    font-size: 20px;
   }
 
   .content-add-events {

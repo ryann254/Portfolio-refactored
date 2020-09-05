@@ -78,7 +78,7 @@ function AddEvents({ history, ...props }) {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="limit-footer">
         <Row>
           <div className="body">
             <Zoom bottom>
@@ -90,8 +90,8 @@ function AddEvents({ history, ...props }) {
               </div>
 
               <div className="container-events">
-                <div className="inner d-flex-column">
-                  <Col>
+                <div className="inner d-flex-column d-md-flex">
+                  <Col md={6} lg={7}>
                     <div className="left" onMouseMove={addAnimation}>
                       <div className="content-add-events">
                         <h1>
@@ -109,7 +109,7 @@ function AddEvents({ history, ...props }) {
                       </div>
                     </div>
                   </Col>
-                  <Col>
+                  <Col md={6} lg={5}>
                     <div className="right mb-3">
                       <p className="text-center">Fill the following form!</p>
                       <Form onSubmit={handleSubmit} className="pl-3 pr-3">
@@ -139,7 +139,9 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Title</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="title"
+                            autoComplete="off"
                             placeholder="Enter the title.."
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
@@ -150,7 +152,9 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Subtitle</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="subtitle"
+                            autoComplete="off"
                             value={subtitle}
                             onChange={(e) => setSubtitle(e.target.value)}
                             placeholder="Enter the subtitle..."
@@ -160,6 +164,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Content</Form.Label>
                           <Form.Control
                             as="textarea"
+                            required="true"
                             rows="4"
                             value={content}
                             onChange={(e) => setContent(e.target.value)}

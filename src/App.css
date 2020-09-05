@@ -25,7 +25,7 @@ h3.lg-heading {
 }
 
 h2.sm-heading {
-  font-size: 1.7rem;
+  font-size: 25px;
 }
 
 h1.sm-heading,
@@ -71,13 +71,12 @@ main .icons a:hover {
 .projects .netflix-image,
 .projects .photography {
   width: 100%;
-  border: 3px #fff solid;
 }
 
 .projects img:hover {
   opacity: 0.6;
-  border-color: #f5603b;
   transition: all 0.6s ease-in-out;
+  border: 3px #f5603b solid;
 }
 
 .work-buttons {
@@ -92,13 +91,14 @@ main .icons a:hover {
 }
 
 .technologies {
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .work-content p {
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 .technologies img {
@@ -142,6 +142,7 @@ main .icons a:hover {
 .work-content h3 {
   font-weight: bold;
   margin: 0;
+  font-size: 26px;
 }
 
 .work-content {
@@ -163,13 +164,13 @@ main .icons a:hover {
 
 .lg-header {
   letter-spacing: 1px;
-  font-size: 44px;
-  font-weight: 900;
+  font-size: 33px !important;
+  font-weight: 600;
   color: #000;
 }
 .lg-header .line-contact {
   margin-left: 10px;
-  width: 2.5rem;
+  width: 2rem;
   height: 4px;
   background: #333;
 }
@@ -180,11 +181,17 @@ main .icons a:hover {
 
 .right-heading {
   color: #888;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .contact-form {
   margin-top: 2rem;
+}
+
+@media all and (max-width: 320px) {
+  .technologies img {
+    width: 22px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -198,33 +205,41 @@ main .icons a:hover {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 4rem;
+    font-size: 55px;
   }
 
   #about,
   #work,
   #contact {
     margin-top: 200px;
-    margin-bottom: 110px;
+    margin-bottom: 120px;
+  }
+
+  #contact {
+    margin-bottom: 0px;
   }
 
   /* My Work Page */
-  .projects img {
-    width: 65%;
+  .technologies img {
+    width: 30px;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
   }
 
   .work-buttons {
-    width: 65%;
-  }
-
-  .technologies {
-    margin-left: -12px;
+    width: 100%;
   }
 
   /* Contact page */
   .contact-pic {
-    width: 85vw;
-    height: 85vh;
+    width: 100%;
+    height: 70vh;
   }
 
   .contact-top {
@@ -233,9 +248,9 @@ main .icons a:hover {
 
   .page-content {
     position: absolute;
-    top: -85px;
-    right: 0;
-    font-size: 7rem;
+    top: -66px;
+    right: -37px;
+    font-size: 5.7rem;
     text-transform: uppercase;
     letter-spacing: 30px;
   }
@@ -259,6 +274,90 @@ main .icons a:hover {
   .content-words .one-letter {
     color: #bbb;
     padding-left: 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Work Page */
+  .item a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    width: 370px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sm-heading.work {
+    font-size: 27px !important;
+  }
+
+  .contact-pic {
+    height: 75vh;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .page-content {
+    font-size: 6rem;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .lg-header {
+    font-size: 36px !important;
+  }
+
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 59px;
+  }
+
+  h2.sm-heading {
+    font-size: 29px;
+  }
+
+  .sm-heading.work {
+    font-size: 30px !important;
+  }
+
+  .work-content p {
+    font-size: 20px;
+  }
+
+  .work-content h3 {
+    font-size: 29px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .sm-header,
+  .right-heading {
+    font-size: 23px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .page-content {
+    top: -78px;
+    font-size: 6.6rem;
   }
 }
 

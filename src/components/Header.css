@@ -57,7 +57,7 @@ a:hover {
   justify-content: flex-end;
   width: 100%;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: 0.1em;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -73,7 +73,7 @@ a:hover {
 }
 
 .pre-footer {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,13 +87,13 @@ a:hover {
 }
 
 .pre-footer .content-work {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 900;
   color: #111;
 }
 
 .fas {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .content-work a:hover {
@@ -108,8 +108,15 @@ a:hover {
 .project,
 .availability,
 .follow {
-  font-size: 19px;
+  font-size: 18px;
   text-align: center;
+}
+
+.contact-info h2,
+.project h2,
+.availability h2,
+.follow h2 {
+  font-size: 29px;
 }
 
 .contact-info a,
@@ -153,9 +160,17 @@ a:hover {
   .underline {
     display: none;
   }
+
+  .larger-screens {
+    display: none;
+  }
 }
 
 @media all and (min-width: 768px) {
+  .smaller-screens {
+    display: none;
+  }
+
   .active {
     position: absolute;
     top: 95%;
@@ -167,32 +182,46 @@ a:hover {
     transition: all 0.5s ease-out;
   }
 
+  #growth {
+    font-size: 16px;
+  }
+
+  .navbar,
+  #basic-navbar-nav {
+    background-color: #ffffff !important;
+  }
+
+  .links a {
+    color: #333;
+  }
+
   .nav-item {
     flex-grow: 0.1;
   }
 
   .pre-footer {
-    margin: 4.2rem 0;
+    margin: 3rem 0;
   }
 
   .pre-footer .content-dev {
-    font-size: 24px;
+    font-size: 19px;
   }
 
   .pre-footer .content-work {
-    font-size: 60px;
+    font-size: 48px;
   }
 
   .fas {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .page-footer {
-    margin-top: 4.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     color: #111;
+    width: -webkit-fill-available;
   }
 
   .contact-info,
@@ -212,15 +241,15 @@ a:hover {
 
   .contact-info .line-footer,
   .availability .line-footer {
-    margin: 49px 0 0 7px;
+    margin: 19px 0 0 7px;
   }
 
   .project .line-footer {
-    margin: 49px 0 0 -15px;
+    margin: 19px 0 0 7px;
   }
 
   .follow .line-footer {
-    margin: 49px 0 0 4px;
+    margin: 19px 0 0 7px;
   }
 
   .contact-content,
@@ -237,10 +266,6 @@ a:hover {
     text-decoration: underline;
   }
 
-  .contact-text {
-    width: 300px;
-  }
-
   .projects-content,
   .follow-content {
     color: #666;
@@ -254,10 +279,99 @@ a:hover {
 
   .logo {
     font-size: 40px;
-    margin-left: 72px;
+    margin-left: 45px;
   }
 
   .date {
     margin: 0 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Header */
+  #growth {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .sm-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .lg-screens {
+    display: none;
+  }
+  .br {
+    display: block;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 52px;
+    line-height: 63px;
+  }
+
+  .footer-2 {
+    justify-content: flex-start;
+  }
+
+  .contact-middle {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1366px) {
+  .footer-lg-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .xl-screens {
+    display: none;
+  }
+
+  .limit-footer {
+    max-width: 1440px;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .limit {
+    width: 1680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #growth {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 22px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 56px;
+  }
+
+  .contact-info h2,
+  .project h2,
+  .availability h2,
+  .follow h2 {
+    font-size: 31px;
+  }
+
+  .contact-content,
+  .availability-content,
+  .projects-content,
+  .follow-content {
+    font-size: 20px;
   }
 }

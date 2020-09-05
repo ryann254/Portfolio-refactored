@@ -47,13 +47,14 @@ function Homepage() {
       <Header />
       <Container className="homepage">
         <Row>
-          <Col className="my-auto mr-auto" md={5}>
+          <Col className="my-auto mr-auto" md={6}>
             <div className="left">
               <div className="middle">
                 <div className="sm-header">Ryan Njoroge</div>
                 <div className="lg-header mb-3">
                   Web Developer, AI Enthusiast
-                  <br />
+                  <br className="br" />
+                  <span className="pl-2"></span>
                   and Critical Thinker
                 </div>
                 <div className="content mb-3">
@@ -67,30 +68,30 @@ function Homepage() {
                   lacus, dolor eget eu erat sed, suspendisse leo, in anim. Duis
                   aliquam tortor, felis lectus massa nulla, id
                 </div>
-                <div className="homepage-links">
-                  <Link to="/work" className="link-projects">
+                <div className="homepage-links d-sm-flex justify-content-center">
+                  <Link to="/work" className="link-projects mr-1 mr-sm-2">
                     View Projects
                   </Link>{" "}
                   <span>|</span>{" "}
                   <a
                     href="https://www.fuzu.com/profile/ryan-njoroge"
                     target="_blank"
-                    className="link-read"
+                    className="link-read mr-1 ml-1 ml-sm-2 mr-sm-2"
                   >
                     Link to my Resume
                   </a>
                   <span>|</span>{" "}
-                  <Link to="/about" className="link-read">
+                  <Link to="/about" className="link-read ml-1 ml-sm-2">
                     Read Some More
                   </Link>
                 </div>
               </div>
             </div>
           </Col>
-          <Col className="ml-auto" md={5}>
-            <Row>
-              <div className="smaller-screens projects-header d-flex-column">
-                <div className="lg-header text-center mb-5">
+          <Col className="ml-auto pr-md-0" md={6} lg={5}>
+            <Row className="smaller-screens">
+              <div className="projects-header d-flex-column">
+                <div className="lg-header text-capitalize text-center mb-5">
                   Some of my projects
                 </div>
                 <Col className="mb-3">
@@ -208,7 +209,7 @@ function Homepage() {
         </Row>
         <Row className="home-projects larger-screens">
           <Col className="mx-auto" md={9}>
-            <div className="lg-header text-center mb-5">
+            <div className="lg-header text-capitalize text-center mb-5">
               Some of my projects
             </div>
             <div>
