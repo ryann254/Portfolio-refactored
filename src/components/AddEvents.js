@@ -49,7 +49,7 @@ function AddEvents({ history, ...props }) {
   // On component mount the following should be fetched and set to state
   useEffect(() => {
     let left = document.querySelector(".left");
-    let contentLeft = document.querySelector(".content");
+    let contentLeft = document.querySelector(".content-add-events");
     let protos = document.querySelectorAll(".proto");
     setLeftState(left);
     setContentState(contentLeft);
