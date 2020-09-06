@@ -57,7 +57,7 @@ const initialState = {
       title: "Rotaract Club of JKUAT(2019-)",
       subtitle: "Clubs and Societies",
       content:
-        "I'm also an active member of Rotaract club, our main agenda is to mostly make the society and environment around us a better place. We go for activities like taking clothes to children's home, cleaning up the environment, painting primary schools that are near us.",
+        "I was an active member of Rotaract club, our main agenda was to mostly make the society and environment around us a better place. We went for activities like taking clothes to children's home, cleaning up the environment, painting primary schools that were near us.",
     },
   ],
 };

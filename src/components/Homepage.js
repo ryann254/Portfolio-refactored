@@ -58,15 +58,13 @@ function Homepage() {
                   and Critical Thinker
                 </div>
                 <div className="content mb-3">
-                  Lorem ipsum dolor sit amet, elit nisl mauris, neque porta id
-                  nunc nulla urna. Scelerisque pharetra pretium, sagittis metus
-                  phasellus velit diam, ut eu et pellentesque urna mus mi, dui
-                  risus ullamcorper mi tincidunt vivamus. Suspendisse mauris,
-                  adipiscing ac, sit etiam nulla duis felis. Eu auctor et in
-                  pretium nascetur turpis, diam eleifend vehicula tempus pretium
-                  orci. Enim aliquam amet at molestie, nulla vitae eu proin pede
-                  lacus, dolor eget eu erat sed, suspendisse leo, in anim. Duis
-                  aliquam tortor, felis lectus massa nulla, id
+                  In the past few years I've been slowly growing my skills in
+                  the tech industry to be specific the Web development industry.
+                  In my journey I've done a few internships that have helped my
+                  experience the full developer cycle, I've indulged in UI/UX
+                  designing for a bit, I've also worked with backend
+                  technologies e.g. Python and Nodejs and ofcourse frontend
+                  technologies. As of now I'm a freelance developer.
                 </div>
                 <div className="homepage-links d-sm-flex justify-content-center">
                   <Link to="/work" className="link-projects mr-1 mr-sm-2">
