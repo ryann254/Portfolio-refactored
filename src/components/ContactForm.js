@@ -68,6 +68,20 @@ function ContactForm() {
     }
   }
 
+  function getPrevQuestion() {
+    if (position > 0) {
+      position = position - 1;
+      input_label.innerHTML = questions[position].question;
+      input_field.type = questions[position].type || "text";
+      input_field.value = questions[position].answer || "";
+
+      progress_bar.style.width = (position * 100) / questions.length + "%";
+
+      //Add User Icon or Back Arrow
+      prev_btn.className = position ? "fas fa-arrow-left" : "fas fa-user";
+    }
+  }
+
   const handleKeyUp = (e) => {
     if (e.keyCode === 13) {
       validate();
@@ -133,6 +147,7 @@ function ContactForm() {
       questions[position].answer = input_field.value;
       position++;
 
+      console.log(questions);
       if (questions[position]) {
         hideQuestion();
         getQuestion();
@@ -236,7 +251,11 @@ function ContactForm() {
       <div id="container">
         <form>
           <div id="form-box">
-            <i id="prev-btn" className="fas fa-arrow-left"></i>
+            <i
+              id="prev-btn"
+              className="fas fa-arrow-left"
+              onClick={getPrevQuestion}
+            ></i>
             <i
               id="next-btn"
               className="fas fa-arrow-right"
