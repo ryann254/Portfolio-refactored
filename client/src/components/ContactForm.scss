@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+h1.end {
+  position: relative;
+  color: #333;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+  font-size: 2rem;
+}
+
+h3.error {
+  position: relative;
+  color: #ff2d26;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+  font-size: 24px;
+  font-family: "Roboto Mono", monospace;
+}
+
+#container {
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  #form-box {
+    background: #eee;
+    position: relative;
+    width: 330px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
+      0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out;
+
+    #next-btn {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      font-size: 30px;
+      color: #2c3e50;
+      float: right;
+      cursor: pointer;
+      z-index: 2;
+      transition: 0.2s ease-in;
+    }
+
+    #next-btn:hover {
+      color: #4ca1af;
+    }
+
+    #prev-btn {
+      position: absolute;
+      font-size: 18px;
+      top: 12px;
+      left: 30px;
+      z-index: 2;
+      color: #9e9e9e;
+      float: right;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+    }
+
+    #prev-btn:hover {
+      color: #b9d4ec;
+    }
+
+    #input-group {
+      position: relative;
+      padding: 30px 10px 20px 20px;
+      margin: 10px 60px 10px 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      input {
+        position: relative;
+        width: 100%;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        outline: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      #input-label {
+        position: absolute;
+        pointer-events: none;
+        top: 32px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.2s ease-in-out;
+      }
+
+      input:valid + #input-label {
+        top: 2px;
+        left: 42px;
+        margin-left: 0 !important;
+        font-size: 15px;
+        font-weight: normal;
+        color: #9e9e9e;
+      }
+
+      #input-progress {
+        border-bottom: 3px solid #2c3e50;
+        width: 0;
+        transition: width 0.6s ease-in-out;
+      }
+    }
+
+    #progress-bar {
+      position: absolute;
+      background: #b9d4ec;
+      height: 10px;
+      width: 0;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+
+  #form-box.close {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0);
+  }
+
+  .close #next-btn,
+  .close #prev-btn {
+    color: #eee;
+  }
+}
+
+@media all and (min-width: 411px) {
+  #container {
+    #form-box {
+      width: 380px;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  #container {
+    #form-box {
+      width: 290px;
+    }
+  }
+}
+
+@media all and (min-width: 576px) {
+  #container {
+    #form-box {
+      width: 480px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  #container {
+    height: 300px;
+    #form-box {
+      width: 400px;
+    }
+  }
+
+  #container #form-box #next-btn {
+    font-size: 40px;
+  }
+
+  #container #form-box #input-group {
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  #container {
+    #form-box {
+      width: 480px;
+    }
+  }
+}

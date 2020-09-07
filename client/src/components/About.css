@@ -1,0 +1,92 @@
+.text-secondary {
+  margin-bottom: 10px;
+}
+.text-secondary-paragraph {
+  color: #434343;
+  font-size: 20px;
+}
+
+.about-info .bio {
+  font-size: 18px;
+}
+
+.about-info .bio-image {
+  margin: auto;
+  background-position: auto;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 3px #f5603b;
+}
+
+.job:hover {
+  position: relative;
+  top: -2%;
+  transform: scale(1.05);
+  box-shadow: 0 12px 17px 3px rgba(15, 32, 39, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.about-info .job {
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  border-bottom: solid 5px #f5603b;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.about-info h3 {
+  font-size: 24px;
+}
+
+.about-info h4 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.sm-heading.work {
+  font-size: 25px;
+}
+
+.identify {
+  height: 50px;
+  width: 50px;
+  margin-right: 0.5em;
+  border: 2px solid #f4bb00;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18pt;
+  padding-top: 5px;
+  color: #fff;
+}
+
+.work-title {
+  width: 250px;
+}
+
+#delete-btn {
+  margin: 10px 0px 0px 0px;
+  padding: 0.35rem 0.7rem;
+}
+
+@media all and (min-width: 1680px) {
+  .about-info h3 {
+    font-size: 27px;
+  }
+
+  .about-info .bio {
+    font-size: 20px;
+  }
+
+  .about-info h4 {
+    font-size: 20px;
+  }
+
+  .about-info .job {
+    font-size: 20px;
+  }
+}

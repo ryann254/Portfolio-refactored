@@ -1,0 +1,436 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  font-size: 2rem;
+}
+
+h2.sm-heading {
+  font-size: 25px;
+}
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: linear-gradient(to right, #abbaab, #ffffff);
+}
+
+main .icons {
+  margin-top: 1rem;
+}
+main .icons a {
+  padding: 0.35rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+main .icons a:hover {
+  color: #f5603b;
+  transition: all 0.5s ease-out;
+}
+
+#about,
+#work,
+#contact {
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+#contact {
+  margin-bottom: 0;
+}
+
+/* Work Page */
+.projects .covid-19,
+.projects .expense-tracker,
+.projects .fancy-form,
+.projects .netflix-image,
+.projects .photography {
+  width: 100%;
+}
+
+.projects img:hover {
+  opacity: 0.6;
+  transition: all 0.1s ease-in;
+  border: 3px #f5603b solid;
+}
+
+.work-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.work-buttons i {
+  font-size: 18px;
+}
+
+.technologies {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-content p {
+  font-size: 18px;
+}
+
+.technologies img {
+  margin: 0 20px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.technologies img:hover {
+  border: none;
+  opacity: 1;
+  transition: none;
+}
+
+.btn,
+.btn-dark,
+.btn-light {
+  display: block;
+  border: 0;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
+  background: #f5603b;
+  color: #fff;
+  transition: all 0.6s ease-in-out;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+.btn-light {
+  background: #f1efef;
+  color: #333;
+}
+
+.work-content h3 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 26px;
+}
+
+.work-content {
+  border-bottom: 2px solid #4ca1af;
+}
+
+/* Contact Page */
+.contact-pic {
+  width: 100%;
+  height: inherit;
+}
+
+.sm-header {
+  letter-spacing: 5px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.lg-header {
+  letter-spacing: 1px;
+  font-size: 33px !important;
+  font-weight: 600;
+  color: #000;
+}
+.lg-header .line-contact {
+  margin-left: 10px;
+  width: 2rem;
+  height: 4px;
+  background: #333;
+}
+
+.contact-right {
+  width: 100%;
+}
+
+.right-heading {
+  color: #888;
+  font-size: 21px;
+}
+
+.contact-form {
+  margin-top: 2rem;
+}
+
+@media all and (max-width: 320px) {
+  .technologies img {
+    width: 22px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .larger-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  /* Homepage Header styling */
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 55px;
+  }
+
+  #about,
+  #work,
+  #contact {
+    margin-top: 200px;
+    margin-bottom: 120px;
+  }
+
+  #contact {
+    margin-bottom: 0px;
+  }
+
+  /* My Work Page */
+  .technologies img {
+    width: 30px;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
+  }
+
+  .work-buttons {
+    width: 100%;
+  }
+
+  /* Contact page */
+  .contact-pic {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .contact-top {
+    position: relative;
+  }
+
+  .page-content {
+    position: absolute;
+    top: -66px;
+    right: -37px;
+    font-size: 5.7rem;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+  }
+
+  .page-content .content-words:nth-child(1) {
+    color: #ccc;
+  }
+
+  .page-content .content-words:nth-child(3) {
+    color: #fff;
+  }
+
+  .page-content .content-words:nth-child(5) {
+    color: #ccc;
+  }
+
+  .page-content .content-words:nth-child(7) {
+    color: #fff;
+  }
+
+  .content-words .one-letter {
+    color: #bbb;
+    padding-left: 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Work Page */
+  .item a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects .covid-19,
+  .projects .expense-tracker,
+  .projects .fancy-form,
+  .projects .netflix-image,
+  .projects .photography {
+    width: 370px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .sm-heading.work {
+    font-size: 27px !important;
+  }
+
+  .contact-pic {
+    height: 75vh;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .page-content {
+    font-size: 6rem;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .lg-header {
+    font-size: 36px !important;
+  }
+
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 59px;
+  }
+
+  h2.sm-heading {
+    font-size: 29px;
+  }
+
+  .sm-heading.work {
+    font-size: 30px !important;
+  }
+
+  .work-content p {
+    font-size: 20px;
+  }
+
+  .work-content h3 {
+    font-size: 29px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .sm-header,
+  .right-heading {
+    font-size: 23px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .page-content {
+    top: -78px;
+    font-size: 6.6rem;
+  }
+}
+
+/* Loader */
+.loader-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #141e30, #243b55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}

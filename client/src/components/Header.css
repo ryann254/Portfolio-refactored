@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Nunito+Sans&display=swap");
+
+/* Header */
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#basic-navbar-nav {
+  background: #343a40;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+/* Brand */
+.brand {
+  font-family: "Clicker Script", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 66px;
+  color: #e6b001 !important;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.18em;
+}
+
+/* Logo */
+a:hover {
+  color: #999 !important;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  position: fixed;
+}
+
+.links {
+  position: relative;
+}
+
+.links > a:hover {
+  color: #f5603b !important;
+}
+
+.link-color {
+  color: #f5603b !important;
+}
+
+#growth {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Footer */
+.line-breaker {
+  color: #999;
+  width: 87%;
+}
+
+.content-work a {
+  color: #333;
+}
+
+.pre-footer {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-footer .content-dev {
+  text-transform: uppercase;
+  font-size: 19px;
+  color: #999;
+}
+
+.pre-footer .content-work {
+  font-size: 38px;
+  font-weight: 900;
+  color: #111;
+}
+
+.fas {
+  font-size: 32px;
+}
+
+.content-work a:hover {
+  text-decoration: underline;
+}
+
+.br {
+  display: none;
+}
+
+.contact-info,
+.project,
+.availability,
+.follow {
+  font-size: 18px;
+  text-align: center;
+}
+
+.contact-info h2,
+.project h2,
+.availability h2,
+.follow h2 {
+  font-size: 29px;
+}
+
+.contact-info a,
+.project a,
+.availability a,
+.follow a {
+  color: #333;
+}
+
+.line-footer {
+  width: 2rem;
+  height: 4px;
+  background: #111;
+}
+
+.contact-info .line-footer,
+.availability .line-footer,
+.project .line-footer,
+.follow .line-footer {
+  margin: 19px 0 0 10px;
+}
+
+.post-footer {
+  color: #888;
+}
+
+.logo {
+  color: #888 !important;
+}
+
+.footer-text {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.date {
+  margin: 0 10px 0 0;
+}
+
+@media all and (max-width: 767px) {
+  .underline {
+    display: none;
+  }
+
+  .larger-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .smaller-screens {
+    display: none;
+  }
+
+  .active {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background: #f5603b;
+    transition: all 0.5s ease-out;
+  }
+
+  #growth {
+    font-size: 16px;
+  }
+
+  .navbar,
+  #basic-navbar-nav {
+    background-color: #ffffff !important;
+  }
+
+  .links a {
+    color: #333;
+  }
+
+  .nav-item {
+    flex-grow: 0.1;
+  }
+
+  .pre-footer {
+    margin: 3rem 0;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 19px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 48px;
+  }
+
+  .fas {
+    font-size: 38px;
+  }
+
+  .page-footer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #111;
+    width: -webkit-fill-available;
+  }
+
+  .contact-info,
+  .project,
+  .availability,
+  .follow,
+  h2 {
+    font-size: 27px;
+  }
+  .contact-info,
+  .project,
+  .availability,
+  .follow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info .line-footer,
+  .availability .line-footer {
+    margin: 19px 0 0 7px;
+  }
+
+  .project .line-footer {
+    margin: 19px 0 0 7px;
+  }
+
+  .follow .line-footer {
+    margin: 19px 0 0 7px;
+  }
+
+  .contact-content,
+  .availability-content {
+    margin-top: 10px;
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info a:hover,
+  .project a:hover,
+  .follow a:hover {
+    text-decoration: underline;
+  }
+
+  .projects-content,
+  .follow-content {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .availability-content {
+    margin-top: auto;
+  }
+
+  .logo {
+    font-size: 40px;
+    margin-left: 45px;
+  }
+
+  .date {
+    margin: 0 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  /* Header */
+  #growth {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .sm-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .lg-screens {
+    display: none;
+  }
+  .br {
+    display: block;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 52px;
+    line-height: 63px;
+  }
+
+  .footer-2 {
+    justify-content: flex-start;
+  }
+
+  .contact-middle {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1366px) {
+  .footer-lg-screens {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .xl-screens {
+    display: none;
+  }
+
+  .limit-footer {
+    max-width: 1440px;
+  }
+}
+
+@media all and (min-width: 1680px) {
+  .limit {
+    width: 1680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #growth {
+    font-size: 20px;
+  }
+
+  .pre-footer .content-dev {
+    font-size: 22px;
+  }
+
+  .pre-footer .content-work {
+    font-size: 56px;
+  }
+
+  .contact-info h2,
+  .project h2,
+  .availability h2,
+  .follow h2 {
+    font-size: 31px;
+  }
+
+  .contact-content,
+  .availability-content,
+  .projects-content,
+  .follow-content {
+    font-size: 20px;
+  }
+}
