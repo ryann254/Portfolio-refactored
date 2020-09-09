@@ -4,6 +4,26 @@
   height: 100vh;
 }
 
+.toast {
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  top: 100px;
+  left: 25%;
+}
+
+.toast-2 {
+  top: 200px;
+}
+
+.toast-header {
+  color: red;
+}
+
+.toast-body {
+  font-size: 16px;
+}
+
 .container-events {
   margin: 0 auto;
   text-align: left;

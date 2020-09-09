@@ -6,11 +6,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import randomcolor from "randomcolor";
+import axios from "axios";
 
 import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
-import { changeScrollStatus, deleteComment } from "../redux/action-creator";
+import {
+  changeScrollStatus,
+  deleteComment,
+  getErrors,
+} from "../redux/action-creator";
 
 function About() {
   const {
@@ -52,11 +57,23 @@ function About() {
   }
 
   const handleClick = () => {
+    const jobElement = document.getElementsByClassName("comment");
+
+    let element = 0;
+    for (element; element < jobElement.length; element++) {
+      jobElement[element].classList.add("delete");
+    }
     setState((buttonState) => !buttonState);
   };
 
-  function deleteComments(title) {
-    dispatch(deleteComment(title));
+  async function deleteComments(id) {
+    try {
+      const res = await axios.delete(`/api/v1/comments/${id}`);
+      dispatch(deleteComment(id));
+    } catch (error) {
+      const dbErrors = error.response.data.error;
+      dispatch(getErrors(dbErrors));
+    }
   }
 
   useEffect(() => {
@@ -234,7 +251,7 @@ function About() {
                     ? commentsSection.map((item, index) => (
                         <Col key={index} className="mb-4">
                           <div
-                            className="job"
+                            className="job comment"
                             key={index}
                             onClick={handleClick}
                           >
@@ -267,7 +284,7 @@ function About() {
                               variant="outline-danger"
                               id="delete-btn"
                               size="sm"
-                              onClick={() => deleteComments(item.title)}
+                              onClick={() => deleteComments(item._id)}
                             >
                               Delete
                             </Button>

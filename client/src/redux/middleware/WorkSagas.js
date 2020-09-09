@@ -5,7 +5,8 @@ import {
   EVENT_OR_WORK_ADDED,
   ADD_EVENT_ACHIEVEMENTS,
   SCROLL_TO_ELEMENT,
-  ADD_COMMENTS_SECTION,
+  ADD_SINGLE_COMMENT,
+  GET_ALL_COMMENTS,
 } from "../action-types";
 
 function* addWorkSaga(action) {
@@ -22,7 +23,7 @@ function* addWorkSaga(action) {
     } else if (data.radio === "events") {
       yield put({ type: ADD_EVENT_ACHIEVEMENTS, payload: data });
     } else {
-      yield put({ type: ADD_COMMENTS_SECTION, payload: data });
+      yield put({ type: ADD_SINGLE_COMMENT, payload: data });
     }
     yield put({ type: SCROLL_TO_ELEMENT, payload: scrollData });
   }

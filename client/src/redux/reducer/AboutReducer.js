@@ -4,13 +4,17 @@ import {
   EVENT_OR_WORK_ADDED,
   SCROLL_TO_ELEMENT,
   CHANGE_SCROLL_STATUS,
-  ADD_COMMENTS_SECTION,
+  ADD_SINGLE_COMMENT,
   DELETE_COMMENT,
+  GET_ALL_COMMENTS,
+  COMMENT_DB_ERRORS,
 } from "../action-types";
 
 const initialState = {
   scrollToElement: { state: false, section: "" },
   eventORWorkStatus: false,
+  loading: true,
+  errorsDB: [],
   workEducationData: [
     {
       title: "HNG Internship(2020)",
@@ -62,14 +66,7 @@ const initialState = {
         "I was an active member of Rotaract club, our main agenda was to mostly make the society and environment around us a better place. We went for activities like taking clothes to children's home, cleaning up the environment, painting primary schools that were near us.",
     },
   ],
-  commentsSection: [
-    {
-      title: "Footer",
-      subtitle: "Good font there",
-      content:
-        "I like the font used in the footer, also the logo looks really good.",
-    },
-  ],
+  commentsSection: [],
 };
 
 function AboutReducer(state = initialState, action) {
@@ -84,10 +81,23 @@ function AboutReducer(state = initialState, action) {
         ...state,
         eventsAchievements: [...state.eventsAchievements, action.payload],
       };
-    case ADD_COMMENTS_SECTION:
+    case ADD_SINGLE_COMMENT:
       return {
         ...state,
-        commentsSection: [...state.commentsSection, action.payload],
+        commentsSection: [action.payload, ...state.commentsSection],
+      };
+    case GET_ALL_COMMENTS:
+      return {
+        ...state,
+        loading: false,
+        commentsSection: action.payload,
+      };
+
+    case COMMENT_DB_ERRORS:
+      return {
+        ...state,
+        loading: false,
+        errorsDB: action.payload,
       };
     case EVENT_OR_WORK_ADDED:
       return {
@@ -109,7 +119,7 @@ function AboutReducer(state = initialState, action) {
         ...state,
         commentsSection: [
           ...state.commentsSection.filter(
-            (comment) => comment.title !== action.payload
+            (comment) => comment._id !== action.payload
           ),
         ],
       };
