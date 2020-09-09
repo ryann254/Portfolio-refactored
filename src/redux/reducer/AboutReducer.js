@@ -4,17 +4,11 @@ import {
   EVENT_OR_WORK_ADDED,
   SCROLL_TO_ELEMENT,
   CHANGE_SCROLL_STATUS,
-  ADD_SINGLE_COMMENT,
-  DELETE_COMMENT,
-  GET_ALL_COMMENTS,
-  COMMENT_DB_ERRORS,
 } from "../action-types";
 
 const initialState = {
   scrollToElement: { state: false, section: "" },
   eventORWorkStatus: false,
-  loading: true,
-  errorsDB: [],
   workEducationData: [
     {
       title: "HNG Internship(2020)",
@@ -66,7 +60,6 @@ const initialState = {
         "I was an active member of Rotaract club, our main agenda was to mostly make the society and environment around us a better place. We went for activities like taking clothes to children's home, cleaning up the environment, painting primary schools that were near us.",
     },
   ],
-  commentsSection: [],
 };
 
 function AboutReducer(state = initialState, action) {
@@ -80,24 +73,6 @@ function AboutReducer(state = initialState, action) {
       return {
         ...state,
         eventsAchievements: [...state.eventsAchievements, action.payload],
-      };
-    case ADD_SINGLE_COMMENT:
-      return {
-        ...state,
-        commentsSection: [action.payload, ...state.commentsSection],
-      };
-    case GET_ALL_COMMENTS:
-      return {
-        ...state,
-        loading: false,
-        commentsSection: action.payload,
-      };
-
-    case COMMENT_DB_ERRORS:
-      return {
-        ...state,
-        loading: false,
-        errorsDB: action.payload,
       };
     case EVENT_OR_WORK_ADDED:
       return {
@@ -113,15 +88,6 @@ function AboutReducer(state = initialState, action) {
       return {
         ...state,
         scrollToElement: { ...state.scrollToElement, state: false },
-      };
-    case DELETE_COMMENT:
-      return {
-        ...state,
-        commentsSection: [
-          ...state.commentsSection.filter(
-            (comment) => comment._id !== action.payload
-          ),
-        ],
       };
     default:
       return state;

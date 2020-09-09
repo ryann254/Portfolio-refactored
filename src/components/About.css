@@ -68,15 +68,6 @@
   width: 250px;
 }
 
-#delete-btn {
-  margin: 10px 0px 0px 0px;
-  padding: 0.35rem 0.7rem;
-}
-
-.delete {
-  height: 165px !important;
-}
-
 @media all and (min-width: 1680px) {
   .about-info h3 {
     font-size: 27px;

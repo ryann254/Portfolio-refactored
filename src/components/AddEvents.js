@@ -3,20 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
 import { Zoom } from "react-reveal";
-import axios from "axios";
 
-import { changeEditStatus, addData, getErrors } from "../redux/action-creator";
+import { addWork, changeEditStatus, addData } from "../redux/action-creator";
 import "./AddEvents.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Toast from "react-bootstrap/Toast";
 
 function AddEvents({ history, ...props }) {
   const { eventORWorkStatus } = useSelector((state) => state.about);
-  const errorsDB = useSelector((state) => state.about.errorsDB);
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
@@ -25,39 +22,16 @@ function AddEvents({ history, ...props }) {
   const [leftState, setLeftState] = useState("");
   const [contentState, setContentState] = useState("");
   const [protosState, setProtosState] = useState("");
-  const [modalTitle, setModalTitle] = useState(true);
-  const [modalContent, setModalContent] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
-      id: Math.random().toString(36).slice(2, 15),
       radio,
       title,
       subtitle,
       content,
     };
-    if (data.radio === "") {
-      // Making an api call
-      async function postComment() {
-        const config = {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        };
-        try {
-          delete data.radio;
-          const res = await axios.post("/api/v1/comments", data, config);
-          dispatch(addData(res.data.data));
-        } catch (error) {
-          const dbErrors = error.response.data.error;
-          dispatch(getErrors(dbErrors));
-        }
-      }
-      postComment();
-    } else {
-      dispatch(addData(data));
-    }
+    dispatch(addData(data));
   }
 
   function addAnimation(event) {
@@ -72,14 +46,6 @@ function AddEvents({ history, ...props }) {
     }
   }
 
-  const handleErrorTitle = () => {
-    setModalTitle((modalTitle) => !modalTitle);
-  };
-
-  const handleErrorContent = () => {
-    setModalContent((modalContent) => !modalContent);
-  };
-
   // On component mount the following should be fetched and set to state
   useEffect(() => {
     let left = document.querySelector(".left");
@@ -92,7 +58,7 @@ function AddEvents({ history, ...props }) {
     if (eventORWorkStatus === true) {
       Swal.fire({
         title: "Congratulations!",
-        text: "Work/Event/Comment Added Successfully",
+        text: "Work/Event Added Successfully",
         icon: "success",
         confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
         confirmButtonAriaLabel: "Thumbs up, great!",
@@ -113,33 +79,6 @@ function AddEvents({ history, ...props }) {
   return (
     <>
       <Container fluid className="limit-footer">
-        {errorsDB.length > 0 ? (
-          <div>
-            <Toast
-              show={modalTitle}
-              onClose={handleErrorTitle}
-              className="toast"
-            >
-              <Toast.Header>
-                <strong className="mr-auto">Errors</strong>
-                <small>Read them carefully</small>
-              </Toast.Header>
-              <Toast.Body>{errorsDB[0]}</Toast.Body>
-            </Toast>
-            <Toast
-              show={modalContent}
-              onClose={handleErrorContent}
-              className="toast toast-2"
-            >
-              <Toast.Header>
-                <strong className="mr-auto">Errors</strong>
-                <small>Read them carefully</small>
-              </Toast.Header>
-              <Toast.Body>{errorsDB[1]}</Toast.Body>
-            </Toast>
-          </div>
-        ) : null}
-
         <Row>
           <div className="body">
             <Zoom bottom>
@@ -176,8 +115,8 @@ function AddEvents({ history, ...props }) {
                       <Form onSubmit={handleSubmit} className="pl-3 pr-3">
                         <Form.Group>
                           <Form.Label>
-                            Are you adding to the work section, the events
-                            section or the comments section:
+                            Are you adding to the work section or the events
+                            section:
                           </Form.Label>
                           <Form.Check
                             type="radio"
@@ -192,15 +131,7 @@ function AddEvents({ history, ...props }) {
                             id="events"
                             name="workorevents"
                             label="Events Section"
-                            value="events"
-                            onChange={(e) => setRadio(e.target.value)}
-                          />
-                          <Form.Check
-                            type="radio"
-                            id="comments"
-                            name="workorevents"
-                            label="Comments Section"
-                            value="comments"
+                            work="events"
                             onChange={(e) => setRadio(e.target.value)}
                           />
                         </Form.Group>
@@ -208,8 +139,8 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Title</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="title"
-                            required={true}
                             autoComplete="off"
                             placeholder="Enter the title.."
                             value={title}
@@ -221,6 +152,7 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Subtitle</Form.Label>
                           <Form.Control
                             type="text"
+                            required="true"
                             name="subtitle"
                             autoComplete="off"
                             value={subtitle}
@@ -232,8 +164,8 @@ function AddEvents({ history, ...props }) {
                           <Form.Label>Content</Form.Label>
                           <Form.Control
                             as="textarea"
+                            required="true"
                             rows="4"
-                            required={true}
                             value={content}
                             onChange={(e) => setContent(e.target.value)}
                             placeholder="Enter some descriptive content..."
