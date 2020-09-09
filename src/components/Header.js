@@ -13,6 +13,7 @@ function Header({ children }) {
   const { url } = useRouteMatch();
 
   const [nav, setNav] = useState("");
+  const [showMenu, setShowMenu] = useState(false);
   const [menuBtn, setMenuBtn] = useState(null);
   const [btnLines, setBtnLines] = useState(null);
   const [menuNav, setMenuNav] = useState(null);
@@ -21,6 +22,7 @@ function Header({ children }) {
   const [mainNav, setMainNav] = useState("");
   const [border, setBorder] = useState("");
   const [desc, setDesc] = useState("");
+  const [hover, toggleHover] = useState(false);
 
   //On component mount the following should be fetched and set to state
   useEffect(() => {
