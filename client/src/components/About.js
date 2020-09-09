@@ -1,29 +1,41 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Bounce, Zoom } from "react-reveal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import randomcolor from "randomcolor";
+import axios from "axios";
 
 import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
-import { changeScrollStatus } from "../redux/action-creator";
+import {
+  changeScrollStatus,
+  deleteComment,
+  getErrors,
+} from "../redux/action-creator";
 
 function About() {
   const {
     workEducationData,
     eventsAchievements,
+    commentsSection,
     scrollToElement,
   } = useSelector((state) => state.about);
 
   const dispatch = useDispatch();
+  const [buttonState, setState] = useState(false);
 
   function doneResizing(id, offsetTop) {
     if (window.Modernizr.mq("screen and (min-width:768px)")) {
-      let offsetTop = 130;
-      scrollFunction(id, offsetTop);
+      if (offsetTop === "") {
+        let offsetTop = 130;
+        scrollFunction(id, offsetTop);
+      } else {
+        scrollFunction(id, offsetTop);
+      }
     } else if (window.Modernizr.mq("screen and (max-width: 767px)")) {
       if (offsetTop === "") {
         let offsetTop = 500;
@@ -44,6 +56,26 @@ function About() {
     dispatch(changeScrollStatus());
   }
 
+  const handleClick = () => {
+    const jobElement = document.getElementsByClassName("comment");
+
+    let element = 0;
+    for (element; element < jobElement.length; element++) {
+      jobElement[element].classList.add("delete");
+    }
+    setState((buttonState) => !buttonState);
+  };
+
+  async function deleteComments(id) {
+    try {
+      const res = await axios.delete(`/api/v1/comments/${id}`);
+      dispatch(deleteComment(id));
+    } catch (error) {
+      const dbErrors = error.response.data.error;
+      dispatch(getErrors(dbErrors));
+    }
+  }
+
   useEffect(() => {
     if (scrollToElement.state === true) {
       if (
@@ -51,9 +83,15 @@ function About() {
         scrollToElement.section === "work"
       ) {
         doneResizing("work-section");
-      } else {
+      } else if (
+        scrollToElement.section !== "" &&
+        scrollToElement.section === "events"
+      ) {
         let offsetTop = 1300;
         doneResizing("events-section", offsetTop);
+      } else {
+        let offsetTop = -130;
+        doneResizing("comments-section", offsetTop);
       }
     }
   }, [scrollToElement]);
@@ -194,6 +232,63 @@ function About() {
                             </div>
                             <p>{item.content}</p>
                           </div>
+                        </Col>
+                      ))
+                    : console.log("Loading")}
+                </Row>
+              </div>
+            </Zoom>
+            <div className="headings">
+              <h2 className="sm-heading work">Comments Section</h2>
+            </div>
+            <Zoom>
+              <div
+                className="work-education d-flex mx-auto"
+                id="comments-section"
+              >
+                <Row>
+                  {commentsSection !== ""
+                    ? commentsSection.map((item, index) => (
+                        <Col key={index} className="mb-4">
+                          <div
+                            className="job comment"
+                            key={index}
+                            onClick={handleClick}
+                          >
+                            <div className="d-flex">
+                              <div
+                                className="identify"
+                                style={{
+                                  background: randomcolor({
+                                    luminosity: "dark",
+                                    format: "rgba",
+                                    alpha: 0.7,
+                                  }),
+                                }}
+                              >
+                                {item.title !== ""
+                                  ? item.title.slice(0, 1).toUpperCase()
+                                  : null}
+                              </div>
+                              <div>
+                                <h3 className="mt-2 work-title">
+                                  {item.title}
+                                </h3>
+                                <h4>{item.subtitle}</h4>
+                              </div>
+                            </div>
+                            <p>{item.content}</p>
+                          </div>
+                          {buttonState ? (
+                            <Button
+                              variant="outline-danger"
+                              id="delete-btn"
+                              size="sm"
+                              onClick={() => deleteComments(item._id)}
+                            >
+                              Delete
+                            </Button>
+                          ) : null}
                         </Col>
                       ))
                     : console.log("Loading")}

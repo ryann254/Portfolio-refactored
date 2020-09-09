@@ -5,7 +5,13 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "./public"),
     historyApiFallback: true,
-    port: 4001,
+    port: 4000,
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+        secure: false,
+      },
+    },
   },
   entry: path.resolve(__dirname, "./src/index.js"),
   output: {
