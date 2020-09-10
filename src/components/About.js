@@ -68,7 +68,8 @@ function About() {
 
   async function deleteComments(id) {
     try {
-      const res = await axios.delete(`/api/v1/comments/${id}`);
+      const url = "https://portfolio-refactored-backend.herokuapp.com";
+      const res = await axios.delete(`${url}/api/v1/comments/${id}`);
       dispatch(deleteComment(id));
     } catch (error) {
       const dbErrors = error.response.data.error;

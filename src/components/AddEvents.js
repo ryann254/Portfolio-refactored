@@ -47,7 +47,8 @@ function AddEvents({ history, ...props }) {
         };
         try {
           delete data.radio;
-          const res = await axios.post("/api/v1/comments", data, config);
+          const url = "https://portfolio-refactored-backend.herokuapp.com";
+          const res = await axios.post(`${url}/api/v1/comments`, data, config);
           dispatch(addData(res.data.data));
         } catch (error) {
           const dbErrors = error.response.data.error;

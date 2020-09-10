@@ -13,13 +13,16 @@ function App() {
   // Making the api call
   async function getComments() {
     try {
-      const res = await axios.get(`/api/v1/comments`);
-      const { data } = res.data;
-      data.map((element) => {
-        element.radio = "comments";
-      });
+      const url = "https://portfolio-refactored-backend.herokuapp.com";
+      const res = await axios.get(`${url}/api/v1/comments`);
+      if (res.status === 200) {
+        const { data } = res.data;
+        data.map((element) => {
+          element.radio = "comments";
+        });
 
-      dispatch(getAllComments(data));
+        dispatch(getAllComments(data));
+      }
     } catch (error) {
       const dbErrors = error.response.data.error;
       dispatch(getErrors(dbErrors));
