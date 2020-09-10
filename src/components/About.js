@@ -83,9 +83,15 @@ function About() {
         scrollToElement.section === "work"
       ) {
         doneResizing("work-section");
-      } else {
+      } else if (
+        scrollToElement.section !== "" &&
+        scrollToElement.section === "events"
+      ) {
         let offsetTop = 1300;
         doneResizing("events-section", offsetTop);
+      } else {
+        let offsetTop = -130;
+        doneResizing("comments-section", offsetTop);
       }
     }
   }, [scrollToElement]);

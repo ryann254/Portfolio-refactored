@@ -37,7 +37,7 @@ function AddEvents({ history, ...props }) {
       subtitle,
       content,
     };
-    if (data.radio === "") {
+    if (data.radio === "comments") {
       // Making an api call
       async function postComment() {
         const config = {
