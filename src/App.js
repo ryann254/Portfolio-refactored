@@ -1,20 +1,22 @@
 import React, { useEffect } from "react";
-import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import "./App.css";
 
 //Own Components
+import "./App.css";
+import Api from "./services/network";
 import Routes from "./Routes";
 import Loader from "./loader/Loader";
 import { getAllComments, getErrors } from "./redux/action-creator";
+import isEmpty from "./helpers/isEmpty";
 
 function App() {
   const dispatch = useDispatch();
   // Making the api call
   async function getComments() {
+    const api = new Api();
     try {
-      const url = "https://portfolio-refactored-backend.herokuapp.com";
-      const res = await axios.get(`${url}/api/v1/comments`);
+      const res = await api.auth().getCommentsCall();
       if (res.status === 200) {
         const { data } = res.data;
         data.map((element) => {
@@ -24,8 +26,10 @@ function App() {
         dispatch(getAllComments(data));
       }
     } catch (error) {
-      const dbErrors = error.response.data.error;
-      dispatch(getErrors(dbErrors));
+      if (!isEmpty(error)) {
+        const dbErrors = error.response.data.error;
+        dispatch(getErrors(dbErrors));
+      }
     }
   }
 
@@ -34,10 +38,12 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="App">
-      {/* <Loader />*/}
-      <Routes />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {/* <Loader />*/}
+        <Routes />
+      </div>
+    </BrowserRouter>
   );
 }
 

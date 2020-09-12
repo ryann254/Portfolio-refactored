@@ -12,6 +12,25 @@ body {
   overflow: auto;
 }
 
+.toast {
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  left: 75%;
+  max-width: 270px;
+  width: inherit;
+}
+
+.toast-header {
+  color: #f7b733;
+  font-family: "Nunito", sans-serif;
+}
+
+.toast-header small {
+  font-size: 84%;
+  letter-spacing: 0.9px;
+}
+
 h1,
 h2,
 h3 {

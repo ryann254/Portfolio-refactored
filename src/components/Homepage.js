@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { Fade } from "react-reveal";
+import Header from "./Header";
+import Footer from "./Footer";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Toast from "react-bootstrap/Toast";
+import { useOktaAuth } from "@okta/okta-react";
 
 import "./Homepage.scss";
 import ProfilePic from "../../public/images/Profile-replacement3-min.jpg";
@@ -13,13 +20,12 @@ import Expenseapp from "../../public/images/projects/Expense-app.png";
 import Fancyform from "../../public/images/projects/Fancy-form.png";
 import Homefurniture from "../../public/images/projects/Home-furniture.png";
 import Netflix from "../../public/images/projects/Netflix.png";
-import Header from "./Header";
-import Footer from "./Footer";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import isEmpty from "../helpers/isEmpty";
 
 function Homepage() {
+  const [name, setUserName] = useState("");
+  const [toast, showToast] = useState(true);
+  const { authState } = useOktaAuth();
   const settings = {
     dots: true,
     infinite: true,
@@ -42,10 +48,34 @@ function Homepage() {
     lazyLoad: "ondemand",
     arrows: true,
   };
+
+  function getLoggedInUser() {
+    const details = JSON.parse(localStorage.getItem("okta-token-storage"));
+    if (!isEmpty(details)) {
+      setUserName(details.idToken.claims.name);
+    }
+  }
+
+  const handleToast = () => {
+    showToast((toast) => !toast);
+  };
+
+  useEffect(() => {
+    getLoggedInUser();
+  }, []);
   return (
     <>
       <Header />
       <Container className="homepage">
+        {authState.isAuthenticated ? (
+          <Toast show={toast} onClose={handleToast} className="toast welcome">
+            <Toast.Header>
+              <strong className="mr-auto">Greetings!</strong>
+              <small>Welcome to my Portfolio</small>
+            </Toast.Header>
+            <Toast.Body>Mr./Ms. {name}</Toast.Body>
+          </Toast>
+        ) : null}
         <Row>
           <Col className="my-auto mr-auto" md={6}>
             <div className="left">

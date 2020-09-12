@@ -6,11 +6,14 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavItem from "react-bootstrap/NavItem";
+import Button from "react-bootstrap/Button";
+import { useOktaAuth } from "@okta/okta-react";
 
 import "./Header.css";
 
 function Header({ children }) {
   const { url } = useRouteMatch();
+  const { authState, authService } = useOktaAuth();
 
   const [nav, setNav] = useState("");
   const [showMenu, setShowMenu] = useState(false);
@@ -22,7 +25,6 @@ function Header({ children }) {
   const [mainNav, setMainNav] = useState("");
   const [border, setBorder] = useState("");
   const [desc, setDesc] = useState("");
-  const [hover, toggleHover] = useState(false);
 
   //On component mount the following should be fetched and set to state
   useEffect(() => {
@@ -116,6 +118,10 @@ function Header({ children }) {
     }
   }
 
+  // Logging In and Out
+  const login = () => authService.login("/");
+  const logout = () => authService.logout("/");
+
   return (
     <Fragment>
       <header>
@@ -160,6 +166,20 @@ function Header({ children }) {
                 <NavItem>
                   <div className="links mb-2 text-center" id="contact-link">
                     <Link to="/contact">Contact</Link>
+                    <div className="underline"></div>
+                  </div>
+                </NavItem>
+                <NavItem>
+                  <div className="links mb-2 text-center" id="login-link">
+                    {!authState.isAuthenticated ? (
+                      <Button className="login" onClick={login}>
+                        <a>Login</a>
+                      </Button>
+                    ) : (
+                      <Button className="logout" onClick={logout}>
+                        <a>Logout</a>
+                      </Button>
+                    )}
                     <div className="underline"></div>
                   </div>
                 </NavItem>
