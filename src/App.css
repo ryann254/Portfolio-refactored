@@ -12,6 +12,25 @@ body {
   overflow: auto;
 }
 
+.toast {
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  left: 22%;
+  max-width: 270px;
+  width: inherit;
+}
+
+.toast-header {
+  color: #f7b733;
+  font-family: "Nunito", sans-serif;
+}
+
+.toast-header small {
+  font-size: 84%;
+  letter-spacing: 0.9px;
+}
+
 h1,
 h2,
 h3 {
@@ -192,15 +211,38 @@ main .icons a:hover {
   .technologies img {
     width: 22px;
   }
+
+  .toast {
+    left: 14%;
+  }
+}
+
+@media all and (min-width: 411px) {
+  .toast {
+    left: 27%;
+  }
+}
+
+@media all and (min-width: 576px) {
+  .toast {
+    left: 45%;
+  }
 }
 
 @media all and (max-width: 767px) {
   .larger-screens {
     display: none;
   }
+
+  .xl-screens {
+    display: none;
+  }
 }
 
 @media all and (min-width: 768px) {
+  .toast {
+    left: 60%;
+  }
   /* Homepage Header styling */
   h1.lg-heading,
   h2.lg-heading,
@@ -278,6 +320,9 @@ main .icons a:hover {
 }
 
 @media all and (min-width: 992px) {
+  .toast {
+    left: 67%;
+  }
   /* Work Page */
   .item a {
     display: flex;
@@ -294,6 +339,10 @@ main .icons a:hover {
 }
 
 @media all and (min-width: 1200px) {
+  .toast {
+    left: 75%;
+  }
+
   .sm-heading.work {
     font-size: 27px !important;
   }
