@@ -9,6 +9,9 @@ class SigninWidget extends Component {
     this.widget = new OktaSignIn({
       baseUrl: this.props.baseUrl,
       logo: "images/Login-logo-2.png",
+      features: {
+        registration: true,
+      },
     });
 
     this.widget.renderEl({ el }, this.props.onSuccess, this.props.onError);
