@@ -6,8 +6,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import randomcolor from "randomcolor";
+import axios from "axios";
 
-import Api from "../services/network";
 import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
 import "./About.css";
 import Footer from "./Footer";
@@ -67,9 +67,9 @@ function About() {
   };
 
   async function deleteComments(id) {
-    const api = new Api();
     try {
-      const res = await api.auth().deleteCommentCall(id);
+      const url = "https://portfolio-refactored-backend.herokuapp.com";
+      const res = await axios.delete(`${url}/api/v1/comments/${id}`);
       dispatch(deleteComment(id));
     } catch (error) {
       const dbErrors = error.response.data.error;

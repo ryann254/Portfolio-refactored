@@ -1,5 +1,4 @@
 const path = require("path");
-const includePath = path.resolve(__dirname, "..");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -22,16 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        include: includePath,
-        use: [
-          { loader: "style-loader" },
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -41,18 +31,13 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: ["file-loader"],
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        include: includePath,
-        use: "url-loader",
-      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html",
-      favicon: `./public/favicon.ico`,
+      favicon: "./public/favicon.ico",
     }),
   ],
 };

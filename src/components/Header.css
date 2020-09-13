@@ -36,7 +36,7 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 10;
   position: fixed;
 }
 
@@ -154,29 +154,6 @@ a:hover {
 
 .date {
   margin: 0 10px 0 0;
-}
-
-.login {
-  margin: auto;
-  background-color: #fecc99 !important;
-}
-
-.logout {
-  margin: auto;
-  background-color: rgba(230, 230, 230, 0.9) !important;
-}
-
-.login a,
-.logout a {
-  color: #333 !important;
-}
-
-.login:hover {
-  background: #fecc55 !important;
-}
-
-.logout:hover {
-  background: rgba(200, 200, 200, 0.6) !important;
 }
 
 @media all and (max-width: 767px) {
@@ -314,11 +291,6 @@ a:hover {
   /* Header */
   #growth {
     font-size: 18px;
-  }
-
-  .login,
-  .logout {
-    width: 95px;
   }
 }
 

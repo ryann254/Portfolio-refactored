@@ -3,24 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
 import { Zoom } from "react-reveal";
+import axios from "axios";
+
+import { changeEditStatus, addData, getErrors } from "../redux/action-creator";
+import "./AddEvents.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Toast from "react-bootstrap/Toast";
-import { useOktaAuth } from "@okta/okta-react";
-
-import Api from "../services/network";
-import { changeEditStatus, addData, getErrors } from "../redux/action-creator";
-import "./AddEvents.scss";
-import Header from "./Header";
-import isEmpty from "../helpers/isEmpty";
 
 function AddEvents({ history, ...props }) {
   const { eventORWorkStatus } = useSelector((state) => state.about);
   const errorsDB = useSelector((state) => state.about.errorsDB);
-  const { authState } = useOktaAuth();
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
@@ -31,8 +27,6 @@ function AddEvents({ history, ...props }) {
   const [protosState, setProtosState] = useState("");
   const [modalTitle, setModalTitle] = useState(true);
   const [modalContent, setModalContent] = useState(true);
-  const [name, setUserName] = useState("");
-  const [toast, showToast] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -46,10 +40,15 @@ function AddEvents({ history, ...props }) {
     if (data.radio === "comments") {
       // Making an api call
       async function postComment() {
-        const api = new Api();
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
         try {
           delete data.radio;
-          const res = await api.auth().postCommentCall(data);
+          const url = "https://portfolio-refactored-backend.herokuapp.com";
+          const res = await axios.post(`${url}/api/v1/comments`, data, config);
           dispatch(addData(res.data.data));
         } catch (error) {
           const dbErrors = error.response.data.error;
@@ -82,17 +81,6 @@ function AddEvents({ history, ...props }) {
     setModalContent((modalContent) => !modalContent);
   };
 
-  function getLoggedInUser() {
-    const details = JSON.parse(localStorage.getItem("okta-token-storage"));
-    if (!isEmpty(details)) {
-      setUserName(details.idToken.claims.name);
-    }
-  }
-
-  const handleToast = () => {
-    showToast((toast) => !toast);
-  };
-
   // On component mount the following should be fetched and set to state
   useEffect(() => {
     let left = document.querySelector(".left");
@@ -101,8 +89,6 @@ function AddEvents({ history, ...props }) {
     setLeftState(left);
     setContentState(contentLeft);
     setProtosState(protos);
-
-    getLoggedInUser();
 
     if (eventORWorkStatus === true) {
       Swal.fire({
@@ -127,14 +113,13 @@ function AddEvents({ history, ...props }) {
 
   return (
     <>
-      <Header />
       <Container fluid className="limit-footer">
         {errorsDB.length > 0 ? (
           <div>
             <Toast
               show={modalTitle}
               onClose={handleErrorTitle}
-              className="toast toast-error"
+              className="toast"
             >
               <Toast.Header>
                 <strong className="mr-auto">Errors</strong>
@@ -145,7 +130,7 @@ function AddEvents({ history, ...props }) {
             <Toast
               show={modalContent}
               onClose={handleErrorContent}
-              className="toast toast-error toast-2"
+              className="toast toast-2"
             >
               <Toast.Header>
                 <strong className="mr-auto">Errors</strong>
@@ -155,15 +140,7 @@ function AddEvents({ history, ...props }) {
             </Toast>
           </div>
         ) : null}
-        {authState.isAuthenticated ? (
-          <Toast show={toast} onClose={handleToast} className="toast welcome">
-            <Toast.Header>
-              <strong className="mr-auto">Greetings!</strong>
-              <small>Welcome to my Portfolio</small>
-            </Toast.Header>
-            <Toast.Body>Mr./Ms. {name}</Toast.Body>
-          </Toast>
-        ) : null}
+
         <Row>
           <div className="body">
             <Zoom bottom>
