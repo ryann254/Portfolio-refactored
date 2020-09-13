@@ -23,9 +23,6 @@ export default withOktaAuth(
       console.log("error logging in", err);
     }
 
-    componentDidMount() {
-      console.log(this.props.authState, "authstate");
-    }
     render() {
       return this.props.authState.isAuthenticated ? (
         <Redirect to={{ pathname: "/" }} />
