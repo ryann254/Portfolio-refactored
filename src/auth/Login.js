@@ -30,14 +30,11 @@ export default withOktaAuth(
       return this.props.authState.isAuthenticated ? (
         <Redirect to={{ pathname: "/" }} />
       ) : (
-        <div>
-          {console.log(this.props.authState, "authstate")}
-          <SignInWidget
-            baseUrl={this.props.baseUrl}
-            onSuccess={this.onSuccess}
-            onError={this.onError}
-          />
-        </div>
+        <SignInWidget
+          baseUrl={this.props.baseUrl}
+          onSuccess={this.onSuccess}
+          onError={this.onError}
+        />
       );
     }
   }
