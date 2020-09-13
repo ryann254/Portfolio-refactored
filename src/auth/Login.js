@@ -23,21 +23,15 @@ export default withOktaAuth(
       console.log("error logging in", err);
     }
 
-    componentDidMount() {
-      console.log(this.props.authState, "authstate");
-    }
     render() {
       return this.props.authState.isAuthenticated ? (
         <Redirect to={{ pathname: "/" }} />
       ) : (
-        <div>
-          {console.log(this.props.authState, "authstate")}
-          <SignInWidget
-            baseUrl={this.props.baseUrl}
-            onSuccess={this.onSuccess}
-            onError={this.onError}
-          />
-        </div>
+        <SignInWidget
+          baseUrl={this.props.baseUrl}
+          onSuccess={this.onSuccess}
+          onError={this.onError}
+        />
       );
     }
   }
