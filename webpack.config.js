@@ -42,7 +42,7 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|svg|webp)$/,
         include: includePath,
         use: "url-loader",
       },
@@ -53,6 +53,7 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
       favicon: `./public/favicon.ico`,
+      inject: false,
     }),
   ],
 };

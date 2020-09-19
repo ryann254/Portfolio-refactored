@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
@@ -126,7 +126,7 @@ function AddEvents({ history, ...props }) {
   }, [eventORWorkStatus]);
 
   return (
-    <>
+    <Fragment>
       <Header />
       <Container fluid className="limit-footer">
         {errorsDB.length > 0 ? (
@@ -281,7 +281,7 @@ function AddEvents({ history, ...props }) {
           </div>
         </Row>
       </Container>
-    </>
+    </Fragment>
   );
 }
 

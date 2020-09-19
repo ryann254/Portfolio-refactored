@@ -8,7 +8,7 @@ class SigninWidget extends Component {
     const el = ReactDOM.findDOMNode(this);
     this.widget = new OktaSignIn({
       baseUrl: this.props.baseUrl,
-      logo: "images/Login-logo-2.png",
+      logo: "images/Login-logo-2.webp",
       features: {
         registration: true,
       },

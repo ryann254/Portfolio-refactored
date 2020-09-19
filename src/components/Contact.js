@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-import ContactPic from "../../public/images/contact/contact4-min.jpg";
+import ContactPic from "../../public/images/contact4-min.webp";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Contact() {
   return (
-    <>
+    <Fragment>
       <Container>
         <div id="contact">
           <h1 className="lg-heading mb-2">
@@ -63,7 +63,7 @@ function Contact() {
         </div>
       </Container>
       <Footer />
-    </>
+    </Fragment>
   );
 }
 

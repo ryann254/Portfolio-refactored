@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -38,12 +38,14 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <BrowserRouter>
-      <div className="App">
-        {/* <Loader />*/}
-        <Routes />
-      </div>
-    </BrowserRouter>
+    <React.Suspense fallback={<span>Loading...</span>}>
+      <BrowserRouter>
+        <div className="App">
+          {/* <Loader />*/}
+          <Routes />
+        </div>
+      </BrowserRouter>
+    </React.Suspense>
   );
 }
 
