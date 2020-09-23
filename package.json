@@ -12,8 +12,6 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "file-loader": "^6.0.0",
-    "imagemin": "^7.0.1",
-    "imagemin-webp": "^6.0.0",
     "modernizr": "^3.11.3",
     "node-sass": "^4.14.0",
     "randomcolor": "^0.6.2",
