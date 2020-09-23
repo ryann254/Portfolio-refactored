@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 
 import "./Header.css";
@@ -17,7 +17,7 @@ function Footer() {
     }
   }, []);
   return (
-    <>
+    <Fragment>
       <Container fluid className="limit-footer">
         <Row className="d-flex justify-content-between">
           <Col>
@@ -416,7 +416,7 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-    </>
+    </Fragment>
   );
 }
 

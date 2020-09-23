@@ -1,22 +1,22 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Zoom } from "react-reveal";
 
 // Own Components
-import Bakery from "../../public/images/projects/Bakery template.png";
-import Law from "../../public/images/projects/Law-template.png";
-import Wedding from "../../public/images/projects/Wedding-template.jpg";
-import Estimatorapp from "../../public/images/projects/Estimator-app.png";
-import Expenseapp from "../../public/images/projects/Expense-app.png";
-import Fancyform from "../../public/images/projects/Fancy-form.png";
-import Netflix from "../../public/images/projects/Netflix.png";
-import Homefurniture from "../../public/images/projects/Home-furniture.png";
-import IconHtml from "../../public/images/icons/html-icon.png";
-import IconCss from "../../public/images/icons/css-icon.png";
-import IconJs from "../../public/images/icons/js-icon.png";
-import IconReactjs from "../../public/images/icons/reactjs-icon.png";
-import IconNodejs from "../../public/images/icons/nodejs-icon.png";
-import IconAngular from "../../public/images/icons/angular-icon.png";
-import IconJquery from "../../public/images/icons/jquery-icon.png";
+import Bakery from "../../public/images/Bakery template.webp";
+import Law from "../../public/images/Law-template.webp";
+import Wedding from "../../public/images/Wedding-template.webp";
+import Estimatorapp from "../../public/images/Estimator-app.webp";
+import Expenseapp from "../../public/images/Expense-app.webp";
+import Fancyform from "../../public/images/Fancy-form.webp";
+import Netflix from "../../public/images/Netflix.webp";
+import Homefurniture from "../../public/images/Home-furniture.webp";
+import IconHtml from "../../public/images/html-icon.webp";
+import IconCss from "../../public/images/css-icon.webp";
+import IconJs from "../../public/images/js-icon.webp";
+import IconReactjs from "../../public/images/reactjs-icon.webp";
+import IconNodejs from "../../public/images/nodejs-icon.webp";
+import IconAngular from "../../public/images/angular-icon.webp";
+import IconJquery from "../../public/images/jquery-icon.webp";
 import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -24,7 +24,7 @@ import Col from "react-bootstrap/Col";
 
 function Work() {
   return (
-    <div>
+    <Fragment>
       <Container>
         <div id="work">
           <h1 className="lg-heading mb-2">
@@ -557,7 +557,7 @@ function Work() {
         </div>
       </Container>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

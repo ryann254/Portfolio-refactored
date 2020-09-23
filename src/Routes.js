@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, lazy } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
 
 //Own Components
 import { RoutesWithLayout } from "./RoutesWithLayout";
-import { Header, About, Work, Contact, AddEvents } from "./components";
-import Homepage from "./components/Homepage";
-import Login from "./auth/Login";
+//React Lazy load
+const Header = lazy(() => import("./components/Header"));
+const Homepage = lazy(() => import("./components/Homepage"));
+const About = lazy(() => import("./components/About"));
+const Work = lazy(() => import("./components/Work"));
+const Contact = lazy(() => import("./components/Contact"));
+const AddEvents = lazy(() => import("./components/AddEvents"));
+const Login = lazy(() => import("./auth/Login"));
 
 const CALLBACK_PATH = "/implicit/callback";
 

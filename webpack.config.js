@@ -1,6 +1,7 @@
 const path = require("path");
 const includePath = path.resolve(__dirname, "..");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   devServer: {
@@ -12,6 +13,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./build"),
     filename: "bundle.js",
+  },
+  optimization: {
+    concatenateModules: true,
   },
   module: {
     rules: [
@@ -42,7 +46,7 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|svg|webp)$/,
         include: includePath,
         use: "url-loader",
       },
@@ -53,6 +57,7 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
       favicon: `./public/favicon.ico`,
+      inject: false,
     }),
   ],
 };

@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 import randomcolor from "randomcolor";
 
 import Api from "../services/network";
-import ProfilePic from "../../public/images/Profile-replacement1-min.jpg";
+import ProfilePic from "../../public/images/Profile-replacement1-min.webp";
 import "./About.css";
 import Footer from "./Footer";
 import {

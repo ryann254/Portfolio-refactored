@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { Fade } from "react-reveal";
@@ -11,15 +11,15 @@ import Toast from "react-bootstrap/Toast";
 import { useOktaAuth } from "@okta/okta-react";
 
 import "./Homepage.scss";
-import ProfilePic from "../../public/images/Profile-replacement3-min.jpg";
-import WeddingTemplate from "../../public/images/projects/Wedding-template.jpg";
-import BakeryTemplate from "../../public/images/projects/Bakery template.png";
-import LawTemplate from "../../public/images/projects/Law-template.png";
-import Estimatorapp from "../../public/images/projects/Estimator-app.png";
-import Expenseapp from "../../public/images/projects/Expense-app.png";
-import Fancyform from "../../public/images/projects/Fancy-form.png";
-import Homefurniture from "../../public/images/projects/Home-furniture.png";
-import Netflix from "../../public/images/projects/Netflix.png";
+import ProfilePic from "../../public/images/Profile-replacement3-min.webp";
+import WeddingTemplate from "../../public/images/Wedding-template.webp";
+import BakeryTemplate from "../../public/images/Bakery template.webp";
+import LawTemplate from "../../public/images/Law-template.webp";
+import Estimatorapp from "../../public/images/Estimator-app.webp";
+import Expenseapp from "../../public/images/Expense-app.webp";
+import Fancyform from "../../public/images/Fancy-form.webp";
+import Homefurniture from "../../public/images/Home-furniture.webp";
+import Netflix from "../../public/images/Netflix.webp";
 import isEmpty from "../helpers/isEmpty";
 
 function Homepage() {
@@ -64,7 +64,7 @@ function Homepage() {
     getLoggedInUser();
   }, []);
   return (
-    <>
+    <Fragment>
       <Header />
       <Container className="homepage">
         {authState.isAuthenticated ? (
@@ -322,7 +322,7 @@ function Homepage() {
         </Row>
       </Container>
       <Footer />
-    </>
+    </Fragment>
   );
 }
 
