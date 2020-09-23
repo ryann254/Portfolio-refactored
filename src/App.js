@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import "./App.css";
 import Api from "./services/network";
 import Routes from "./Routes";
-import Loader from "./loader/Loader";
+import PageLoader from "./page-loader/PageLoader";
 import { getAllComments, getErrors } from "./redux/action-creator";
 import isEmpty from "./helpers/isEmpty";
 
@@ -38,10 +38,9 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <React.Suspense fallback={<span>Loading...</span>}>
+    <React.Suspense fallback={<PageLoader />}>
       <BrowserRouter>
         <div className="App">
-          {/* <Loader />*/}
           <Routes />
         </div>
       </BrowserRouter>
