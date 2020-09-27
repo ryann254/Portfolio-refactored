@@ -6,6 +6,7 @@
 .pnp.js
 .vscode
 Image-converter.js
+/old png files
 # testing
 /coverage
 
