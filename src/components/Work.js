@@ -496,7 +496,10 @@ function Work() {
               <div className="d-flex-column d-md-flex">
                 <Col>
                   <div className="item mb-4">
-                    <a href="https://ryanphotography.cf/" target="_blank">
+                    <a
+                      href="https://trusting-wilson-8f4a95.netlify.app/"
+                      target="_blank"
+                    >
                       <img
                         className="photography"
                         src={Homefurniture}
@@ -510,7 +513,7 @@ function Work() {
                     </div>
                     <div className="work-buttons">
                       <a
-                        href="https://ryanphotography.cf/"
+                        href="https://trusting-wilson-8f4a95.netlify.app/"
                         target="_blank"
                         className="btn btn-light"
                       >
@@ -518,7 +521,7 @@ function Work() {
                       </a>
 
                       <a
-                        href="https://github.com/ryann254/homefurniture"
+                        href="https://github.com/ryann254/Home-Furniture"
                         target="_blank"
                         className="btn btn-dark"
                       >
