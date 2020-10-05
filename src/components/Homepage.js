@@ -117,69 +117,140 @@ function Homepage() {
             </div>
           </Col>
           <Col className="ml-auto pr-md-0" md={6} lg={5}>
-            <Row className="smaller-screens">
-              <div className="projects-header d-flex-column">
-                <div className="lg-header text-capitalize text-center mb-5">
-                  Some of my projects
+            <div className="projects">
+              <Row className="smaller-screens">
+                <div className="projects-header d-flex-column">
+                  <div className="lg-header text-capitalize text-center mb-5">
+                    Some of my projects
+                  </div>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://compassionate-einstein-9ec9cd.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={WeddingTemplate}
+                            alt="wedding"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://hardcore-tereshkova-f8d88e.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={LawTemplate}
+                            alt="law"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://dreamy-sammet-3a0674.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={BakeryTemplate}
+                            alt="bakery"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://ryann254.github.io/Ryan-Covid19-Deploy/"
+                          target="_blank"
+                        >
+                          <img
+                            src={Estimatorapp}
+                            alt="estimator"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://expense-tracker-frontend-001.herokuapp.com/"
+                          target="_blank"
+                        >
+                          <img
+                            src={Expenseapp}
+                            alt="expenseapp"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a href="https://ryanfancyform.cf/" target="_blank">
+                          <img
+                            src={Fancyform}
+                            alt="fancyform"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://tender-fermi-f8c720.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={Netflix}
+                            alt="netflix"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://trusting-wilson-8f4a95.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={Homefurniture}
+                            alt="homefurniture"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
                 </div>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img
-                      src={WeddingTemplate}
-                      alt="wedding"
-                      className="img-fluid"
-                    />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img src={LawTemplate} alt="law" className="img-fluid" />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img
-                      src={BakeryTemplate}
-                      alt="bakery"
-                      className="img-fluid"
-                    />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img
-                      src={Estimatorapp}
-                      alt="estimator"
-                      className="img-fluid"
-                    />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img
-                      src={Fancyform}
-                      alt="fancyform"
-                      className="img-fluid"
-                    />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img src={Netflix} alt="netflix" className="img-fluid" />
-                  </Fade>
-                </Col>
-                <Col className="mb-3">
-                  <Fade bottom>
-                    <img
-                      src={Homefurniture}
-                      alt="homefurniture"
-                      className="img-fluid"
-                    />
-                  </Fade>
-                </Col>
-              </div>
-            </Row>
-
+              </Row>
+            </div>
             <div className="right-home larger-screens">
               <div className="profile-container d-flex-column justify-content-center">
                 <div className="mb-5 d-flex justify-content-center">
