@@ -77,6 +77,7 @@ module.exports = {
         orientation: "portrait-primary",
         start_url: "/index.html",
         icons: {
+          appleStartup: false,
           coast: false,
           firefox: false,
           windows: false,
