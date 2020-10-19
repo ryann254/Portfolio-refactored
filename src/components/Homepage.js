@@ -20,6 +20,7 @@ import Expenseapp from "../../public/images/Expense-app.webp";
 import Fancyform from "../../public/images/Fancy-form.webp";
 import Homefurniture from "../../public/images/Home-furniture.webp";
 import Netflix from "../../public/images/Netflix.webp";
+import Messenger from "../../public/images/Messenger-app-coverphoto.webp";
 import isEmpty from "../helpers/isEmpty";
 
 function Homepage() {
@@ -123,6 +124,22 @@ function Homepage() {
                   <div className="lg-header text-capitalize text-center mb-5">
                     Some of my projects
                   </div>
+                  <Col className="mb-3">
+                    <Fade bottom>
+                      <div className="item">
+                        <a
+                          href="https://ecstatic-colden-597ec2.netlify.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src={Messenger}
+                            alt="messenger"
+                            className="img-fluid"
+                          />
+                        </a>
+                      </div>
+                    </Fade>
+                  </Col>
                   <Col className="mb-3">
                     <Fade bottom>
                       <div className="item">

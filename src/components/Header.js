@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { useRouteMatch } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -192,9 +191,5 @@ function Header({ children }) {
     </Fragment>
   );
 }
-
-Header.propTypes = {
-  children: PropTypes.object,
-};
 
 export default Header;

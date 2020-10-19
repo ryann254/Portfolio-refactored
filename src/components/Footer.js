@@ -47,7 +47,7 @@ function Footer() {
                 </div>
                 <div className="contact-content mt-2">
                   <div>
-                    <p className="contact-text pl-2 pr-2">
+                    <p className="contact-text pl-3 pr-3">
                       Feel free to reach out at any time, through email or call.
                     </p>
                   </div>
@@ -145,7 +145,7 @@ function Footer() {
                 </div>
                 <div className="availability-content mt-2">
                   <div>
-                    <p className="pl-2 pr-2">
+                    <p className="availabilty-p">
                       Most of the time I'm working on a project(either personal
                       or business related) but I’ll be happy to discuss new
                       opportunities. Let’s get in touch!

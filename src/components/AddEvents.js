@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
-import PropTypes from "prop-types";
 import { Zoom } from "react-reveal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -284,9 +283,5 @@ function AddEvents({ history, ...props }) {
     </Fragment>
   );
 }
-
-AddEvents.propTypes = {
-  history: PropTypes.any,
-};
 
 export default AddEvents;
