@@ -1,6 +1,10 @@
 import React, { Component, lazy } from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
-import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
+import Switch from "react-router-dom/Switch";
+import Route from "react-router-dom/Route";
+import withRouter from "react-router-dom/withRouter";
+import Security from "@okta/okta-react/dist/Security";
+import LoginCallback from "@okta/okta-react/dist/LoginCallback";
+import SecureRoute from "@okta/okta-react/dist/SecureRoute";
 
 //Own Components
 import { RoutesWithLayout } from "./RoutesWithLayout";

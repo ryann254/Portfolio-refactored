@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Link } from "react-router-dom";
+import Link from "react-router-dom/Link";
 import Slider from "react-slick";
-import { Fade } from "react-reveal";
+import Fade from "react-reveal/Fade";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "react-bootstrap/Container";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import Route from "react-router-dom/Route";
 
 export const RoutesWithLayout = (props) => {
   const { layout: Layout, component: Component, ...rest } = props;

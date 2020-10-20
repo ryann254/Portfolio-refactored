@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Swal from "sweetalert2";
-import { Zoom } from "react-reveal";
+import Zoom  from "react-reveal/Zoom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

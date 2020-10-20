@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import BrowserRouter from "react-router-dom/BrowserRouter";
+import {useDispatch} from "react-redux";
 
 //Own Components
 import "./App.css";
