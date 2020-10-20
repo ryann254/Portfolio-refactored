@@ -30,7 +30,8 @@
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^9.10.12",
     "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "workbox-cli": "^5.1.4"
   },
   "scripts": {
     "start": "webpack-dev-server --progress",
