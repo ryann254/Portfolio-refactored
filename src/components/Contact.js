@@ -20,6 +20,8 @@ function Contact() {
               <div className="contact-top">
                 <img
                   src={ContactPic}
+                  width="640"
+                  height="360"
                   className="contact-pic"
                   alt="contact-pic"
                 />

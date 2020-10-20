@@ -1,4 +1,6 @@
-import { applyMiddleware, createStore, combineReducers } from "redux";
+import applyMiddleware from "redux/src/applyMiddleware";
+import createStore from "redux/src/createStore";
+import combineReducers from "redux/src/combineReducers";
 import CreateSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from "redux-devtools-extension";
 

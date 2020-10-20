@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import { Zoom } from "react-reveal";
 
 // Own Components
+import Messenger from "../../public/images/Messenger-app-coverphoto.webp";
 import Bakery from "../../public/images/Bakery template.webp";
 import Law from "../../public/images/Law-template.webp";
 import Wedding from "../../public/images/Wedding-template.webp";
@@ -32,6 +32,68 @@ function Work() {
           </h1>
           <h2 className="sm-heading">A few of my projects....</h2>
           <div className="projects">
+            <Row className="mb-5">
+              <div className="d-flex-column d-md-flex">
+                <Col>
+                  <div className="item mb-4">
+                    <a
+                      href="https://ecstatic-colden-597ec2.netlify.app/"
+                      target="_blank"
+                    >
+                      <img src={Messenger} className="covid-19" alt="Project" />
+                    </a>
+                    <div className="technologies">
+                      <img src={IconReactjs} alt="icon" />
+                      <img src={IconNodejs} alt="icon" />
+                    </div>
+                    <div className="work-buttons">
+                      <a
+                        href="https://ecstatic-colden-597ec2.netlify.app/"
+                        target="_blank"
+                        className="btn btn-light"
+                      >
+                        <i className="fas fa-eye pr-1"></i> Project
+                      </a>
+
+                      <a
+                        href="https://github.com/ryann254/React-Messenger-Deployed"
+                        target="_blank"
+                        className="btn btn-dark"
+                      >
+                        <i className="fab fa-github pr-1"></i> Github
+                      </a>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="work-content">
+                    <div>
+                      <h3>React Messenger</h3>
+                    </div>
+                    <div>
+                      <p>
+                        This is a messenger app built on react, it makes queries
+                        to a graphql server to allow user to communicate with
+                        each other. Multiple users can communicate with each
+                        other, each user just has to state their name in the
+                        first textbox usually labelled Ryan. The data however is
+                        not persistent at the time since heroku reloads the app
+                        once a day and by doing that it reloads the server and
+                        hence all the previous messages are lost. The frontend
+                        is hosted on Netlify and the backend on heroku.
+                      </p>
+                    </div>
+                    <div>
+                      <h3>Noteable Features:</h3>
+                      <p>
+                        When you tap your messages, an x button pops that allows
+                        you to delete your messages.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
             <Row className="mb-5">
               <div className="d-flex-column d-md-flex">
                 <Col>

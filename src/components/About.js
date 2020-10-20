@@ -1,6 +1,7 @@
 import React, { useState, Fragment, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Bounce, Zoom } from "react-reveal";
+import {useDispatch, useSelector} from "react-redux";
+import Zoom from "react-reveal/Zoom";
+import Bounce from "react-reveal/Bounce";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

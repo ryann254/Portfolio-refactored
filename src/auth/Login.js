@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import Redirect from "react-router-dom/es/Redirect";
 import SignInWidget from "./SigninWidget";
 import { withOktaAuth } from "@okta/okta-react";
 
