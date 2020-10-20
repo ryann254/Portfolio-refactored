@@ -35,9 +35,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "start-sw": "http-server build/ -c 0",
-    "server": "http-server build",
-    "build": "webpack -p && workbox copyLibraries build/ && workbox injectManifest workbox-config.js",
+    "start-sw": "workbox copyLibraries build/ && workbox injectManifest workbox-config.js && http-server build/ -c 0",
+    "server": "http-server build/ -c 0",
+    "build": "webpack -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
