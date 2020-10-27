@@ -46,11 +46,11 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(gif)$/,
         use: ["file-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg|webp)$/,
+        test: /\.(woff|woff2|eot|ttf|svg|webp|png|svg)$/,
         include: includePath,
         use: "url-loader",
       },
