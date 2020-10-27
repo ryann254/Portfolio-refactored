@@ -438,14 +438,15 @@ function Work() {
                     <a href="https://ryanfancyform.cf/" target="_blank">
                       <img
                         src={Fancyform}
+                        loading="lazy"
                         className="fancy-form"
                         alt="Project"
                       />
                     </a>
                     <div className="technologies">
-                      <img src={IconHtml} alt="icon" />
-                      <img src={IconCss} alt="icon" />
-                      <img src={IconJs} alt="icon" />
+                      <img src={IconHtml} loading="lazy" alt="icon" />
+                      <img src={IconCss} loading="lazy" alt="icon" />
+                      <img src={IconJs} loading="lazy" alt="icon" />
                     </div>
                     <div className="work-buttons">
                       <a
@@ -502,12 +503,13 @@ function Work() {
                     >
                       <img
                         src={Netflix}
+                        loading="lazy"
                         className="netflix-image"
                         alt="Project"
                       />
                     </a>
                     <div className="technologies">
-                      <img src={IconAngular} alt="icon" />
+                      <img src={IconAngular} loading="lazy" alt="icon" />
                     </div>
                     <div className="work-buttons">
                       <a
@@ -565,13 +567,14 @@ function Work() {
                       <img
                         className="photography"
                         src={Homefurniture}
+                        loading="lazy"
                         alt="Project"
                       />
                     </a>
                     <div className="technologies">
-                      <img src={IconHtml} alt="icon" />
-                      <img src={IconCss} alt="icon" />
-                      <img src={IconJs} alt="icon" />
+                      <img src={IconHtml} loading="lazy" alt="icon" />
+                      <img src={IconCss} loading="lazy" alt="icon" />
+                      <img src={IconJs} loading="lazy" alt="icon" />
                     </div>
                     <div className="work-buttons">
                       <a

@@ -242,6 +242,7 @@ function Homepage() {
                         >
                           <img
                             src={Netflix}
+                            loading="lazy"
                             alt="netflix"
                             className="img-fluid"
                           />
@@ -258,6 +259,7 @@ function Homepage() {
                         >
                           <img
                             src={Homefurniture}
+                            loading="lazy"
                             alt="homefurniture"
                             className="img-fluid"
                           />
