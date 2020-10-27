@@ -336,6 +336,15 @@ function Homepage() {
                   <div className="pr-4">
                     <a href="/work">
                       <img
+                        src={Messenger}
+                        className="img-fluid wedding-home"
+                        alt="Project"
+                      />
+                    </a>
+                  </div>
+                  <div className="pr-4">
+                    <a href="/work">
+                      <img
                         src={WeddingTemplate}
                         className="img-fluid wedding-home"
                         alt="Project"
@@ -355,6 +364,7 @@ function Homepage() {
                     <a href="/work">
                       <img
                         src={LawTemplate}
+                        loading="lazy"
                         className="img-fluid law-home"
                         alt="Project"
                       />
@@ -364,6 +374,7 @@ function Homepage() {
                     <a href="/work">
                       <img
                         src={Estimatorapp}
+                        loading="lazy"
                         className="img-fluid estimator-home"
                         alt="Project"
                       />
@@ -373,6 +384,7 @@ function Homepage() {
                     <a href="/work">
                       <img
                         src={Expenseapp}
+                        loading="lazy"
                         className="img-fluid expense-home"
                         alt="Project"
                       />
