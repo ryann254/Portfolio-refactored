@@ -2,7 +2,6 @@ const path = require("path");
 const includePath = path.resolve(__dirname, "..");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
 const AppManifestWebpackPlugin = require('app-manifest-webpack-plugin')
 
 module.exports = {

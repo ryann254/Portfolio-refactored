@@ -49,3 +49,14 @@ workbox.routing.registerRoute(
         cacheName: 'page-images'
     }), 'GET'
 )
+
+self.addEventListener('install', function(evt) {
+    self.skipWaiting();
+})
+
+self.addEventListener("fetch", (evt) => {
+    evt.respondWith(caches.match(evt.request).then(cacheRes => {
+        console.log('Fetch request')
+        return cacheRes || fetch(evt.request);
+    }))
+});
