@@ -16,10 +16,10 @@ const handlerCb = async ({url, request, event, params}) => {
     return new Response(`${responseBody}`); 
   };
 
-workbox.routing.registerRoute(
-    new RegExp('/styles/.*\\.css'),
-    handlerCb
-  );
+// workbox.routing.registerRoute(
+//     new RegExp('/styles/.*\\.css'),
+//     handlerCb
+//   );
 
 workbox.routing.registerRoute(/.*categories/, new workbox.strategies.CacheFirst(dataCacheConfig), 'GET')
 workbox.routing.registerRoute(/.*templates/, new workbox.strategies.CacheFirst(dataCacheConfig), 'GET')
@@ -51,12 +51,11 @@ workbox.routing.registerRoute(
 )
 
 self.addEventListener('install', function(evt) {
-    self.skipWaiting();
+//(chas)
 })
 
 self.addEventListener("fetch", (evt) => {
     evt.respondWith(caches.match(evt.request).then(cacheRes => {
-        console.log('Fetch request')
         return cacheRes || fetch(evt.request);
     }))
 });

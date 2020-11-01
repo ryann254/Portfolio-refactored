@@ -74,7 +74,7 @@ module.exports = {
         theme_color: "#FFE1C4",
         display: "standalone",
         orientation: "portrait-primary",
-        start_url: "/index.html",
+        start_url: "./index.html",
         icons: {
           appleStartup: false,
           coast: false,
