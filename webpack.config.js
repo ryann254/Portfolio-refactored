@@ -46,11 +46,11 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(gif)$/,
         use: ["file-loader"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg|webp)$/,
+        test: /\.(woff|woff2|eot|ttf|svg|webp|png|svg|jpg|jpeg|)$/,
         include: includePath,
         use: "url-loader",
       },
@@ -64,6 +64,10 @@ module.exports = {
       favicon: `./public/images/favicon.ico`,
       inject: false,
     }),
+    new WorkboxPlugin.InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: 'sw.js'
+    }),
     new AppManifestWebpackPlugin({
       logo: './public/images/Logo/logo6_192x192.png',
       persistentCache: true,
@@ -75,7 +79,7 @@ module.exports = {
         theme_color: "#FFE1C4",
         display: "standalone",
         orientation: "portrait-primary",
-        start_url: "/index.html",
+        start_url: "/",
         icons: {
           appleStartup: false,
           coast: false,

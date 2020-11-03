@@ -10,16 +10,16 @@ const dataCacheConfig = {
     cacheName: 'page-data'
 }
 
-const handlerCb = async ({url, request, event, params}) => {
-    const response = await fetch(request);
-    const responseBody = await response.text();
-    return new Response(`${responseBody}`); 
-  };
+// const handlerCb = async ({url, request, event, params}) => {
+//     const response = await fetch(request);
+//     const responseBody = await response.text();
+//     return new Response(`${responseBody}`); 
+//   };
 
-workbox.routing.registerRoute(
-    new RegExp('/styles/.*\\.css'),
-    handlerCb
-  );
+// workbox.routing.registerRoute(
+//     new RegExp('/styles/.*\\.css'),
+//     handlerCb
+//   );
 
 workbox.routing.registerRoute(/.*categories/, new workbox.strategies.CacheFirst(dataCacheConfig), 'GET')
 workbox.routing.registerRoute(/.*templates/, new workbox.strategies.CacheFirst(dataCacheConfig), 'GET')
@@ -49,3 +49,10 @@ workbox.routing.registerRoute(
         cacheName: 'page-images'
     }), 'GET'
 )
+
+self.addEventListener("fetch", (evt) => {
+    evt.respondWith(caches.match(evt.request).then(cacheRes => {
+        console.log('Fetch request')
+        return cacheRes || fetch(evt.request);
+    }))
+});

@@ -17,14 +17,14 @@ function App() {
     const api = new Api();
     try {
       const res = await api.auth().getCommentsCall();
-      if (res.status === 200) {
-        const { data } = res.data;
-        data.map((element) => {
-          element.radio = "comments";
-        });
+      // if (res.status === 200) {
+      //   const { data } = res.data;
+      //   data.map((element) => {
+      //     element.radio = "comments";
+      //   });
 
-        dispatch(getAllComments(data));
-      }
+      //   dispatch(getAllComments(data));
+      // }
     } catch (error) {
       if (!isEmpty(error)) {
         const dbErrors = error.response.data.error;
