@@ -1,15 +1,15 @@
 import React, { useState, useEffect, Fragment } from "react";
-import Link from "react-router-dom/Link";
+import {Link} from "react-router-dom";
 import Slider from "react-slick";
 import Fade from "react-reveal/Fade";
-import Header from "./Header";
-import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Toast from "react-bootstrap/Toast";
 import { useOktaAuth } from "@okta/okta-react";
 
+import Header from "./Header";
+import Footer from "./Footer";
 import "./Homepage.scss";
 import ProfilePic from "../../public/images/Profile-replacement3-min.webp";
 import WeddingTemplate from "../../public/images/Wedding-template.webp";

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import BrowserRouter from "react-router-dom/BrowserRouter";
+import {BrowserRouter} from "react-router-dom";
 import {useDispatch} from "react-redux";
 
 //Own Components
@@ -17,16 +17,17 @@ function App() {
     const api = new Api();
     try {
       const res = await api.auth().getCommentsCall();
-      // if (res.status === 200) {
-      //   const { data } = res.data;
-      //   data.map((element) => {
-      //     element.radio = "comments";
-      //   });
+      if (res.status === 200) {
+        const { date } = res.data;
+        data.map((element) => {
+          element.radio = "comments";
+        });
 
-      //   dispatch(getAllComments(data));
-      // }
+        dispatch(getAllComments(data));
+      }
     } catch (error) {
-      if (!isEmpty(error)) {
+      if (isEmpty(error) !== true) {
+        console.log("Isempty is not working")
         const dbErrors = error.response.data.error;
         dispatch(getErrors(dbErrors));
       }
