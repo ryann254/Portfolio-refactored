@@ -75,6 +75,7 @@ function Work() {
                           {work.solution}
                         </p>
                       </div> : null}
+                      {work.title.includes('React') || work.title.includes('Daily') ? <div><h3>How to use</h3> <p>{work.usage}</p></div> : null}
                       <div>
                         <h3>Noteable Features:</h3>
                         <p>
