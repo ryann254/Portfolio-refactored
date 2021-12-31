@@ -13,6 +13,8 @@ import Col from "react-bootstrap/Col";
 
 function Work() {
   const { myWork } = useSelector(state => state.work);
+  // Projects without the problem subtitle.
+  const withoutChallenge = ['React Messenger', 'Wedding Planner Template', 'Bakery Template', 'Fancy Form']
   return (
     <Fragment>
       <Container>
@@ -61,7 +63,7 @@ function Work() {
                     <div className="work-content">
                       <div>
                         <h3>{work.title}</h3>
-                        {work.title.includes('Covid') || work.title.includes('Daily') ? <h3>Problem:</h3>: null}
+                        {!withoutChallenge.includes(work.title) ? <h3>Challenge:</h3>: null}
                         {work.title.includes('Homefurniture') ? <h3>Small scale e-commerce site:</h3>: null}
                       </div>
                       <div>
@@ -69,7 +71,7 @@ function Work() {
                           {work.description}
                         </p>
                       </div>
-                      {work.title.includes('Covid') || work.title.includes('Daily') ? <div>
+                      {work.solution !== undefined ? <div>
                         <h3>Solution:</h3>
                         <p>
                           {work.solution}
@@ -77,10 +79,21 @@ function Work() {
                       </div> : null}
                       {work.title.includes('React') || work.title.includes('Daily') ? <div><h3>How to use</h3> <p>{work.usage}</p></div> : null}
                       <div>
-                        <h3>Noteable Features:</h3>
-                        <p>
-                          {work.noteableFeatures}
-                        </p>
+                        {work.noteableFeatures !== undefined ? (
+                          <>
+                            <h3>Noteable Features:</h3>
+                            <p>
+                              {work.noteableFeatures}
+                            </p>
+                          </>
+                        ): 
+                        <>
+                          <h3>Languages:</h3>
+                          <p>
+                            {work.languages}
+                          </p>
+                        </>
+                        }
                       </div>
                     </div>
                   </Col>
