@@ -1,9 +1,9 @@
 const initialState = {
     myWork: [
         {
-            netlifyLink: "https://ryann254.github.io/Ryan-Covid19-Deploy/",
+            netlifyLink: "",
             githubLink: "https://github.com/ryann254/Threejs-Keyboard",
-            image: "images/underconstruction-1.webp",
+            image: "images/Threejs keyboard project.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Adjustable Threejs Keyboard",
             description: "The client’s request was to fork a keyboard repository originally made to help users improve on their typing accuracy and speed and turn into an extension of his website that allowed users to see the keyboard they’re buying then purchase it on his site.",
@@ -11,9 +11,9 @@ const initialState = {
             languages: "The project consisted of the following programming languages: Three.js, typescript, reactjs, python and electronjs.",
         },
         {
-            netlifyLink: "https://laughing-almeida-5b96e3.netlify.app/",
+            netlifyLink: "https://ntf-market-place.netlify.app/",
             githubLink: "https://github.com/ryann254/flask-app-frontend-pancake",
-            image: "images/underconstruction-2.webp",
+            image: "images/pancake swap project.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "NFT marketplace",
             description: "The client’s plan was to create a cryptocurrency platform that allowed people to come and trade tokens.",
@@ -23,7 +23,7 @@ const initialState = {
         {
             netlifyLink: "https://techive.co.ke",
             githubLink: "https://github.com/Developer-Square/Dev_square_Frontend",
-            image: "images/underconstruction-1.webp",
+            image: "images/techive website - 2.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Startup Website",
             description: "A startup CEO wanted a stunning site to showcase her designs and services offered by her company. She also wanted the site to have a dashboard where she could track tasks, users and the company's projects.",
@@ -32,7 +32,7 @@ const initialState = {
         },
         {
             netlifyLink: "https://vimeo.com/538273834",
-            image: "images/underconstruction-2.webp",
+            image: "images/PARK_254_1000x400-01.svg",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Park254 Parking App",
             description: "The client wanted to expand his business and help ease the parking issue in Nairobi, Kenya's capital city.",
@@ -42,7 +42,7 @@ const initialState = {
         {
             netlifyLink: "https://vimeo.com/620492772",
             githubLink: "https://github.com/Developer-Square/Salon_App_Frontend",
-            image: "images/underconstruction-2.webp",
+            image: "images/welcome.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Salon App",
             description: "The client’s expand his salon business and create a sense of order as his business was going very fast.",
@@ -50,9 +50,9 @@ const initialState = {
             languages: "The project was built using the following: Reactjs, Django Rest, jest for testing."
         },
         {
-            netlifyLink: "https://musing-varahamihira-9eb6c5.netlify.app/",
+            netlifyLink: "https://portfolio-donation.netlify.app/",
             githubLink: "https://github.com/ryann254/Portfolio-website-Client",
-            image: "images/underconstruction-1.webp",
+            image: "images/portfolio-website.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Portfolio donation website",
             description: "The client wanted a basic site to post news articles and events for his Non-profit organisation with a section where people could donate.",
@@ -60,9 +60,9 @@ const initialState = {
             languages:"The project consisted of: Reactjs, Nodejs and jest for testing",
         },
         {
-            netlifyLink: "https://ryann254.github.io/Ryan-Covid19-Deploy/",
-            githubLink: "https://github.com/ryann254/Ryan-Covid19-Challenge",
-            image: "images/underconstruction-2.webp",
+            netlifyLink: "https://edmund-eastfield.netlify.app/",
+            githubLink: "https://github.com/ryann254/Client-Edumund-EastField",
+            image: "images/edumund-eastfield.png",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Edmund Document Manager",
             description: "The client wanted a way for her customers to contact her directly through her Whatsapp and sliding effects on her contact form.",
@@ -82,7 +82,7 @@ const initialState = {
                 "On the homepage when you cursor is on the page the background is focused but when you move your cursor out of the page the background is no longer focused. On the form when you click the submit button, the components slide over each other.",
         },
         {
-            netlifyLink: "https://ecstatic-colden-597ec2.netlify.app/",
+            netlifyLink: "https://react-messenger-trial.netlify.app/",
             githubLink: "https://github.com/ryann254/React-Messenger-Deployed",
             image: "images/Messenger-app-coverphoto.webp",
             technologis: ["IconReactjs", "IconNodejs"],
@@ -93,7 +93,7 @@ const initialState = {
                 "You can send mesages like in a chatroom. When you tap your messages, an x button pops that allows you to delete your messages.",
         },
         {
-            netlifyLink: "https://compassionate-einstein-9ec9cd.netlify.app/",
+            netlifyLink: "https://wedding-template-trial.netlify.app/",
             githubLink: "https://github.com/ryann254/React-Messenger-Deployed",
             image: "images/Wedding-template.webp",
             technologis: ["IconHtml", "IconNodejs","IconCss", "IconJs", "IconJquery"],
@@ -115,7 +115,7 @@ const initialState = {
                 "When you enter a transaction and click add transaction its automatically sorted as an expense or income and based on that your balance is displayed at the top. This project also has an active backend",
         },
         {
-            netlifyLink: "https://dreamy-sammet-3a0674.netlify.app/",
+            netlifyLink: "https://bakery-website-1.netlify.app/",
             githubLink: "https://github.com/ryann254/Bakery",
             image: "images/Bakery template.webp",
             technologis: ["IconHtml", "IconCss", "IconJs", "IconJquery"],
