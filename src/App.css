@@ -329,6 +329,10 @@ main .icons a:hover {
     justify-content: center;
   }
 
+  .salon {
+    width: 300px !important;
+  }
+
   .projects .covid-19,
   .projects .expense-tracker,
   .projects .fancy-form,
