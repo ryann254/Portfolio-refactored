@@ -1,7 +1,7 @@
 const initialState = {
     myWork: [
         {
-            netlifyLink: "",
+            netlifyLink: "https://adjustable-threejs-keyboard.netlify.app/",
             githubLink: "https://github.com/ryann254/Threejs-Keyboard",
             image: "images/Threejs keyboard project.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
@@ -32,6 +32,7 @@ const initialState = {
         },
         {
             netlifyLink: "https://vimeo.com/538273834",
+            githubLink: "https://github.com/Developer-Square/Park254-s-Parking-App-Frontend",
             image: "images/PARK_254_1000x400-01.svg",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Park254 Parking App",
