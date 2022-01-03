@@ -45,7 +45,7 @@ const initialState = {
             image: "images/welcome.webp",
             technologis: ["IconHtml", "IconCss", "IconJs"],
             title: "Salon App",
-            description: "The client’s expand his salon business and create a sense of order as his business was going very fast.",
+            description: "The client’s wanted to expand his salon business and create a sense of order as his business was going very fast.",
             solution: "I built a salon app to allow users to book services ahead of schedule, the salon app also had a social media like feature that allowed the owner to post different hairstyles and others could like and comment on them.",
             languages: "The project was built using the following: Reactjs, Django Rest, jest for testing."
         },

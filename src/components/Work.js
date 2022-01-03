@@ -33,7 +33,8 @@ function Work() {
                         href={work.netlifyLink}
                         target="_blank"
                       >
-                        <img src={work.image} className="covid-19" alt="Project" />
+                        <img src={work.image} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
+                        {/* <img src={work.image} className='covid-19' alt="Project" /> */}
                       </a>
                       <div className="technologies">
                         {work.technologies && work.technologies.map((technology, index) => (
