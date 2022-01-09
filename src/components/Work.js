@@ -1,15 +1,12 @@
 import React, { Fragment } from "react";
 import {useSelector} from "react-redux";
-
-// Own Components
-import Homefurniture from "../../public/images/Home-furniture.webp";
-import IconHtml from "../../public/images/html-icon.webp";
-import IconCss from "../../public/images/css-icon.webp";
-import IconJs from "../../public/images/js-icon.webp";
-import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+// Own Components
+import Footer from "./Footer";
+
 
 function Work() {
   const { myWork } = useSelector(state => state.work);
@@ -33,7 +30,7 @@ function Work() {
                         href={work.netlifyLink}
                         target="_blank"
                       >
-                        <img src={work.image} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
+                        <img src='images/PARK_254_1000x400-01.svg' className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
                         {/* <img src={work.image} className='covid-19' alt="Project" /> */}
                       </a>
                       <div className="technologies">
