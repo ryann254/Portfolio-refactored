@@ -3,7 +3,6 @@ const initialState = {
         {
             netlifyLink: "https://adjustable-threejs-keyboard.netlify.app/",
             githubLink: "https://github.com/ryann254/Threejs-Keyboard",
-            image: "images/Threejs keyboard project.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Adjustable Threejs Keyboard",
             description: "The client’s request was to fork a keyboard repository originally made to help users improve on their typing accuracy and speed and turn into an extension of his website that allowed users to see the keyboard they’re buying then purchase it on his site.",
@@ -13,7 +12,6 @@ const initialState = {
         {
             netlifyLink: "https://ntf-market-place.netlify.app/",
             githubLink: "https://github.com/ryann254/flask-app-frontend-pancake",
-            image: "images/pancake swap project.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "NFT marketplace",
             description: "The client’s plan was to create a cryptocurrency platform that allowed people to come and trade tokens.",
@@ -23,7 +21,6 @@ const initialState = {
         {
             netlifyLink: "https://techive.co.ke",
             githubLink: "https://github.com/Developer-Square/Dev_square_Frontend",
-            image: "images/techive website - 2.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Startup Website",
             description: "A startup CEO wanted a stunning site to showcase her designs and services offered by her company. She also wanted the site to have a dashboard where she could track tasks, users and the company's projects.",
@@ -33,7 +30,6 @@ const initialState = {
         {
             netlifyLink: "https://vimeo.com/538273834",
             githubLink: "https://github.com/Developer-Square/Park254-s-Parking-App-Frontend",
-            image: "images/PARK_254_1000x400-01.svg",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Park254 Parking App",
             description: "The client wanted to expand his business and help ease the parking issue in Nairobi, Kenya's capital city.",
@@ -43,7 +39,6 @@ const initialState = {
         {
             netlifyLink: "https://vimeo.com/620492772",
             githubLink: "https://github.com/Developer-Square/Salon_App_Frontend",
-            image: "images/welcome.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Salon App",
             description: "The client’s wanted to expand his salon business and create a sense of order as his business was going very fast.",
@@ -53,7 +48,6 @@ const initialState = {
         {
             netlifyLink: "https://portfolio-donation.netlify.app/",
             githubLink: "https://github.com/ryann254/Portfolio-website-Client",
-            image: "images/portfolio-website.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Portfolio donation website",
             description: "The client wanted a basic site to post news articles and events for his Non-profit organisation with a section where people could donate.",
@@ -63,7 +57,6 @@ const initialState = {
         {
             netlifyLink: "https://edmund-eastfield.netlify.app/",
             githubLink: "https://github.com/ryann254/Client-Edumund-EastField",
-            image: "images/edumund-eastfield.png",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Edmund Document Manager",
             description: "The client wanted a way for her customers to contact her directly through her Whatsapp and sliding effects on her contact form.",
@@ -74,7 +67,6 @@ const initialState = {
         {
             netlifyLink: "https://ryann254.github.io/Ryan-Covid19-Deploy/",
             githubLink: "https://github.com/ryann254/Ryan-Covid19-Challenge",
-            image: "images/Estimator-app.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Covid-19 Estimator App",
             description: "In recent times we've been hit by a pandemic, corona virus, and the main issues have been stopping the spread of the virus and estimating how hard each country will be hit.",
@@ -85,7 +77,6 @@ const initialState = {
         {
             netlifyLink: "https://react-messenger-trial.netlify.app/",
             githubLink: "https://github.com/ryann254/React-Messenger-Deployed",
-            image: "images/Messenger-app-coverphoto.webp",
             technologies: ["images/reactjs-icon.webp", "images/nodejs-icon.webp"],
             title: "React Messenger",
             description: "It's a messenger app built on react, it makes queries to a graphql server to allow user to communicate with each other. The frontend is hosted on Netlify and the backend on heroku.",
@@ -96,7 +87,6 @@ const initialState = {
         {
             netlifyLink: "https://wedding-template-trial.netlify.app/",
             githubLink: "https://github.com/ryann254/React-Messenger-Deployed",
-            image: "images/Wedding-template.webp",
             technologies: ["images/html-icon.webp", "images/nodejs-icon.webp","images/css-icon.webp", "images/js-icon.webp", "images/jquery-icon.webp"],
             title: "Wedding Planner Template",
             description: "This is Wedding Planner template built with html,css,js,bootstrap and a touch of jquery.It's fully mobile responsive and can be adapted to any wedding planner theme or specification.",
@@ -106,7 +96,6 @@ const initialState = {
         {
             netlifyLink: "https://expense-tracker-frontend-001.herokuapp.com/",
             githubLink: "https://github.com/ryann254/Daily-Expenditure-App-Front-End",
-            image: "images/Expense-app.webp",
             technologies: ["images/reactjs-icon.webp", "images/nodejs-icon.webp"],
             title: "Daily Expenditure App",
             description: "In today's world we constantly spending money hence there's need to track all this spending. Yes, you can use simple notebook apps to record all your transactions but notebooks won't do the calculations for you and calculator apps won't keep records for you.",
@@ -118,7 +107,6 @@ const initialState = {
         {
             netlifyLink: "https://bakery-website-1.netlify.app/",
             githubLink: "https://github.com/ryann254/Bakery",
-            image: "images/Bakery template.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp", "images/jquery-icon.webp"],
             title: "Bakery Template",
             description: "This is bakery template built with html,css,js,bootstrap and a touch of jquery.It\'s fully mobile responsive and can be adapted to any bakery theme or specification.",
@@ -128,7 +116,6 @@ const initialState = {
         {
             netlifyLink: "https://ryanfancyform.cf/",
             githubLink: "https://github.com/ryann254/FancyUI",
-            image: "images/Fancy-form.webp",
             technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Fancy Form",
             description: "This project does not solve any particular problem in society, its just a well-designed ui for a form. It gives you a different perspective on how forms can look",

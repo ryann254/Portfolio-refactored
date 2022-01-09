@@ -5,12 +5,24 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Own Components
-import Park254 from '../../public/images/PARK_254_1000x400-01.svg'
+import ThreejsKeyboard from '../../public/images/Threejs keyboard project.webp'
+import NftMarketPlace from '../../public/images/pancake swap project.webp'
+import tecHive from '../../public/images/techive website - 2.webp'
+import SalonApp from '../../public/images/welcome.webp'
+import DonationWebsite from '../../public/images/portfolio-website.webp'
+import EdmundEastField from '../../public/images/edumund-eastfield.png'
+import EstimatorApp from '../../public/images/Estimator-app.webp'
+import ReactMessenger from '../../public/images/Messenger-app-coverphoto.webp'
+import WeddingTemplate from '../../public/images/Wedding-template.webp'
+import DailyExpenditureApp from '../../public/images/Expense-app.webp'
+import Backery from '../../public/images/Bakery template.webp'
+import FancyForm from '../../public/images/Fancy-form.webp'
 import Footer from "./Footer";
 
 
 function Work() {
   const { myWork } = useSelector(state => state.work);
+  const projectImages = [ThreejsKeyboard, NftMarketPlace, tecHive, SalonApp, DonationWebsite, EdmundEastField, EstimatorApp, ReactMessenger, WeddingTemplate, DailyExpenditureApp, Backery, FancyForm]
   // Projects without the problem subtitle.
   const withoutChallenge = ['React Messenger', 'Wedding Planner Template', 'Bakery Template', 'Fancy Form']
   return (
@@ -31,7 +43,7 @@ function Work() {
                         href={work.netlifyLink}
                         target="_blank"
                       >
-                        <img src={Park254} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
+                        <img src={projectImages[index]} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
                       </a>
                       <div className="technologies">
                         {work.technologies && work.technologies.map((technology, index) => (
