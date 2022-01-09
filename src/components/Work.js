@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Own Components
+import Park254 from '../../public/images/PARK_254_1000x400-01.svg'
 import Footer from "./Footer";
 
 
@@ -30,8 +31,7 @@ function Work() {
                         href={work.netlifyLink}
                         target="_blank"
                       >
-                        <img src='images/PARK_254_1000x400-01.svg' className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
-                        {/* <img src={work.image} className='covid-19' alt="Project" /> */}
+                        <img src={Park254} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
                       </a>
                       <div className="technologies">
                         {work.technologies && work.technologies.map((technology, index) => (
