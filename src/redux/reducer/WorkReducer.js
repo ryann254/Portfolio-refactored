@@ -3,7 +3,6 @@ const initialState = {
         {
             netlifyLink: "https://adjustable-threejs-keyboard.netlify.app/",
             githubLink: "https://github.com/ryann254/Threejs-Keyboard",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Adjustable Threejs Keyboard",
             description: "The client’s request was to fork a keyboard repository originally made to help users improve on their typing accuracy and speed and turn into an extension of his website that allowed users to see the keyboard they’re buying then purchase it on his site.",
             solution: "I forked the repository, worked on updating the translations(allowing different languages on the keyboard) and colour scheme to allow only a select blend of colours. I also launched the site on vercel and on boarded the client on how to make future changes.",
@@ -12,7 +11,6 @@ const initialState = {
         {
             netlifyLink: "https://ntf-market-place.netlify.app/",
             githubLink: "https://github.com/ryann254/flask-app-frontend-pancake",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "NFT marketplace",
             description: "The client’s plan was to create a cryptocurrency platform that allowed people to come and trade tokens.",
             solution: "I forked the Pancake Swap repository as a starting point, added the tokens that the client wanted, updated the translations(allowing users to switch between different languages) and connected the site to the backend apis.",
@@ -21,7 +19,6 @@ const initialState = {
         {
             netlifyLink: "https://techive.co.ke",
             githubLink: "https://github.com/Developer-Square/Dev_square_Frontend",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Startup Website",
             description: "A startup CEO wanted a stunning site to showcase her designs and services offered by her company. She also wanted the site to have a dashboard where she could track tasks, users and the company's projects.",
             solution: "I converted her website design to code, built out the backend apis in Nodejs and connected the apis to the frontend to allow selected users to register, login, create and tasks and projects.",
@@ -30,7 +27,6 @@ const initialState = {
         {
             netlifyLink: "https://vimeo.com/538273834",
             githubLink: "https://github.com/Developer-Square/Park254-s-Parking-App-Frontend",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Park254 Parking App",
             description: "The client wanted to expand his business and help ease the parking issue in Nairobi, Kenya's capital city.",
             solution: "I built a parking app(both android and iOS) that allowed drivers to register, login and book parking slots in Nairobi ahead of schedule. I have attached a video of how the app is working as of the day of writing.",
@@ -39,7 +35,6 @@ const initialState = {
         {
             netlifyLink: "https://vimeo.com/620492772",
             githubLink: "https://github.com/Developer-Square/Salon_App_Frontend",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Salon App",
             description: "The client’s wanted to expand his salon business and create a sense of order as his business was going very fast.",
             solution: "I built a salon app to allow users to book services ahead of schedule, the salon app also had a social media like feature that allowed the owner to post different hairstyles and others could like and comment on them.",
@@ -48,7 +43,6 @@ const initialState = {
         {
             netlifyLink: "https://portfolio-donation.netlify.app/",
             githubLink: "https://github.com/ryann254/Portfolio-website-Client",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Portfolio donation website",
             description: "The client wanted a basic site to post news articles and events for his Non-profit organisation with a section where people could donate.",
             solution: "I built him a site from his design, added authentication and backend logic to allow him to add events and news articles and integrated stripe payments to allow for donations.",
@@ -57,7 +51,6 @@ const initialState = {
         {
             netlifyLink: "https://edmund-eastfield.netlify.app/",
             githubLink: "https://github.com/ryann254/Client-Edumund-EastField",
-            technologies: ["images/html-icon.webp", "images/css-icon.webp", "images/js-icon.webp"],
             title: "Edmund Document Manager",
             description: "The client wanted a way for her customers to contact her directly through her Whatsapp and sliding effects on her contact form.",
             solution: "I integrated a whatsapp plugin to allow website visitors to contact the site owner. I connected the contact page so that the client would get an email every time a user left a message on the contact form. I also integrated react-animated-slider to add the sliding effect for the contact page.",
