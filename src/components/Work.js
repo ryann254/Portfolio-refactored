@@ -10,7 +10,7 @@ import NftMarketPlace from '../../public/images/pancake swap project.webp'
 import tecHive from '../../public/images/techive website - 2.webp'
 import SalonApp from '../../public/images/welcome.webp'
 import DonationWebsite from '../../public/images/portfolio-website.webp'
-import EdmundEastField from '../../public/images/edumund-eastfield.PNG'
+import Ed from '../../public/images/edumund-eastfield.PNG'
 import EstimatorApp from '../../public/images/Estimator-app.webp'
 import ReactMessenger from '../../public/images/Messenger-app-coverphoto.webp'
 import WeddingTemplate from '../../public/images/Wedding-template.webp'
@@ -22,7 +22,7 @@ import Footer from "./Footer";
 
 function Work() {
   const { myWork } = useSelector(state => state.work);
-  const projectImages = [ThreejsKeyboard, NftMarketPlace, tecHive, SalonApp, DonationWebsite, EdmundEastField, EstimatorApp, ReactMessenger, WeddingTemplate, DailyExpenditureApp, Backery, FancyForm]
+  const projectImages = [ThreejsKeyboard, NftMarketPlace, tecHive, SalonApp, DonationWebsite, Ed, EstimatorApp, ReactMessenger, WeddingTemplate, DailyExpenditureApp, Backery, FancyForm]
   // Projects without the problem subtitle.
   const withoutChallenge = ['React Messenger', 'Wedding Planner Template', 'Bakery Template', 'Fancy Form']
   return (
