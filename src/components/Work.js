@@ -46,11 +46,6 @@ function Work() {
                       >
                         <img src={projectImages[index]} className={work.title === 'Salon App' ? 'salon covid-19' : 'covid-19'} alt="Project" />
                       </a>
-                      <div className="technologies">
-                        {work.technologies && work.technologies.map((technology, index) => (
-                            <img key={index} src={technology} alt="icon" />
-                        ))}
-                      </div>
                       <div className="work-buttons">
                         <a
                           href={work.netlifyLink}
@@ -90,21 +85,21 @@ function Work() {
                       </div> : null}
                       {work.title.includes('React') || work.title.includes('Daily') ? <div><h3>How to use</h3> <p>{work.usage}</p></div> : null}
                       <div>
-                        {work.noteableFeatures !== undefined ? (
                           <>
-                            <h3>Noteable Features:</h3>
-                            <p>
-                              {work.noteableFeatures}
-                            </p>
-                          </>
-                        ): 
-                        <>
+                          {work.noteableFeatures !== undefined ? (
+                            <>
+                              <h3>Noteable Features:</h3>
+                              <p>
+                                {work.noteableFeatures}
+                              </p>
+                            </>
+                          ) : <></>}
+                            
                           <h3>Languages:</h3>
                           <p>
                             {work.languages}
                           </p>
                         </>
-                        }
                       </div>
                     </div>
                   </Col>
