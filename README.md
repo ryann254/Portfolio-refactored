@@ -12,4 +12,4 @@ This is my portfolio, it includes almost everything that I've done as a develope
 ## Cool feature
 - If you sign up and login with Okta you can leave comments about the site - This feature is needs some bug fixing.
 
-I've hosted it on this url....https://fervent-brown-669ae4.netlify.app/
+I've hosted it on this url....https://ryan-s-portfolio.netlify.app/
