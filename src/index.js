@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Provider from "react-redux/es/components/Provider";;
+import {Provider} from "react-redux";;
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

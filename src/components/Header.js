@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Link  from "react-router-dom/Link";
+import {Link}  from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
