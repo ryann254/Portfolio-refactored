@@ -1,23 +1,10 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 // Own Components
-import ThreejsKeyboard from '../../public/images/Threejs keyboard project.webp';
-import NftMarketPlace from '../../public/images/pancake swap project.webp';
-import tecHive from '../../public/images/techive website - 2.webp';
-import Park254 from '../../public/images/PARK_254_1000x400-01.svg';
-import SalonApp from '../../public/images/welcome.webp';
-import DonationWebsite from '../../public/images/portfolio-website.webp';
-import EdmundEastField from '../../public/images/edumund-eastfield.PNG';
-import EstimatorApp from '../../public/images/Estimator-app.webp';
-import ReactMessenger from '../../public/images/Messenger-app-coverphoto.webp';
-import WeddingTemplate from '../../public/images/Wedding-template.webp';
-import DailyExpenditureApp from '../../public/images/Expense-app.webp';
-import Backery from '../../public/images/Bakery template.webp';
-import FancyForm from '../../public/images/Fancy-form.webp';
 import Footer from './Footer';
 import { useQuery } from '@apollo/client';
 import JOBS_QUERY from '../graphql/jobs';
@@ -104,7 +91,7 @@ function Work() {
 												<div>
 													<p>{job.description}</p>
 												</div>
-												{job.solution !== undefined ? (
+												{job.solution !== null ? (
 													<div>
 														<h3>Solution:</h3>
 														<p>{job.solution}</p>
@@ -118,7 +105,7 @@ function Work() {
 												) : null}
 												<div>
 													<>
-														{job.noteableFeatures !== undefined ? (
+														{job.noteableFeatures !== null ? (
 															<>
 																<h3>Noteable Features:</h3>
 																<p>{job.noteableFeatures}</p>

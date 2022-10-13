@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
 //Own Components
 import './App.css';
-// import Api from './services/network';
 import Routes from './Routes';
 import PageLoader from './page-loader/PageLoader';
-import { addJobs, getAllComments, getErrors } from './redux/action-creator';
-import isEmpty from './helpers/isEmpty';
 
 function App() {
-	const dispatch = useDispatch();
-
 	// Fix the comment backend issue.
 	// Making the api call
 	// async function getComments() {
