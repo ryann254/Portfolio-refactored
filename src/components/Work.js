@@ -39,6 +39,7 @@ function Work() {
 		if (!loading && !error) {
 			setPortfolioJobs(data.portfolioJobs);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [loading]);
 
 	if (loading) return <h1>Loading...</h1>;
@@ -55,12 +56,12 @@ function Work() {
 					<div className='projects'>
 						{portfolioJobs.length ? (
 							portfolioJobs.map((job, index) => (
-								<Row className='mb-5' key={index}>
+								<Row className='mb-5' key={job.id}>
 									<div className='d-flex-column d-md-flex'>
 										<Col>
 											<div className='item mb-4'>
 												<a href={job.netlifyLink} target='_blank'>
-													{/* <img
+													<img
 														src={job.jobImage.url}
 														className={
 															job.title === 'Salon App'
@@ -68,7 +69,7 @@ function Work() {
 																: 'covid-19'
 														}
 														alt='Project'
-													/> */}
+													/>
 												</a>
 												<div className='job-buttons'>
 													<a

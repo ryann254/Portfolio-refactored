@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 //Own Components
 import './App.css';
@@ -13,11 +12,6 @@ import isEmpty from './helpers/isEmpty';
 
 function App() {
 	const dispatch = useDispatch();
-
-	const client = new ApolloClient({
-		uri: 'https://api-eu-west-2.hygraph.com/v2/cl93rprfe474l01tcdu78gvjk/master',
-		cache: new InMemoryCache(),
-	});
 
 	// Fix the comment backend issue.
 	// Making the api call
@@ -49,13 +43,11 @@ function App() {
 	// }, []);
 	return (
 		<React.Suspense fallback={<PageLoader />}>
-			<ApolloProvider client={client}>
-				<BrowserRouter>
-					<div className='App'>
-						<Routes />
-					</div>
-				</BrowserRouter>
-			</ApolloProvider>
+			<BrowserRouter>
+				<div className='App'>
+					<Routes />
+				</div>
+			</BrowserRouter>
 		</React.Suspense>
 	);
 }
