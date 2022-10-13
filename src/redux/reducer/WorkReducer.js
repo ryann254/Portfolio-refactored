@@ -1,3 +1,6 @@
+/* eslint-disable no-fallthrough */
+import { ADD_JOBS } from '../action-types';
+
 const initialState = {
 	myWork: [
 		{
@@ -109,7 +112,16 @@ const initialState = {
 };
 
 function WorkReducer(state = initialState, action) {
-	return state;
+	switch (action.type) {
+		case ADD_JOBS:
+			return {
+				...state,
+				myWork: action.payload,
+			};
+
+		default:
+			return state;
+	}
 }
 
 export default WorkReducer;
