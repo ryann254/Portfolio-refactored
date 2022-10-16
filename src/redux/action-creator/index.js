@@ -6,6 +6,8 @@ import {
 	GET_ALL_COMMENTS,
 	COMMENT_DB_ERRORS,
 	ADD_JOBS,
+	ADD_BIO_INTRO,
+	ADD_BIO_CONTENT,
 } from '../action-types';
 
 export const addData = (data) => {
@@ -34,4 +36,12 @@ export const deleteComment = (id) => {
 
 export const addJobs = (data) => {
 	return { type: ADD_JOBS, payload: data };
+};
+
+export const addBioIntro = (data) => {
+	return { type: ADD_BIO_INTRO, payload: data };
+};
+
+export const addBioContent = (data) => {
+	return { type: ADD_BIO_CONTENT, payload: data };
 };

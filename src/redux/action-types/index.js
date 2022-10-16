@@ -9,3 +9,5 @@ export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const GET_ALL_COMMENTS = 'GET_ALL_COMMENTS';
 export const COMMENT_DB_ERRORS = 'COMMENT_DB_ERRORS';
 export const ADD_JOBS = 'ADD_JOBS';
+export const ADD_BIO_INTRO = 'ADD_BIO_INTRO';
+export const ADD_BIO_CONTENT = 'ADD_BIO_CONTENT';
