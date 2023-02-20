@@ -2,7 +2,11 @@
   "name": "react-modern-portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.13.0"
+  },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "@okta/okta-react": "^3.0.6",
     "@okta/okta-signin-widget": "^4.4.2",
     "@reduxjs/toolkit": "^1.2.5",
@@ -12,8 +16,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "file-loader": "^6.0.0",
+    "graphql": "15.5.1",
     "modernizr": "^3.11.3",
-    "node-sass": "^4.14.0",
     "randomcolor": "^0.6.2",
     "react": "^16.13.0",
     "react-bootstrap": "^1.3.0",
@@ -72,7 +76,7 @@
     "imagemin-webp": "^6.0.0",
     "interpolate-html-plugin": "^3.0.0",
     "jquery": "^3.5.0",
-    "sass": "^1.26.5",
+    "sass": "^1.55.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "url-loader": "^4.1.0",
