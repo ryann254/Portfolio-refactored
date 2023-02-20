@@ -2,9 +2,6 @@
   "name": "react-modern-portfolio",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "16.x"
-  },
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@okta/okta-react": "^3.0.6",
