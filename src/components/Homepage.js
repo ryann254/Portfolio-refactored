@@ -5,8 +5,6 @@ import Fade from 'react-reveal/Fade';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Toast from 'react-bootstrap/Toast';
-import { useOktaAuth } from '@okta/okta-react';
 import { useQuery } from '@apollo/client';
 
 import Header from './Header';
@@ -30,13 +28,11 @@ import PORTFOLIO_IMAGES_QUERY from '../graphql/portfolio';
 
 function Homepage() {
   const [name, setUserName] = useState('');
-  const [toast, showToast] = useState(true);
   const [intro, setIntro] = useState({ jobTitle: '', titleDescription: '' });
   const dispatch = useDispatch();
   const { bioIntro, bioContent } = useSelector((state) => state.about);
   const [imageData, setImageData] = useState([]);
 
-  const { authState } = useOktaAuth();
   const settings = {
     dots: true,
     infinite: true,
@@ -67,10 +63,6 @@ function Homepage() {
     }
   }
 
-  const handleToast = () => {
-    showToast((toast) => !toast);
-  };
-
   const { loading, error, data: introData } = useQuery(INTRO_QUERY);
   const {
     loading: imagesLoading,
@@ -98,15 +90,6 @@ function Homepage() {
     <Fragment>
       <Header />
       <Container className='homepage'>
-        {authState.isAuthenticated ? (
-          <Toast show={toast} onClose={handleToast} className='toast welcome'>
-            <Toast.Header>
-              <strong className='mr-auto'>Greetings!</strong>
-              <small>Welcome to my Portfolio</small>
-            </Toast.Header>
-            <Toast.Body>Mr./Ms. {name}</Toast.Body>
-          </Toast>
-        ) : null}
         <Row>
           <Col className='my-auto mr-auto' md={6}>
             <div className='left'>
